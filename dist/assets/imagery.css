@@ -50,3 +50,17 @@ h2[id]{scroll-margin-top:24px}
 
 .photo-hero .editorial-photo:after{display:none}
 .photo-hero figcaption{top:auto;bottom:14px;left:14px;right:14px;max-width:none;width:fit-content}
+/* Full-width page shell, including 1440p, ultrawide and 4K displays. */
+:root{--gutter:clamp(18px,2.5vw,64px)}
+html,body,main{width:100%;max-width:none;min-width:0}
+.wrap:not(.reading),header,.hero,.footer-top,.footer-bottom{width:100%;max-width:none}
+.hero .search,.email-form{width:100%;max-width:none}
+.hero-copy,.hero-art,.visual-intro>.wrap>*{min-width:0}
+@media(min-width:1600px){
+ .hero{align-items:center}
+ .hero-art{min-height:clamp(560px,32vw,1000px)}
+ .guide-photo img,.intro-photo{height:clamp(400px,24vw,760px)}
+ .image-feature>.editorial-photo img,.residence-story .editorial-photo img{height:clamp(320px,22vw,700px)}
+ .gallery-photo img{height:clamp(300px,19vw,600px)}
+ .hero-copy{padding-block:40px}
+}
