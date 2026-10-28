@@ -6,3 +6,5 @@ outputs/*.md
 outputs/nobleton-production/
 **/__pycache__/
 .DS_Store
+!work/bilingual.py
+!work/fr.json

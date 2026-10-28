@@ -11,3 +11,4 @@ for path in (root/'dist').rglob('*.html'):
     for old,new in [('This preview prepares an email','This form prepares an email'),('How the preview works','How the website works'),('This preview does not load','This website does not load'),('The preview web server may record','The hosting service may record'),('Preview notice ·','Privacy notice ·')]:
         source=source.replace(old,new)
     path.write_text(source)
+subprocess.run([sys.executable,str(root/'work/bilingual.py'),str(root/'dist')],check=True)

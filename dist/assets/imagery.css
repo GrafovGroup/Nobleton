@@ -66,3 +66,10 @@ html,body,main{width:100%;max-width:none;min-width:0}
 }
 
 .advertise-band{background:#e9eddf;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.advertise-band p:not(.eyebrow){max-width:55rem}.advertise-band .button{flex-shrink:0}
+
+/* Language control stays visible on mobile as well as wide screens. */
+.topline{align-items:center}.topline>span:nth-child(2){display:none}.topline .preview{margin-left:auto}.language-switch{display:flex;align-items:center;gap:4px;margin-left:16px;flex-shrink:0}.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:36px;padding:5px 8px;border-radius:4px;font-size:12px;letter-spacing:.5px;color:var(--white)}.language-switch a[aria-current]{background:var(--accent);color:var(--ink);font-weight:700}.language-switch a:hover{text-decoration:underline}.topline{padding-top:4px;padding-bottom:4px}
+@media(max-width:460px){.topline .preview{display:none}.language-switch{margin-left:auto}}
+@media(min-width:1001px) and (max-width:1200px){html[lang="fr-CA"] header{flex-wrap:wrap}html[lang="fr-CA"] .menu-toggle{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #bec8b4;border-radius:4px;background:transparent;color:var(--ink)}html[lang="fr-CA"] header nav{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0}html[lang="fr-CA"] header nav.open{display:flex}html[lang="fr-CA"] header nav>a{padding:14px 0}html[lang="fr-CA"] header nav .button{margin-top:12px}}
+html[lang="fr-CA"] .hero h1{font-size:clamp(42px,4vw,80px)}
+@media(max-width:780px){html[lang="fr-CA"] .hero h1{font-size:clamp(38px,7.5vw,60px)}}

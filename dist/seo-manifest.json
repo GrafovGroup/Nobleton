@@ -12,6 +12,25 @@
     "/directory/nobleton-public-school/",
     "/directory/st-mary-catholic-elementary-school/",
     "/find-a-service/",
+    "/fr/",
+    "/fr/about/",
+    "/fr/advertise/",
+    "/fr/directory/",
+    "/fr/directory/king-chamber/",
+    "/fr/directory/nobleton-community-park/",
+    "/fr/directory/nobleton-library/",
+    "/fr/directory/nobleton-public-school/",
+    "/fr/directory/st-mary-catholic-elementary-school/",
+    "/fr/find-a-service/",
+    "/fr/guide/",
+    "/fr/guide/essentials/",
+    "/fr/guide/moving-to-nobleton/",
+    "/fr/guide/parks/",
+    "/fr/guide/schools/",
+    "/fr/photo-credits/",
+    "/fr/privacy/",
+    "/fr/standards/",
+    "/fr/submit/",
     "/guide/",
     "/guide/essentials/",
     "/guide/moving-to-nobleton/",
@@ -24,7 +43,13 @@
   ],
   "excludedRoutes": [
     "/404.html",
-    "/real-estate/"
+    "/real-estate/",
+    "/fr/404.html",
+    "/fr/real-estate/"
   ],
-  "note": "Production mode prepares files only. Hosting, HTTPS, status codes and Search Console still need verification."
+  "note": "Production mode prepares files only. Hosting, HTTPS, status codes and Search Console still need verification.",
+  "languages": [
+    "en-CA",
+    "fr-CA"
+  ]
 }

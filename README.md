@@ -32,3 +32,9 @@ Content growth remains the main opportunity: verified business listings, real lo
 Hambly House (Peter Broster, CC BY-SA 4.0), Nobleton Lakes (Ken Mist, CC BY 2.0) and Roslyn House (Kingrd, CC BY-SA 3.0) are locally hosted, resized photographs. See `/photo-credits/` for original sources, license links, dates and change notices. Reuse retains each image license. Other luxury property imagery remains labelled AI-generated inspiration.
 
 Advertising inquiries: `/advertise/` uses the same Formspree endpoint with `inquiry_type=advertising` and a dedicated email subject. Homepage and footer calls to action link to this page. No prices, audience claims or paid bookings are offered.
+
+## English and French
+
+English routes remain at `/`; equivalent French routes are under `/fr/`. Every page has an EN/FR switcher, self-canonical URL, reciprocal `hreflang` links and localized metadata/JSON-LD. The switcher preserves query strings and section anchors. Official organization names and external source URLs are retained.
+
+`work/fr.json` is the exact French text catalogue; `work/bilingual.py` generates the French HTML during `python3 publish-build.py`. Untranslated new visible text fails the production build. Update the catalogue when editing English copy. Shared CSS/JS/images are not duplicated. Forms include `preferred_language`, with localized sending, success and error messages. Both languages use the existing Formspree endpoint.
