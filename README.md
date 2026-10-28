@@ -8,7 +8,7 @@ Independent community guide and directory. Static HTML, CSS and JavaScript; Pyth
 python3 publish-build.py
 ```
 
-Deploy `dist/` with real 404 handling using `dist/404.html`. The default canonical origin is https://nobleton.dimagrafov.chatgpt.site. Set `NOBLETON_SITE_ORIGIN` to an active production custom domain before rebuilding if the domain changes. Submit that origin's `/sitemap.xml` to Search Console.
+Deploy `dist/` with real 404 handling using `dist/404.html`. The default canonical origin is https://nobleton.ca. Set `NOBLETON_SITE_ORIGIN` to an active production custom domain before rebuilding if the domain changes. Submit that origin's `/sitemap.xml` to Search Console.
 
 ## Edit
 

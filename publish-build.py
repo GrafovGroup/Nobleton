@@ -3,7 +3,7 @@ from pathlib import Path
 import os, shutil, subprocess, sys
 
 root=Path(__file__).resolve().parent
-os.environ.setdefault('NOBLETON_SITE_ORIGIN','https://nobleton.dimagrafov.chatgpt.site')
+os.environ.setdefault('NOBLETON_SITE_ORIGIN','https://nobleton.ca')
 subprocess.run([sys.executable,str(root/'work/build.py'),'--production'],check=True)
 shutil.copytree(root/'outputs/nobleton-production',root/'dist',dirs_exist_ok=True)
 for path in (root/'dist').rglob('*.html'):
