@@ -16,7 +16,7 @@ META={
  '/submit/':('Add Your Nobleton Business: Free Directory Submission','Submit a business serving Nobleton for a free directory listing, or suggest a correction. All submissions are reviewed before publication.'),
  '/about/':('About Nobleton: Independent Local Community Guide','Learn about Nobleton.ca, an independent guide to local businesses, community information, service connections and upcoming real estate.'),
  '/standards/':('Nobleton Directory Listing & Correction Standards','Read how the Nobleton directory reviews business submissions, handles corrections and identifies partnerships and sponsored placements.'),
- '/privacy/':('Nobleton Privacy Information & Contact','Contact info@nobleton.ca and learn how the website handles email drafts, inquiries and personal information.'),
+ '/privacy/':('Nobleton Privacy Information & Contact','Contact info@nobleton.ca and learn how the website handles Formspree submissions, inquiries and personal information.'),
 }
 LABELS={'/':'Home','/directory/':'Directory','/guide/':'Local guide','/real-estate/':'Real estate','/find-a-service/':'Find a service','/submit/':'Add your business','/about/':'About','/standards/':'Listing standards','/privacy/':'Privacy & contact'}
 EXCLUDED={'/404.html','/real-estate/'}

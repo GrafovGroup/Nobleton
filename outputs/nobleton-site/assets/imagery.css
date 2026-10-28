@@ -37,3 +37,6 @@ h2[id]{scroll-margin-top:24px}
 @media(max-width:380px){.categories{grid-template-columns:repeat(2,minmax(0,1fr))}.topline .preview{font-size:8px}.search>span{display:none}.search button{padding:12px}.search button span{display:none}.footer-top{grid-template-columns:1fr}.hero h1{font-size:40px}}
 .categories{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:780px){.categories{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.email-form [data-fs-success]{padding:18px;background:#e9eddf;border-radius:6px;margin-top:20px;color:var(--ink)}
+.email-form [data-fs-error]{color:#9b3029;margin-top:12px}.email-form [data-fs-error]:empty{display:none}.email-form button:disabled{opacity:.65;cursor:wait}

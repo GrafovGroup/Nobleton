@@ -19,7 +19,7 @@ Deploy `dist/` with real 404 handling using `dist/404.html`. The default canonic
 - `publish-build.py`: production build entry point.
 - `.openai/hosting.json`: existing Sites deployment identity.
 
-Forms prepare email drafts locally; they do not deliver submissions to a backend. Users must send the email themselves. No analytics or visitor data collection is configured. Generated imagery is labelled and is not a photograph of an actual location or property listing. Resource review dates reflect the source content, not the most recent software build.
+Business submissions and service requests POST to `https://formspree.io/f/xljjnzbr`. The Formspree AJAX CDN helper provides loading, success and validation/error states; native HTML POST is the fallback when JavaScript is unavailable. Both forms use the `email` reply-to field, `message`, distinct `_subject` and `inquiry_type` fields. Formspree dashboard settings control recipient notifications, spam protection and allowed domains. No analytics is configured. Generated imagery is labelled and is not a photograph of an actual location or property listing. Resource review dates reflect the source content, not the most recent software build.
 
 ## October 2026 UX/search improvements
 
