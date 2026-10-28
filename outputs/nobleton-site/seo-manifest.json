@@ -1,0 +1,28 @@
+{
+  "mode": "preview",
+  "canonicalOrigin": "https://nobleton.ca",
+  "eligibleRoutes": [
+    "/",
+    "/about/",
+    "/directory/",
+    "/directory/king-chamber/",
+    "/directory/nobleton-community-park/",
+    "/directory/nobleton-library/",
+    "/directory/nobleton-public-school/",
+    "/directory/st-mary-catholic-elementary-school/",
+    "/find-a-service/",
+    "/guide/",
+    "/guide/essentials/",
+    "/guide/moving-to-nobleton/",
+    "/guide/parks/",
+    "/guide/schools/",
+    "/privacy/",
+    "/standards/",
+    "/submit/"
+  ],
+  "excludedRoutes": [
+    "/404.html",
+    "/real-estate/"
+  ],
+  "note": "Production mode prepares files only. Hosting, HTTPS, status codes and Search Console still need verification."
+}
