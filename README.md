@@ -26,3 +26,7 @@ Business submissions and service requests POST to `https://formspree.io/f/xljjnz
 Fluid page containers, readable article widths, responsive navigation, larger text and touch targets, populated homepage categories, directory filter reset, guide contents links, explicit location heading and social sharing metadata. Existing canonical URLs, crawl policy, sitemap, breadcrumbs and entity markup are preserved. The incomplete real-estate section remains noindex.
 
 Content growth remains the main opportunity: verified business listings, real local photographs and maintained official-resource links. Search rankings and inclusion in AI answers are not guaranteed.
+
+## Local photography
+
+Hambly House (Peter Broster, CC BY-SA 4.0), Nobleton Lakes (Ken Mist, CC BY 2.0) and Roslyn House (Kingrd, CC BY-SA 3.0) are locally hosted, resized photographs. See `/photo-credits/` for original sources, license links, dates and change notices. Reuse retains each image license. Other luxury property imagery remains labelled AI-generated inspiration.
