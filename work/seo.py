@@ -11,7 +11,7 @@ META={
  '/guide/parks/':('Nobleton Parks, Recreation & Library Guide','Plan time outdoors at Nobleton Community Park, find the Nobleton library and check official King Township resources for events and seasonal information.'),
  '/guide/essentials/':('Nobleton, Ontario: Location & Everyday Local Resources','Find out where Nobleton is and where to find King Township services, community information and local business resources.'),
  '/guide/moving-to-nobleton/':('Moving to Nobleton: A Practical Local Checklist','Planning a move to Nobleton? Start with schools, local amenities, address-specific checks and service planning before you choose a home.'),
- '/real-estate/':('Nobleton Real Estate & Neighbourhood Guide','Explore Nobleton schools and amenities before your next move. Property listings are coming through our brokerage partner; no homes are advertised yet.'),
+ '/real-estate/':('Nobleton Real Estate Resources & Moving Guide','Explore Nobleton neighbourhood guides, moving resources and links to property search and planning tools on ToRe.ca.'),
  '/find-a-service/':('Request Local Services in Nobleton','Looking for a service provider in Nobleton? Tell our team what you need as we build a local referral network. Provider availability is not guaranteed.'),
  '/submit/':('Add Your Nobleton Business: Free Directory Submission','Submit a business serving Nobleton for a free directory listing, or suggest a correction. All submissions are reviewed before publication.'),
  '/about/':('About Nobleton: Independent Local Community Guide','Learn about Nobleton.ca, an independent guide to local businesses, community information, service connections and upcoming real estate.'),
@@ -19,7 +19,7 @@ META={
  '/privacy/':('Nobleton Privacy Information & Contact','Contact info@nobleton.ca and learn how the website handles Formspree submissions, inquiries and personal information.'),
 }
 LABELS={'/':'Home','/directory/':'Directory','/guide/':'Local guide','/real-estate/':'Real estate','/find-a-service/':'Find a service','/submit/':'Add your business','/about/':'About','/standards/':'Listing standards','/privacy/':'Privacy & contact'}
-EXCLUDED={'/404.html','/real-estate/'}
+EXCLUDED={'/404.html'}
 
 def prepare(title,desc,body,path,resources):
  title,desc=META.get(path,(title,desc))

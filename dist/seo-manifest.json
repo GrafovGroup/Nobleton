@@ -29,6 +29,7 @@
     "/fr/guide/schools/",
     "/fr/photo-credits/",
     "/fr/privacy/",
+    "/fr/real-estate/",
     "/fr/standards/",
     "/fr/submit/",
     "/guide/",
@@ -38,14 +39,13 @@
     "/guide/schools/",
     "/photo-credits/",
     "/privacy/",
+    "/real-estate/",
     "/standards/",
     "/submit/"
   ],
   "excludedRoutes": [
     "/404.html",
-    "/real-estate/",
-    "/fr/404.html",
-    "/fr/real-estate/"
+    "/fr/404.html"
   ],
   "note": "Production mode prepares files only. Hosting, HTTPS, status codes and Search Console still need verification.",
   "languages": [
