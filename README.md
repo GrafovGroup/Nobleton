@@ -30,3 +30,5 @@ Content growth remains the main opportunity: verified business listings, real lo
 ## Local photography
 
 Hambly House (Peter Broster, CC BY-SA 4.0), Nobleton Lakes (Ken Mist, CC BY 2.0) and Roslyn House (Kingrd, CC BY-SA 3.0) are locally hosted, resized photographs. See `/photo-credits/` for original sources, license links, dates and change notices. Reuse retains each image license. Other luxury property imagery remains labelled AI-generated inspiration.
+
+Advertising inquiries: `/advertise/` uses the same Formspree endpoint with `inquiry_type=advertising` and a dedicated email subject. Homepage and footer calls to action link to this page. No prices, audience claims or paid bookings are offered.

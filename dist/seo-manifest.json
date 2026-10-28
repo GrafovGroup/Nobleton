@@ -4,6 +4,7 @@
   "eligibleRoutes": [
     "/",
     "/about/",
+    "/advertise/",
     "/directory/",
     "/directory/king-chamber/",
     "/directory/nobleton-community-park/",

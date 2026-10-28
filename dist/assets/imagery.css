@@ -64,3 +64,5 @@ html,body,main{width:100%;max-width:none;min-width:0}
  .gallery-photo img{height:clamp(300px,19vw,600px)}
  .hero-copy{padding-block:40px}
 }
+
+.advertise-band{background:#e9eddf;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.advertise-band p:not(.eyebrow){max-width:55rem}.advertise-band .button{flex-shrink:0}
