@@ -11,7 +11,7 @@ META={
  '/guide/parks/':('Nobleton Parks, Recreation & Library Guide','Plan time outdoors at Nobleton Community Park, find the Nobleton library and check official King Township resources for events and seasonal information.'),
  '/guide/essentials/':('Nobleton, Ontario: Location & Everyday Local Resources','Find out where Nobleton is and where to find King Township services, community information and local business resources.'),
  '/guide/moving-to-nobleton/':('Moving to Nobleton: A Practical Local Checklist','Planning a move to Nobleton? Start with schools, local amenities, address-specific checks and service planning before you choose a home.'),
- '/real-estate/':('Nobleton Real Estate Resources & Moving Guide','Explore Nobleton neighbourhood guides, moving resources and mortgage services with Anatoly Shibkov of Mortgage Architects Professionals Inc.'),
+ '/real-estate/':('Nobleton Real Estate | Ekaterina Ottchenach','Contact Ekaterina Ottchenach at HomeLife Frontier Realty Inc., Brokerage about buying or selling in Nobleton. Call (647) 838-5569 or email realtor@nobleton.ca.'),
  '/find-a-service/':('Request Local Services in Nobleton','Looking for a service provider in Nobleton? Tell our team what you need as we build a local referral network. Provider availability is not guaranteed.'),
  '/submit/':('Add Your Nobleton Business: Free Directory Submission','Submit a business serving Nobleton for a free directory listing, or suggest a correction. All submissions are reviewed before publication.'),
  '/about/':('About Nobleton: Independent Local Community Guide','Learn about Nobleton.ca, an independent guide to local businesses, community information, service connections and upcoming real estate.'),
@@ -37,6 +37,11 @@ def prepare(title,desc,body,path,resources):
   graph[1]['breadcrumb']={'@id':BASE+path+'#breadcrumb'}
   trail='<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol>'+''.join('<li>'+ (f'<a href="{u}">{html.escape(n)}</a>' if i<len(crumbs)-1 else f'<span aria-current="page">{html.escape(n)}</span>')+'</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
   body=trail+body
+ if path=='/real-estate/':
+  graph[1]['@type']='ProfilePage'
+  agent={'@type':'Person','@id':BASE+path+'#ekaterina-ottchenach','name':'Ekaterina Ottchenach','jobTitle':'Real Estate Agent','image':BASE+'/assets/images/ekaterina-ottchenach.webp','telephone':'+1-647-838-5569','email':'realtor@nobleton.ca','worksFor':{'@id':BASE+path+'#brokerage'}}
+  brokerage={'@type':'RealEstateAgent','@id':BASE+path+'#brokerage','name':'HomeLife Frontier Realty Inc., Brokerage','logo':BASE+'/assets/images/homelife-frontier-logo.jpg','address':{'@type':'PostalAddress','streetAddress':'7620 Yonge St #400','addressLocality':'Thornhill','addressRegion':'ON','postalCode':'L4J 1V9','addressCountry':'CA'}}
+  graph.extend([agent,brokerage]);graph[1]['mainEntity']={'@id':agent['@id']}
  if path=='/mortgages/':
   graph[1]['@type']='ProfilePage'
   agent={'@type':'Person','@id':BASE+path+'#anatoly-shibkov','name':'Anatoly Shibkov','jobTitle':'Mortgage Agent','image':BASE+'/assets/images/anatoly-shibkov.jpg','telephone':'+1-437-255-5037','email':'mortgage@nobleton.ca','worksFor':{'@id':BASE+path+'#brokerage'}}
