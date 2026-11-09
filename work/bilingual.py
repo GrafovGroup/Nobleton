@@ -5,7 +5,7 @@ Run only after the English production pages have been rebuilt.
 from html.parser import HTMLParser
 from html import escape
 from pathlib import Path
-import json, re, xml.etree.ElementTree as ET
+import json, re, hashlib, datetime, xml.etree.ElementTree as ET
 from urllib.parse import urlsplit
 
 TRANSLATIONS=json.loads(Path(__file__).with_name('fr.json').read_text())
@@ -32,8 +32,9 @@ def schema_fr(value,base,key=''):
  if isinstance(value,list):return [schema_fr(v,base,key) for v in value]
  if isinstance(value,str):
   if key=='inLanguage':return 'fr-CA'
+  if value==base+'/#publisher':return value
   if key in ('@id','url','item'):return french_url(value,base)
-  if key in ('name','description','jobTitle','propertyID'):return tr(value,False)
+  if key in ('name','description','jobTitle','propertyID','headline'):return tr(value,False)
  return value
 
 class French(HTMLParser):
@@ -101,9 +102,26 @@ def build(root):
  routes=manifest['eligibleRoutes'];manifest['eligibleRoutes']=sorted(routes+['/fr'+r for r in routes]);manifest['excludedRoutes']+=['/fr'+r for r in manifest['excludedRoutes']]
  manifest['languages']=['en-CA','fr-CA'];(root/'seo-manifest.json').write_text(json.dumps(manifest,indent=2))
  ET.register_namespace('','http://www.sitemaps.org/schemas/sitemap/0.9')
- sitemap=ET.parse(root/'sitemap.xml');ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
- for route in routes:ET.SubElement(ET.SubElement(sitemap.getroot(),ns+'url'),ns+'loc').text=base+'/fr'+route
- sitemap.write(root/'sitemap.xml',encoding='utf-8',xml_declaration=True)
+ ET.register_namespace('xhtml','http://www.w3.org/1999/xhtml')
+ ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'; xhtml='{http://www.w3.org/1999/xhtml}'
+ sitemap=ET.Element(ns+'urlset')
+ revision_file=Path(__file__).with_name('content-revisions.json')
+ revisions=json.loads(revision_file.read_text()) if revision_file.exists() else {}
+ today=datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+ for route in manifest['eligibleRoutes']:
+  source=(root/route.strip('/')/'index.html').read_text()
+  meaningful='\n'.join(part for match in re.findall(r'<main[^>]*>(.*?)</main>|<title>(.*?)</title>|<meta name="description" content="(.*?)"|<script type="application/ld\+json">(.*?)</script>',source,re.S) for part in match if part)
+  digest=hashlib.sha256(meaningful.encode()).hexdigest()
+  previous=revisions.get(route,{})
+  revisions[route]={'hash':digest,'lastmod':previous.get('lastmod',today) if previous.get('hash')==digest else today}
+  entry=ET.SubElement(sitemap,ns+'url'); ET.SubElement(entry,ns+'loc').text=base+route
+  ET.SubElement(entry,ns+'lastmod').text=revisions[route]['lastmod']
+  english=route[3:] if route.startswith('/fr/') else route
+  for lang,href in [('en-CA',english),('fr-CA','/fr'+english),('x-default',english)]:
+   ET.SubElement(entry,xhtml+'link',{'rel':'alternate','hreflang':lang,'href':base+href})
+ revision_file.write_text(json.dumps(revisions,indent=2,sort_keys=True)+'\n')
+ ET.indent(sitemap,space='  ')
+ ET.ElementTree(sitemap).write(root/'sitemap.xml',encoding='utf-8',xml_declaration=True)
  print(f'Bilingual build: {len(pages)} English + {len(pages)} French pages')
 
 if __name__=='__main__':

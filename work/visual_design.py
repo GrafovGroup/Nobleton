@@ -25,7 +25,7 @@ def home_page(photo, card, resources):
     <h1 id="home-title">Nobleton.<br><em>A little closer<br>to home.</em></h1>
     <p>Discover the places, people and everyday possibilities that make this corner of King Township feel like home.</p>
     <form class="search" action="/directory/" role="search"><label class="sr-only" for="home-search">Search the local directory</label><span>{icon('search')}</span><input id="home-search" name="q" placeholder="What are you looking for?" type="search"><button type="submit">Explore</button></form>
-    <div class="hero-links"><a href="/guide/">Explore the village</a><a href="/real-estate/">Find your next chapter</a></div>
+    <div class="hero-links"><a href="/guide/">Explore the village</a><a href="/homes-for-sale/">Explore homes</a></div>
   </div>
 </section>
 <nav class="discovery-bar wrap" aria-label="Discover Nobleton">{shortcuts}</nav>

@@ -1,0 +1,25 @@
+# WHC / Apache configuration. Deploy separately; preserve verification files.
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+# Redirect only explicit index.html requests, not internal directory resolution.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[\s?]) [NC]
+RewriteRule ^(.*/)?index\.html$ https://nobleton.ca/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^nobleton\.ca$ [NC]
+RewriteRule ^ https://nobleton.ca%{REQUEST_URI} [R=301,L]
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+<FilesMatch "\.(css|js|svg|jpg|jpeg|png|webp|woff2)$">
+Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+<FilesMatch "\.(html|xml|txt)$">
+Header set Cache-Control "public, max-age=0, must-revalidate"
+</FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>

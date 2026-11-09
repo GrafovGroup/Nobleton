@@ -12,3 +12,5 @@ outputs/nobleton-production/
 
 !work/plan_content.py
 !work/test_mortgage.cjs
+
+!work/content-revisions.json

@@ -1,6 +1,6 @@
 # Nobleton
 
-Independent community guide and directory. Static HTML, CSS and JavaScript; Python 3 builds the 19 pages without third-party dependencies.
+Independent community guide and directory. Static HTML, CSS and JavaScript; Python 3 builds 36 English and 36 French pages without third-party dependencies.
 
 ## Build
 
@@ -23,7 +23,7 @@ Business submissions and service requests POST to `https://formspree.io/f/xljjnz
 
 ## October 2026 UX/search improvements
 
-Fluid page containers, readable article widths, responsive navigation, larger text and touch targets, populated homepage categories, directory filter reset, guide contents links, explicit location heading and social sharing metadata. Existing canonical URLs, crawl policy, sitemap, breadcrumbs and entity markup are preserved. The incomplete real-estate section remains noindex.
+Fluid page containers, readable article widths, responsive navigation, larger text and touch targets, populated homepage categories, directory filter reset, guide contents links, explicit location heading and social sharing metadata. Existing canonical URLs, crawl policy, sitemap, breadcrumbs and entity markup are preserved. The property search page clearly explains that the listing feed is pending.
 
 Content growth remains the main opportunity: verified business listings, real local photographs and maintained official-resource links. Search rankings and inclusion in AI answers are not guaranteed.
 
@@ -37,4 +37,10 @@ Advertising inquiries: `/advertise/` uses the same Formspree endpoint with `inqu
 
 English routes remain at `/`; equivalent French routes are under `/fr/`. Every page has an EN/FR switcher, self-canonical URL, reciprocal `hreflang` links and localized metadata/JSON-LD. The switcher preserves query strings and section anchors. Official organization names and external source URLs are retained.
 
-`work/fr.json` is the exact French text catalogue; `work/bilingual.py` generates the French HTML during `python3 publish-build.py`. Untranslated new visible text fails the production build. Update the catalogue when editing English copy. Shared CSS/JS/images are not duplicated. Forms include `preferred_language`, with localized sending, success and error messages. Both languages use the existing Formspree endpoint.
+`work/fr.json` is the exact French text catalogue; `work/bilingual.py` generates the French HTML during `python3 publish-build.py`. Untranslated new visible text fails the production build. Update the catalogue when editing English copy. Shared CSS/JS/images are not duplicated. Forms include `preferred_language`, with localized sending, success and error messages. General business forms use Formspree. Professional inquiries use the separately deployed WHC PHP endpoint in `server/inquiry.php`.
+
+## November 2026 search and usability updates
+
+Unique bilingual metadata, concise breadcrumbs, publisher identity and visible editorial attribution on guides; direct homes/mortgage navigation and contextual mobile contact links. The sitemap lists 68 canonical URLs with reciprocal English/French alternates. `work/content-revisions.json` records content hashes and last-modified dates; unchanged builds do not change dates, and CSS/navigation-only changes do not reset them.
+
+WHC-specific Apache configuration is maintained in `server/nobleton.htaccess` and deployed separately from `dist/`. Preserve search-verification files when deploying. Search submissions are requests for discovery, not a guarantee of indexing.
