@@ -9,3 +9,6 @@ outputs/nobleton-production/
 !work/bilingual.py
 !work/fr.json
 !work/visual_design.py
+
+!work/plan_content.py
+!work/test_mortgage.cjs

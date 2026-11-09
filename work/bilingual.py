@@ -21,6 +21,7 @@ def tr(value,strict=True):
  return value[:len(value)-len(value.lstrip())]+out+value[len(value.rstrip()):]
 
 def french_url(value,base):
+ if value.startswith(('/api/',base+'/api/')):return value
  if value.startswith(base+'/'):
   return base+'/fr'+value[len(base):] if not value.startswith(base+'/assets/') else value
  if value.startswith('/') and not value.startswith(('/assets/','/favicon','/fr/')):return '/fr'+value
@@ -44,6 +45,7 @@ class French(HTMLParser):
   a=dict(attrs)
   if tag=='script':self.script=a.get('type','script');self.script_data=[]
   if tag=='html':a['lang']='fr-CA'
+  if tag=='input' and a.get('name')=='preferred_language':a['value']='fr-CA'
   for key in ('alt','placeholder','aria-label','title'):
    if key in a:a[key]=tr(a[key])
   for key in ('href','action'):
@@ -85,7 +87,9 @@ def decorate(source,path,base,lang):
  return source
 
 def build(root):
- root=Path(root);manifest=json.loads((root/'seo-manifest.json').read_text());base=manifest['canonicalOrigin']
+ root=Path(root)
+ TRANSLATIONS.update(json.loads((root/'plan-translations.json').read_text()))
+ manifest=json.loads((root/'seo-manifest.json').read_text());base=manifest['canonicalOrigin']
  pages=[p for p in root.rglob('*.html') if not p.relative_to(root).parts[0]=='fr']
  for p in pages:
   rel=p.relative_to(root);path='/'+str(rel).removesuffix('index.html')

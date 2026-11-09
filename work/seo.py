@@ -4,6 +4,7 @@ import json
 
 BASE=os.environ.get('NOBLETON_SITE_ORIGIN','https://nobleton.ca').rstrip('/')
 META={
+ '/homes-for-sale/':('Nobleton Real Estate | Homes for Sale','Explore Nobleton neighbourhoods and start a personal property search with Ekaterina Ottchenach. Online listings are pending the required feed permissions.'),
  '/':('Nobleton, Ontario: Local Directory & Community Guide','Explore Nobleton, Ontario: local schools, parks, library resources, business submissions and service requests. An independent guide to life in King Township.'),
  '/directory/':('Nobleton Business & Community Directory','Browse Nobleton schools, community resources and local business categories. Find official websites or submit a free listing for a business serving Nobleton.'),
  '/guide/':('Living in Nobleton: Schools, Parks & Local Information','Get to know Nobleton with practical guides to schools, parks, the library and municipal resources, with links to official sources.'),
@@ -19,7 +20,7 @@ META={
  '/privacy/':('Nobleton Privacy Information & Contact','Contact info@nobleton.ca and learn how the website handles Formspree submissions, inquiries and personal information.'),
 }
 LABELS={'/':'Home','/directory/':'Directory','/guide/':'Local guide','/real-estate/':'Real estate','/mortgages/':'Mortgage services','/find-a-service/':'Find a service','/submit/':'Add your business','/about/':'About','/standards/':'Listing standards','/privacy/':'Privacy & contact'}
-EXCLUDED={'/404.html'}
+EXCLUDED={'/404.html','/thank-you/'}
 
 def prepare(title,desc,body,path,resources):
  title,desc=META.get(path,(title,desc))
@@ -39,7 +40,7 @@ def prepare(title,desc,body,path,resources):
   body=trail+body
  if path=='/real-estate/':
   graph[1]['@type']='ProfilePage'
-  agent={'@type':'Person','@id':BASE+path+'#ekaterina-ottchenach','name':'Ekaterina Ottchenach','jobTitle':'Real Estate Agent','image':BASE+'/assets/images/ekaterina-ottchenach.webp','telephone':'+1-647-838-5569','email':'realtor@nobleton.ca','worksFor':{'@id':BASE+path+'#brokerage'}}
+  agent={'@type':'Person','@id':BASE+path+'#ekaterina-ottchenach','name':'Ekaterina Ottchenach','jobTitle':'Real Estate Sales Representative','image':BASE+'/assets/images/ekaterina-ottchenach.webp','telephone':'+1-647-838-5569','email':'realtor@nobleton.ca','worksFor':{'@id':BASE+path+'#brokerage'},'sameAs':['https://www.instagram.com/family.realtor/']}
   brokerage={'@type':'RealEstateAgent','@id':BASE+path+'#brokerage','name':'HomeLife Frontier Realty Inc., Brokerage','logo':BASE+'/assets/images/homelife-frontier-logo.jpg','address':{'@type':'PostalAddress','streetAddress':'7620 Yonge St #400','addressLocality':'Thornhill','addressRegion':'ON','postalCode':'L4J 1V9','addressCountry':'CA'}}
   graph.extend([agent,brokerage]);graph[1]['mainEntity']={'@id':agent['@id']}
  if path=='/mortgages/':

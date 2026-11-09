@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict');
+const {estimate,payment}=require('../outputs/nobleton-site/assets/mortgage-calculator.js');
+const base={price:1000000,down:20,downMode:'percent',rate:4.5,years:25,frequency:12,eligible30:false};
+const e=extra=>estimate({...base,...extra});
+// Independently step through 240 monthly balances under semiannual compounding.
+let balance=619000;const installment=payment(balance,5.6,20,12);
+for(let month=0;month<240;month++) balance=balance*Math.pow(1.028,1/6)-installment;
+assert(Math.abs(balance)<.0001,'Fixed mortgage amortizes to zero');
+assert.equal(e({price:500000,down:5}).minimum,25000);
+assert.equal(e({price:1000000,down:7.5}).minimum,75000);
+assert.throws(()=>e({price:1499999,down:8}),/minimum/);
+assert.equal(e({price:1500000}).minimum,300000);
+assert.throws(()=>e({price:1500000,down:19.99}),/minimum/);
+assert.equal(e({down:10}).premium,27900);
+assert.equal(e({down:15}).premium,23800);
+assert.equal(e({down:7.5}).premium,37000);
+assert.equal(e({down:20}).premium,0);
+assert.equal(e({price:500000,down:5,years:30,eligible30:true}).premium,19950);
+assert.throws(()=>e({price:500000,down:5,years:30}),/eligibility/);
+assert.equal(e({rate:0}).payment,800000/300);
+assert.equal(e({down:10}).tax,2232);
+assert.equal(e({down:100000,downMode:'amount'}).premium,e({down:10}).premium);
+for(const input of [{price:NaN},{down:-1},{down:100},{rate:-1},{years:35},{frequency:24}])assert.throws(()=>e(input));
+assert(e({frequency:26}).payment<e({frequency:12}).payment);
+assert(e({frequency:52}).payment<e({frequency:26}).payment);
+console.log('Mortgage calculator: 23 amortization, threshold and validation checks passed.');
