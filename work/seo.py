@@ -39,7 +39,7 @@ def prepare(title,desc,body,path,resources):
   body=trail+body
  if path=='/mortgages/':
   graph[1]['@type']='ProfilePage'
-  agent={'@type':'Person','@id':BASE+path+'#anatoly-shibkov','name':'Anatoly Shibkov','jobTitle':'Mortgage Agent','worksFor':{'@id':BASE+path+'#brokerage'}}
+  agent={'@type':'Person','@id':BASE+path+'#anatoly-shibkov','name':'Anatoly Shibkov','jobTitle':'Mortgage Agent','telephone':'+1-437-255-5037','email':'mortgage@nobleton.ca','worksFor':{'@id':BASE+path+'#brokerage'}}
   brokerage={'@type':'Organization','@id':BASE+path+'#brokerage','name':'Mortgage Architects Professionals Inc.','logo':BASE+'/assets/images/mortgage-architects-logo.jpg','areaServed':{'@type':'AdministrativeArea','name':'Ontario, Canada'},'identifier':{'@type':'PropertyValue','propertyID':'Ontario brokerage licence','value':'12168'}}
   graph.extend([agent,brokerage]);graph[1]['mainEntity']={'@id':agent['@id']}
  if path=='/directory/':
