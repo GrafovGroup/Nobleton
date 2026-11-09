@@ -8,3 +8,4 @@ outputs/nobleton-production/
 .DS_Store
 !work/bilingual.py
 !work/fr.json
+!work/visual_design.py
