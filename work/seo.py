@@ -11,14 +11,14 @@ META={
  '/guide/parks/':('Nobleton Parks, Recreation & Library Guide','Plan time outdoors at Nobleton Community Park, find the Nobleton library and check official King Township resources for events and seasonal information.'),
  '/guide/essentials/':('Nobleton, Ontario: Location & Everyday Local Resources','Find out where Nobleton is and where to find King Township services, community information and local business resources.'),
  '/guide/moving-to-nobleton/':('Moving to Nobleton: A Practical Local Checklist','Planning a move to Nobleton? Start with schools, local amenities, address-specific checks and service planning before you choose a home.'),
- '/real-estate/':('Nobleton Real Estate Resources & Moving Guide','Explore Nobleton neighbourhood guides, moving resources and links to property search and planning tools on ToRe.ca.'),
+ '/real-estate/':('Nobleton Real Estate Resources & Moving Guide','Explore Nobleton neighbourhood guides, moving resources and mortgage services with Anatoly Shibkov of Mortgage Architects Professionals Inc.'),
  '/find-a-service/':('Request Local Services in Nobleton','Looking for a service provider in Nobleton? Tell our team what you need as we build a local referral network. Provider availability is not guaranteed.'),
  '/submit/':('Add Your Nobleton Business: Free Directory Submission','Submit a business serving Nobleton for a free directory listing, or suggest a correction. All submissions are reviewed before publication.'),
  '/about/':('About Nobleton: Independent Local Community Guide','Learn about Nobleton.ca, an independent guide to local businesses, community information, service connections and upcoming real estate.'),
  '/standards/':('Nobleton Directory Listing & Correction Standards','Read how the Nobleton directory reviews business submissions, handles corrections and identifies partnerships and sponsored placements.'),
  '/privacy/':('Nobleton Privacy Information & Contact','Contact info@nobleton.ca and learn how the website handles Formspree submissions, inquiries and personal information.'),
 }
-LABELS={'/':'Home','/directory/':'Directory','/guide/':'Local guide','/real-estate/':'Real estate','/find-a-service/':'Find a service','/submit/':'Add your business','/about/':'About','/standards/':'Listing standards','/privacy/':'Privacy & contact'}
+LABELS={'/':'Home','/directory/':'Directory','/guide/':'Local guide','/real-estate/':'Real estate','/mortgages/':'Mortgage services','/find-a-service/':'Find a service','/submit/':'Add your business','/about/':'About','/standards/':'Listing standards','/privacy/':'Privacy & contact'}
 EXCLUDED={'/404.html'}
 
 def prepare(title,desc,body,path,resources):
@@ -37,6 +37,11 @@ def prepare(title,desc,body,path,resources):
   graph[1]['breadcrumb']={'@id':BASE+path+'#breadcrumb'}
   trail='<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol>'+''.join('<li>'+ (f'<a href="{u}">{html.escape(n)}</a>' if i<len(crumbs)-1 else f'<span aria-current="page">{html.escape(n)}</span>')+'</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
   body=trail+body
+ if path=='/mortgages/':
+  graph[1]['@type']='ProfilePage'
+  agent={'@type':'Person','@id':BASE+path+'#anatoly-shibkov','name':'Anatoly Shibkov','jobTitle':'Mortgage Agent','worksFor':{'@id':BASE+path+'#brokerage'}}
+  brokerage={'@type':'Organization','@id':BASE+path+'#brokerage','name':'Mortgage Architects Professionals Inc.','logo':BASE+'/assets/images/mortgage-architects-logo.jpg','areaServed':{'@type':'AdministrativeArea','name':'Ontario, Canada'},'identifier':{'@type':'PropertyValue','propertyID':'Ontario brokerage licence','value':'12168'}}
+  graph.extend([agent,brokerage]);graph[1]['mainEntity']={'@id':agent['@id']}
  if path=='/directory/':
   graph.append({'@type':'ItemList','@id':BASE+path+'#entries','numberOfItems':len(resources),'itemListElement':[{'@type':'ListItem','position':i+1,'name':r['name'],'url':BASE+'/directory/'+r['slug']+'/'} for i,r in enumerate(resources)]})
   graph[1]['mainEntity']={'@id':BASE+path+'#entries'}
