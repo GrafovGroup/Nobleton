@@ -14,3 +14,6 @@ outputs/nobleton-production/
 !work/test_mortgage.cjs
 
 !work/content-revisions.json
+!work/growth.py
+!work/guide_enrichment.py
+!work/businesses.json

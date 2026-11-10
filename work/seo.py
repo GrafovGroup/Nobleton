@@ -56,7 +56,9 @@ def prepare(title,desc,body,path,resources):
  for r in resources:
   if path=='/directory/'+r['slug']+'/':
    types={'Schools':'School','Community':'Library','Parks & recreation':'Park','Business resources':'Organization'}
-   entity={'@type':types[r['category']],'@id':r['url']+'#entity','name':r['name'],'url':r['url'],'description':r['description']}
+   entity={'@type':('LocalBusiness' if r.get('commercial') else types[r['category']]),'@id':r['url']+'#entity','name':r['name'],'url':r['url'],'description':r['description']}
+   if r.get('commercial'):
+    entity.update({'telephone':r['phone'],'address':{'@type':'PostalAddress','streetAddress':r['address'],'addressLocality':'Nobleton','addressRegion':'ON','addressCountry':'CA'}})
    graph.append(entity);graph[1]['mainEntity']={'@id':entity['@id']}
  publisher={'@type':'Organization','@id':BASE+'/#publisher','name':'Nobleton.ca','url':BASE+'/about/','email':'info@nobleton.ca'}
  graph.append(publisher)

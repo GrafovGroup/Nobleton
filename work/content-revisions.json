@@ -1,15 +1,15 @@
 {
   "/": {
-    "hash": "3f58f2e829d73ab64eb1d7090dc2ba084ca2a0f32b90ece507c0917d62764d6b",
-    "lastmod": "2026-11-09"
+    "hash": "17bbac2a37b1788bb9a9caf7bc6241812db59026486a74b65273de753bcf1514",
+    "lastmod": "2026-11-10"
   },
   "/about/": {
     "hash": "3e3d2e52eb3336aaade48d8ccad79a327d8c8149d19dcd25169379457f82cf7a",
     "lastmod": "2026-11-09"
   },
   "/advertise/": {
-    "hash": "9521c74b50cd93b513a71b305719eff5270cca58cc1624bd8e07b9bbeb70bf94",
-    "lastmod": "2026-11-09"
+    "hash": "d40e2a173e5fe4a52909ae48e30650f946e1ccad2ce584ba1d7541fea4edd41b",
+    "lastmod": "2026-11-10"
   },
   "/ask-realtor/": {
     "hash": "a668a202e575c4269c71e054477072e79d92264361396c1ebeb5394094ef49aa",
@@ -24,48 +24,148 @@
     "lastmod": "2026-11-09"
   },
   "/directory/": {
-    "hash": "6316d9cab22d6644f6d4297adec312d232b9e7522fd74abd7c4085611202068a",
-    "lastmod": "2026-11-09"
+    "hash": "2dc3c1195f4513e95eff8fd0f5cff016397e6452820c43157e34a1f40dc24532",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/barburrito-nobleton/": {
+    "hash": "5d046b715e61f3ccdadefade1318903ca20a2a64ff2b817328b8cfd963c17777",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/cappuccino-bakery/": {
+    "hash": "6964763a7d18d3824ba327eeb224147352c81644e3976757a7a3e81f58d5d1ce",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/cibc-nobleton/": {
+    "hash": "25a80e2f462da1e85e1b5de90bfcce952b7373bfae067f1037684e7f13b67e6d",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/cousins-market-nobleton/": {
+    "hash": "6b950af5d6f82646b08e6762cca7996d1a325480499de1dd9d98466680c9ee20",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/flourish-family-chiropractic/": {
+    "hash": "02fab13ce5572bc8e5ef124a2179fabf026250c660c8e8322fa0cca2c9528f4e",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/king-automotive-repair-service/": {
+    "hash": "a72e80cb04dfd8bd9b73dba447b6881af21e63e4cc9319df46cc8e87fb25da47",
+    "lastmod": "2026-11-10"
   },
   "/directory/king-chamber/": {
     "hash": "39bd5e38ad06ae1ea2d9129ecdfa7a912e6ee3f5b31b2ff27644f41b6afa06e1",
     "lastmod": "2026-11-09"
   },
+  "/directory/lcbo-nobleton/": {
+    "hash": "70993b81315f1a3153ccca7add49d1ac7bd0a3d2412d2ed82477f903844a0990",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/misoya-sushi/": {
+    "hash": "82535668c8f4e9a19794b484f0cf48fba253764b6507ec034bb598f892a845d3",
+    "lastmod": "2026-11-10"
+  },
   "/directory/nobleton-community-park/": {
     "hash": "e3ebe2d515d512ce76fbfdef0eb9a17a6d703021b68adada33b068d1e8b3603b",
     "lastmod": "2026-11-09"
+  },
+  "/directory/nobleton-dental-smiles/": {
+    "hash": "b4527b2dd9a4cb9831bcb738786eb29a72d36fea1a722829fbca5c2ed64e70ed",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/nobleton-family-dental/": {
+    "hash": "fb30ec3b173affcb4256e3100855bea54ba69c99a085bc01b2ba1083e5da6c12",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/nobleton-feed-mill/": {
+    "hash": "76e061fdfaa7b895649f43fefd1fb2756d5b26a800a81d6fe952b3799d658ea7",
+    "lastmod": "2026-11-10"
   },
   "/directory/nobleton-library/": {
     "hash": "bc99e505e1ac59333714cb35bc0cdd5e0567dc6443a2c8f5fc01b7322f5b8715",
     "lastmod": "2026-11-09"
   },
+  "/directory/nobleton-optometry/": {
+    "hash": "a3c929d5b0e4016700976f7620295b1ffad16564f4f54cc30f8f512576fe0cda",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/nobleton-physiotherapy/": {
+    "hash": "02d43a41ec04759b7642aefec633b2312f6d8ab562d9e163360238d018de63e0",
+    "lastmod": "2026-11-10"
+  },
   "/directory/nobleton-public-school/": {
     "hash": "8e192ff9e469dae1d2c186d79fe1ba9cb9df6bad4a1bece3abba28cdc502bdea",
     "lastmod": "2026-11-09"
   },
+  "/directory/nobleton-veterinary-clinic/": {
+    "hash": "56fa94aaa77bcf08c1c9aba17f2e53e94707bbb79a241beef81f838ea64ab461",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/pet-valu-nobleton/": {
+    "hash": "518e4d8517dba00d792f591af1bbfd93d42f4a26593872e009a17a3a9e939475",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/physiomed-nobleton/": {
+    "hash": "4a9972cf8b2a140a78947c774caabc7436da0ae6c980bd0c6b41a2353f6491f7",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/premier-equipment-nobleton/": {
+    "hash": "a618566b764fb1b9c9d615e30063d437af16a14fccd557eeaeee241fb8697f5d",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/rbc-royal-bank-nobleton/": {
+    "hash": "185145c7dfac96501ec990572b370e79c4bfb7a3fa00377baec3f524e4617b71",
+    "lastmod": "2026-11-10"
+  },
   "/directory/st-mary-catholic-elementary-school/": {
     "hash": "f050ba7b54dcc601f3149a0e8917f9972b07a9c65b18f03f6f7515b0e6df6d99",
     "lastmod": "2026-11-09"
+  },
+  "/directory/st-phillips-nobleton/": {
+    "hash": "9da40be7c0fa4ad3056086117c649fb0d1ae62ede31003e09656d2c6b5f072f4",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/subway-nobleton/": {
+    "hash": "66363ba1bd374c9bcf9299cd5f21f667efd2a1a48619503039e10ef93e989a01",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/sunset-grill-nobleton/": {
+    "hash": "822acf9171833ebfb59319dcd35d47e02c594b40d09a78d351e2763552fc02f7",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/taj-royal-indian-cuisine/": {
+    "hash": "ab8bf4ccc3f84d834ad6f95c5456a53a08bc627770b85f331749b05f7d92c9ca",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/timeless-stonework/": {
+    "hash": "d9bee32ea239144b4d1950bbad43f775b9913eff37f9e70070745d977ac4dd8f",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/vivo-pizza-pasta-nobleton/": {
+    "hash": "87cda3d6cc9b939b04a55a251a25053e427c3fc1123d0a71e924f1b916d9705b",
+    "lastmod": "2026-11-10"
+  },
+  "/directory/vv-nails-boutique/": {
+    "hash": "c2d8668e3d908318da0d41922de9b399bdedb3735fa9f9e24dc5c791a4f5848e",
+    "lastmod": "2026-11-10"
   },
   "/events/": {
     "hash": "2c2e5393ba168f3513fdef0a7fef1ec4b6b6352785093e6e41aeac15fd32e158",
     "lastmod": "2026-11-09"
   },
   "/find-a-service/": {
-    "hash": "227d547c21de4e6782e159c49ff74f0984ee31f58227b64500d40f5f428c35d6",
-    "lastmod": "2026-11-09"
+    "hash": "3e252ea98b59ae98df27d933ac5e80b997ebdcdb6d757a50a424afbd2df5f121",
+    "lastmod": "2026-11-10"
   },
   "/fr/": {
-    "hash": "f8df43b4008e583e0e4727a2aa7d66363cafd2eda0a7abd6f471b01576246bba",
-    "lastmod": "2026-11-09"
+    "hash": "c3c9c7b82e1d7a1b8a0df14cdb4b11aa3ed850220ffd72b2e77dde2855323385",
+    "lastmod": "2026-11-10"
   },
   "/fr/about/": {
     "hash": "5412dc50ddd55b6ea6a3782d985aacdc143948026ef2a82993eefb170a53b950",
     "lastmod": "2026-11-09"
   },
   "/fr/advertise/": {
-    "hash": "4bd4aa5454ce18355ccfde2c71a3a43484dd4a0de1107447a1ab8660f2d50683",
-    "lastmod": "2026-11-09"
+    "hash": "fb157f0cb136ebe456d78a4e1882e89e692ba9b5987ecb58d7776f2caf0af2ac",
+    "lastmod": "2026-11-10"
   },
   "/fr/ask-realtor/": {
     "hash": "630e95d011d4e69e087e25ee581792695452c48c1e7d34ee2bef786f592c5b7b",
@@ -80,36 +180,136 @@
     "lastmod": "2026-11-09"
   },
   "/fr/directory/": {
-    "hash": "1124927db8a216d77e946c0e4c1bc8724a32dde7a0a542ed290881b87b48a1df",
-    "lastmod": "2026-11-09"
+    "hash": "26ae5e64bd6f15584bc9b114f17ed24509f2163a263aace06a9a746e03773463",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/barburrito-nobleton/": {
+    "hash": "a5d12f60c96159206611ca27af8c6affc2a1b5430490b5802fce65efc78c6436",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/cappuccino-bakery/": {
+    "hash": "5f520081b3a99f5fb4ff73aa94a701b72c0bd9bc627efe96682e7add99af49a7",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/cibc-nobleton/": {
+    "hash": "c1801a4e31c97cea7e0532e1bcde749103ad48680a53cc421cad0e0053130d35",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/cousins-market-nobleton/": {
+    "hash": "e5687a46017a47d97cf8e52c6f57603f0a13dafc3d2a3c4b1d61be396402183b",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/flourish-family-chiropractic/": {
+    "hash": "5a8332d3867bbf057f22c95672b1b6f99422d41ce0d3915738146089afc2d960",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/king-automotive-repair-service/": {
+    "hash": "54a64e94634b0fbd718725702780cd415948a0f19936713bc7c8970e203bdd2d",
+    "lastmod": "2026-11-10"
   },
   "/fr/directory/king-chamber/": {
     "hash": "0d22d18bda69d53e727f643ab87b124ece318abf09d74c416153cd2172ea584a",
     "lastmod": "2026-11-09"
   },
+  "/fr/directory/lcbo-nobleton/": {
+    "hash": "66620a5bd8e42eb07f5f44e607146741d8ed8da0b4df43ed4d8b77560945b3c1",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/misoya-sushi/": {
+    "hash": "d88060e692f66133ae696705d362df7ad480edffc175f0b054a1859fffc9a08c",
+    "lastmod": "2026-11-10"
+  },
   "/fr/directory/nobleton-community-park/": {
     "hash": "585f1ec86ad23a11b6769da13316df8b667d5b5c6793c264416d3b30912efe30",
     "lastmod": "2026-11-09"
+  },
+  "/fr/directory/nobleton-dental-smiles/": {
+    "hash": "6e83860e105cf9ccdd1892306f5cc168deed120cfb9e93aaba31079abed434de",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/nobleton-family-dental/": {
+    "hash": "25b0d12baf6ed6e1e6d8a84e2352e70959e03e4e87dcd3e1568a91340d1003d3",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/nobleton-feed-mill/": {
+    "hash": "d6e98e49f5a1c3d694b0c7025f4c569c5e441c92a85766133814f8caf99e2c70",
+    "lastmod": "2026-11-10"
   },
   "/fr/directory/nobleton-library/": {
     "hash": "5dd554bb1fe7c343637747be88ce4005d9188642afae50556725ad88e7046cfc",
     "lastmod": "2026-11-09"
   },
+  "/fr/directory/nobleton-optometry/": {
+    "hash": "cef27e44377aaea2fddd97f108dd781b088e0487f23c8fa50a552993d5766b3b",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/nobleton-physiotherapy/": {
+    "hash": "c43cb812f608dc08908b11ed77d0f30392fa6fb9e9a31703bdde0517deafab09",
+    "lastmod": "2026-11-10"
+  },
   "/fr/directory/nobleton-public-school/": {
     "hash": "7b233ac098bf5ec7cf0c5771a4300423dfc521eb8e8d9ad979043c86a9a15f31",
     "lastmod": "2026-11-09"
   },
+  "/fr/directory/nobleton-veterinary-clinic/": {
+    "hash": "b4b8a9a78432ea46febd611d1414c4018809989aff2ac5fdc266a2b6d259e7a4",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/pet-valu-nobleton/": {
+    "hash": "92ccece795abedda2584639655879cc03e19e48a24ea1036136d9f92c5c24331",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/physiomed-nobleton/": {
+    "hash": "838ac981a10a1911c278b8d591e8391cfe06695bada58ea0cb31bde38eec86b0",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/premier-equipment-nobleton/": {
+    "hash": "ce1d54c9380a2f5c6cf7e35b03e82b4971679655f17c9b0c0365478c49cde214",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/rbc-royal-bank-nobleton/": {
+    "hash": "f79284246570d2dceb7a133719dc3ee6952a034f5669cdf96ce6574b25691d34",
+    "lastmod": "2026-11-10"
+  },
   "/fr/directory/st-mary-catholic-elementary-school/": {
     "hash": "6b578d501f05caf602997c28949c3da197e277d6bd89b038630b11745757b2ff",
     "lastmod": "2026-11-09"
+  },
+  "/fr/directory/st-phillips-nobleton/": {
+    "hash": "525282ac29342f2a791e868afddd346ef81f9da17614a256ad1a03c125b4078e",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/subway-nobleton/": {
+    "hash": "0e19f5e8f592f62f2fc3f97b6d7eed0d8629bfea3e65730e86a01a142c953d94",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/sunset-grill-nobleton/": {
+    "hash": "cd1ab3a0d09197438d1c54c54d10b69a1abc7fa5ec5960c515515487dc75b859",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/taj-royal-indian-cuisine/": {
+    "hash": "3bcbd4a72ee7a44f3a9a89dadd57dc4819a0643c35568b83228ffa3b1bcfd026",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/timeless-stonework/": {
+    "hash": "e510a8bb8e3e66e7b6a3cff7042c9b2bd16da9a23ec25f7058d00a22004af270",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/vivo-pizza-pasta-nobleton/": {
+    "hash": "43a9454770e64096da7405257f5cbb7c380862dc67220e1927688dce38620211",
+    "lastmod": "2026-11-10"
+  },
+  "/fr/directory/vv-nails-boutique/": {
+    "hash": "1e6b72cb1e24fe015b461809a456175ab4c1fb72ddd39eeb0c82c059dc8860f1",
+    "lastmod": "2026-11-10"
   },
   "/fr/events/": {
     "hash": "ef7c09d89729993ba8f51df6dc0a24dfdb5bcf756297fc88f290fa73e8669c57",
     "lastmod": "2026-11-09"
   },
   "/fr/find-a-service/": {
-    "hash": "c0d98be6258648ee392033b486158bbeb6219cf642ad943daa93c85a3961d189",
-    "lastmod": "2026-11-09"
+    "hash": "e09c412c83a4d50408ec8727a6e8caec9f3e1a34918bbe3eb3994c180d8c4c2c",
+    "lastmod": "2026-11-10"
   },
   "/fr/guide/": {
     "hash": "bbcef5840c2b6352e82e67ccddfe10c7eee23e243bdcafd6a0fda7eea8f43a12",
@@ -124,24 +324,24 @@
     "lastmod": "2026-11-09"
   },
   "/fr/guide/essentials/": {
-    "hash": "0248fe2541ed856d4af6cbb1819a9a41752093751a99b150ab1608b0f6e81ad4",
-    "lastmod": "2026-11-09"
+    "hash": "40f7c05509cf4261dfc060cedbd22ac2a7aaa831a6c85eb359689fc33586300c",
+    "lastmod": "2026-11-10"
   },
   "/fr/guide/mortgage-renewal/": {
     "hash": "4a4db3162200ad45663227d6ae11fbafec6be2d72b1414beb7113fc622f776bb",
     "lastmod": "2026-11-09"
   },
   "/fr/guide/moving-to-nobleton/": {
-    "hash": "210d8120611c677672dbc092ed4dcee2ea9ef539751db6c7fb930f114f9fa8e5",
-    "lastmod": "2026-11-09"
+    "hash": "2bb97515cbdbc9327a485ac659c77991ab1acf3ae3c66261fcd383ffcb58210a",
+    "lastmod": "2026-11-10"
   },
   "/fr/guide/parks/": {
-    "hash": "b5cfbc01f78765f8cded2f674afd6ea2081e4b4e0133fd90636b5d5d241815e1",
-    "lastmod": "2026-11-09"
+    "hash": "54de565174c8b3d7f9b9b6aebdc60a99463174d1c4ac4124c83826b98164a8ac",
+    "lastmod": "2026-11-10"
   },
   "/fr/guide/schools/": {
-    "hash": "42534724c8a990f041f62b70aef73fdf8525f665f47f7f3b00c1bbb2ec18f9d6",
-    "lastmod": "2026-11-09"
+    "hash": "6335c0c5ddac6a98cf69543a57f4de5e305192e6551121f97dba0fe24f9ffe97",
+    "lastmod": "2026-11-10"
   },
   "/fr/guide/selling-and-buying/": {
     "hash": "b0d0b3cc1c6865a408518f1b8664e747bd9ad898249eed8fbbaa5657765a7f8e",
@@ -172,12 +372,12 @@
     "lastmod": "2026-11-09"
   },
   "/fr/photo-credits/": {
-    "hash": "e725b485db1e90cab5fb4af237f059a907e82b0c79b632b5e3155d9acad31aaa",
-    "lastmod": "2026-11-09"
+    "hash": "53138db6568762f2e1b8de4e0419ab10b5cc590ee9cd8b413629cc4e5259281d",
+    "lastmod": "2026-11-10"
   },
   "/fr/privacy/": {
-    "hash": "0cee85960aad8946644eebfacd170a397b991069abd20589ec7e21ca8bee1dcc",
-    "lastmod": "2026-11-09"
+    "hash": "3d626e79363d97b6174ae35e141abec059b4f2a885abffac2cf6bf998521d9fd",
+    "lastmod": "2026-11-10"
   },
   "/fr/real-estate/": {
     "hash": "90f69c98a02569f180219c4b253f1f0e22c29ca61977966a466bbcef0c3e5635",
@@ -188,8 +388,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/submit/": {
-    "hash": "3afd4838ec62df90cec80a5b90de2ea3f42951301cfa3289d6a9dedb74a9008c",
-    "lastmod": "2026-11-09"
+    "hash": "f5a4b24ccbd1a17ed667f55c9b4a1d0dda22d50c0722371dc90dfa0323af68de",
+    "lastmod": "2026-11-10"
   },
   "/guide/": {
     "hash": "501dbe9954a911bdee1f88d048ee4b9a31ff45273a9c3c5cb6a41e38e91b7405",
@@ -204,24 +404,24 @@
     "lastmod": "2026-11-09"
   },
   "/guide/essentials/": {
-    "hash": "d2799d04c0df4996672a32ce115ef52dfa2a27ffb5223519d43eb97688b55cba",
-    "lastmod": "2026-11-09"
+    "hash": "ea84b5723aa78c8591d875fe97745844a414d313626213330a969e6c641cf1a4",
+    "lastmod": "2026-11-10"
   },
   "/guide/mortgage-renewal/": {
     "hash": "db77066ef97dbc770696e94932b9b22afe04bce54354a077ffd4141cbecf5e87",
     "lastmod": "2026-11-09"
   },
   "/guide/moving-to-nobleton/": {
-    "hash": "31e52ecc57d53f10454ef79859a44003f8da7dcbfe3eda0f409f87a78a5dc34d",
-    "lastmod": "2026-11-09"
+    "hash": "fed6820c53a74673afa04a91288c347baa4e5c4a4b29fcc8cf31e96c11129b51",
+    "lastmod": "2026-11-10"
   },
   "/guide/parks/": {
-    "hash": "0ecc150cc92914a51a47a116c7ffb8847be441e1a52401c4c30290ddb6e4e9b6",
-    "lastmod": "2026-11-09"
+    "hash": "b310de77245d5ec8d1e949228297e4f3fe68367e071e32ebb2c143391a4ffdb9",
+    "lastmod": "2026-11-10"
   },
   "/guide/schools/": {
-    "hash": "5aaea2f5fb6907839b53af943374a3b95287835cd12024a64eabc8bcc052c3ba",
-    "lastmod": "2026-11-09"
+    "hash": "fef34f9c36fe471fd865d0f28ee7b430d67ab6c0a33a501ae0e539af2467e566",
+    "lastmod": "2026-11-10"
   },
   "/guide/selling-and-buying/": {
     "hash": "9e9d4e74b9876071ec540424a09ef6a3ba9d03e2ab9024231396a9a1c8c50158",
@@ -252,12 +452,12 @@
     "lastmod": "2026-11-09"
   },
   "/photo-credits/": {
-    "hash": "dc8a53c392d5d3b188cdf2ffa8ba94c754201cf1d8f21aa3af457ccde2967f38",
-    "lastmod": "2026-11-09"
+    "hash": "b76b33f289affd34b9136aad483d3ac3560bc91a31e9d935342e3d6531d85dc2",
+    "lastmod": "2026-11-10"
   },
   "/privacy/": {
-    "hash": "6d1361a05a3ff43499c32d003bd4ffc2b692d8b472118ec1508c8d3aee3dc144",
-    "lastmod": "2026-11-09"
+    "hash": "a79b6dc16c4d64a76f7a3a1e0d86ff6f8179dd42fa9b6a289297dfd4fabe4786",
+    "lastmod": "2026-11-10"
   },
   "/real-estate/": {
     "hash": "fdd589293fc9515f47d439b3a526f3ebe1072ce1eb5352e0470db4b7289a870c",
@@ -268,7 +468,7 @@
     "lastmod": "2026-11-09"
   },
   "/submit/": {
-    "hash": "89200e387115756a5457aeb0547cc914f10854f33429c5616b3b778ccb20df54",
-    "lastmod": "2026-11-09"
+    "hash": "8d8626681caf15028f03e23319650ede60760d4cbb579b71dad7dc272ce119b9",
+    "lastmod": "2026-11-10"
   }
 }

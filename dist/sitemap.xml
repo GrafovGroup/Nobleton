@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nobleton.ca/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/" />
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/advertise/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/advertise/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/advertise/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/advertise/" />
@@ -44,10 +44,52 @@
   </url>
   <url>
     <loc>https://nobleton.ca/directory/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/barburrito-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/barburrito-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/barburrito-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/barburrito-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/cappuccino-bakery/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cappuccino-bakery/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cappuccino-bakery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cappuccino-bakery/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/cibc-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cibc-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cibc-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cibc-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/cousins-market-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cousins-market-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cousins-market-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cousins-market-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/flourish-family-chiropractic/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/flourish-family-chiropractic/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/flourish-family-chiropractic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/flourish-family-chiropractic/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/king-automotive-repair-service/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/king-automotive-repair-service/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/king-automotive-repair-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/king-automotive-repair-service/" />
   </url>
   <url>
     <loc>https://nobleton.ca/directory/king-chamber/</loc>
@@ -57,11 +99,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/king-chamber/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/directory/lcbo-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/lcbo-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/lcbo-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/lcbo-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/misoya-sushi/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/misoya-sushi/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/misoya-sushi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/misoya-sushi/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/directory/nobleton-community-park/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-community-park/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-community-park/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-community-park/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/nobleton-dental-smiles/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-dental-smiles/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-dental-smiles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-dental-smiles/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/nobleton-family-dental/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-family-dental/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-family-dental/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-family-dental/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/nobleton-feed-mill/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-feed-mill/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-feed-mill/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-feed-mill/" />
   </url>
   <url>
     <loc>https://nobleton.ca/directory/nobleton-library/</loc>
@@ -71,6 +148,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-library/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/directory/nobleton-optometry/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-optometry/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-optometry/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-optometry/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/nobleton-physiotherapy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-physiotherapy/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-physiotherapy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-physiotherapy/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/directory/nobleton-public-school/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-public-school/" />
@@ -78,11 +169,95 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-public-school/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/directory/nobleton-veterinary-clinic/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-veterinary-clinic/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-veterinary-clinic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-veterinary-clinic/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/pet-valu-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/pet-valu-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/pet-valu-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/pet-valu-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/physiomed-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/physiomed-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/physiomed-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/physiomed-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/premier-equipment-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/premier-equipment-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/premier-equipment-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/premier-equipment-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/rbc-royal-bank-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/rbc-royal-bank-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/rbc-royal-bank-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/rbc-royal-bank-nobleton/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/directory/st-mary-catholic-elementary-school/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/st-mary-catholic-elementary-school/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/st-mary-catholic-elementary-school/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/st-mary-catholic-elementary-school/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/st-phillips-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/st-phillips-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/st-phillips-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/st-phillips-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/subway-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/subway-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/subway-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/subway-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/sunset-grill-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/sunset-grill-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/sunset-grill-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/sunset-grill-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/taj-royal-indian-cuisine/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/taj-royal-indian-cuisine/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/taj-royal-indian-cuisine/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/taj-royal-indian-cuisine/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/timeless-stonework/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/timeless-stonework/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/timeless-stonework/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/timeless-stonework/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/vivo-pizza-pasta-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/vivo-pizza-pasta-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/vivo-pizza-pasta-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/vivo-pizza-pasta-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/directory/vv-nails-boutique/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/vv-nails-boutique/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/vv-nails-boutique/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/vv-nails-boutique/" />
   </url>
   <url>
     <loc>https://nobleton.ca/events/</loc>
@@ -93,14 +268,14 @@
   </url>
   <url>
     <loc>https://nobleton.ca/find-a-service/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/find-a-service/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/find-a-service/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/find-a-service/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/" />
@@ -114,7 +289,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/advertise/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/advertise/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/advertise/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/advertise/" />
@@ -142,10 +317,52 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/directory/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/barburrito-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/barburrito-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/barburrito-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/barburrito-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/cappuccino-bakery/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cappuccino-bakery/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cappuccino-bakery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cappuccino-bakery/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/cibc-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cibc-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cibc-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cibc-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/cousins-market-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/cousins-market-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/cousins-market-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/cousins-market-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/flourish-family-chiropractic/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/flourish-family-chiropractic/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/flourish-family-chiropractic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/flourish-family-chiropractic/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/king-automotive-repair-service/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/king-automotive-repair-service/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/king-automotive-repair-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/king-automotive-repair-service/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/directory/king-chamber/</loc>
@@ -155,11 +372,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/king-chamber/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/fr/directory/lcbo-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/lcbo-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/lcbo-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/lcbo-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/misoya-sushi/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/misoya-sushi/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/misoya-sushi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/misoya-sushi/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/fr/directory/nobleton-community-park/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-community-park/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-community-park/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-community-park/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-dental-smiles/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-dental-smiles/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-dental-smiles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-dental-smiles/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-family-dental/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-family-dental/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-family-dental/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-family-dental/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-feed-mill/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-feed-mill/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-feed-mill/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-feed-mill/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/directory/nobleton-library/</loc>
@@ -169,6 +421,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-library/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-optometry/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-optometry/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-optometry/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-optometry/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-physiotherapy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-physiotherapy/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-physiotherapy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-physiotherapy/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/fr/directory/nobleton-public-school/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-public-school/" />
@@ -176,11 +442,95 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-public-school/" />
   </url>
   <url>
+    <loc>https://nobleton.ca/fr/directory/nobleton-veterinary-clinic/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/nobleton-veterinary-clinic/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/nobleton-veterinary-clinic/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/nobleton-veterinary-clinic/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/pet-valu-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/pet-valu-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/pet-valu-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/pet-valu-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/physiomed-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/physiomed-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/physiomed-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/physiomed-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/premier-equipment-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/premier-equipment-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/premier-equipment-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/premier-equipment-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/rbc-royal-bank-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/rbc-royal-bank-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/rbc-royal-bank-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/rbc-royal-bank-nobleton/" />
+  </url>
+  <url>
     <loc>https://nobleton.ca/fr/directory/st-mary-catholic-elementary-school/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/st-mary-catholic-elementary-school/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/st-mary-catholic-elementary-school/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/st-mary-catholic-elementary-school/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/st-phillips-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/st-phillips-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/st-phillips-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/st-phillips-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/subway-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/subway-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/subway-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/subway-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/sunset-grill-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/sunset-grill-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/sunset-grill-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/sunset-grill-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/taj-royal-indian-cuisine/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/taj-royal-indian-cuisine/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/taj-royal-indian-cuisine/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/taj-royal-indian-cuisine/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/timeless-stonework/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/timeless-stonework/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/timeless-stonework/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/timeless-stonework/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/vivo-pizza-pasta-nobleton/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/vivo-pizza-pasta-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/vivo-pizza-pasta-nobleton/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/vivo-pizza-pasta-nobleton/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/directory/vv-nails-boutique/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/directory/vv-nails-boutique/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/directory/vv-nails-boutique/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/directory/vv-nails-boutique/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/events/</loc>
@@ -191,7 +541,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/find-a-service/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/find-a-service/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/find-a-service/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/find-a-service/" />
@@ -219,7 +569,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/essentials/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/essentials/" />
@@ -233,21 +583,21 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/moving-to-nobleton/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/moving-to-nobleton/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/moving-to-nobleton/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/moving-to-nobleton/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/parks/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/parks/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/parks/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/parks/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/schools/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/schools/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/schools/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/schools/" />
@@ -303,14 +653,14 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/photo-credits/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/photo-credits/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/photo-credits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/photo-credits/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/privacy/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/privacy/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/privacy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/privacy/" />
@@ -331,7 +681,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/submit/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/submit/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/submit/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/submit/" />
@@ -359,7 +709,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/guide/essentials/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/essentials/" />
@@ -373,21 +723,21 @@
   </url>
   <url>
     <loc>https://nobleton.ca/guide/moving-to-nobleton/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/moving-to-nobleton/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/moving-to-nobleton/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/moving-to-nobleton/" />
   </url>
   <url>
     <loc>https://nobleton.ca/guide/parks/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/parks/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/parks/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/parks/" />
   </url>
   <url>
     <loc>https://nobleton.ca/guide/schools/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/schools/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/schools/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/schools/" />
@@ -443,14 +793,14 @@
   </url>
   <url>
     <loc>https://nobleton.ca/photo-credits/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/photo-credits/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/photo-credits/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/photo-credits/" />
   </url>
   <url>
     <loc>https://nobleton.ca/privacy/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/privacy/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/privacy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/privacy/" />
@@ -471,7 +821,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/submit/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/submit/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/submit/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/submit/" />

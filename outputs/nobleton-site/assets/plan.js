@@ -15,6 +15,7 @@ if(form){
    let data;try{data=await response.json();}catch{throw new Error('failed');}
    if(!response.ok||data.ok!==true)throw new Error(data.error||'failed');
    window.nobletonTrack?.('inquiry_submit',{inquiry_type:form.dataset.kind});
+   window.nobletonTrack?.('generate_lead',{inquiry_type:form.dataset.kind});
    if(form.dataset.kind==='valuation')window.nobletonTrack?.('valuation_request',{inquiry_type:'valuation'});
    if(form.dataset.kind==='mortgage')window.nobletonTrack?.('consultation_request',{inquiry_type:form.elements.topic.value});
    form.reset();form.elements.source_page.value=location.pathname;form.elements.preferred_language.value=fr?'fr-CA':'en-CA';

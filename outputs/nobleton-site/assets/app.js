@@ -11,7 +11,7 @@ if(filter){
  if([...category.options].some(o=>o.value===params.get('category')))category.value=params.get('category');
  const update=()=>{const q=normalized(input.value.trim()),cat=category.value;let count=0;entries.forEach(entry=>{const visible=(!q||normalized(entry.dataset.search).includes(q))&&(cat==='All categories'||entry.dataset.category===cat);entry.hidden=!visible;if(visible)count++});document.querySelector('#result-count').textContent=isFrench?`${count} ${count===1?'fiche':'fiches'}${q?' pour « '+input.value.trim()+' »':''}`:`${count} ${count===1?'entry':'entries'}${q?' matching “'+input.value.trim()+'”':''}`;document.querySelector('#empty-state').hidden=count>0;const next=new URLSearchParams();if(q)next.set('q',input.value.trim());if(cat!=='All categories')next.set('category',cat);robots.content=(q||cat!=='All categories')?'noindex,follow':defaultRobots;history.replaceState(null,'',location.pathname+(next.size?'?'+next.toString():''))};
  filter.addEventListener('reset',()=>{input.value='';category.value='All categories';update();});
- filter.addEventListener('submit',e=>{e.preventDefault();update()});input.addEventListener('input',update);category.addEventListener('change',update);update();
+ filter.addEventListener('submit',e=>{e.preventDefault();update();window.nobletonTrack?.('directory_search',{category:category.value})});input.addEventListener('input',update);category.addEventListener('change',update);update();
 }
 // Progressive enhancement: native POST still works if the helper cannot load.
 if(document.querySelector('#inquiry-form')){
@@ -28,7 +28,7 @@ if(document.querySelector('#inquiry-form')){
    form.querySelectorAll('[data-fs-error]').forEach(e=>{e.textContent='';e.style.display='none'});form.querySelector('[data-fs-success]').style.display='none';
   },
   enable:({form})=>{const button=form.querySelector('[type="submit"]');button.disabled=false;if(button.dataset.label)button.textContent=button.dataset.label;form.removeAttribute('aria-busy')},
-  renderSuccess:({form})=>{form.reset();const success=form.querySelector('[data-fs-success]');success.style.display='block';success.focus()},
+  renderSuccess:({form})=>{window.nobletonTrack?.('inquiry_submit',{inquiry_type:form.dataset.kind});window.nobletonTrack?.('generate_lead',{inquiry_type:form.dataset.kind});form.reset();const success=form.querySelector('[data-fs-success]');success.style.display='block';success.focus()},
   renderFieldErrors:showError,renderFormError:showError,onFailure:showError
  });
 }
@@ -43,3 +43,8 @@ nav?.addEventListener('click',e=>{if(e.target.closest('a')&&menu?.getAttribute('
 document.querySelectorAll('.language-switch a').forEach(link=>{
  link.addEventListener('click',()=>{const target=new URL(link.href);target.search=location.search;target.hash=location.hash;link.href=target.href});
 });
+
+// Restore a known business name for update requests; do not inject URL values as HTML.
+const inquiry=document.getElementById('inquiry-form');
+if(inquiry){const params=new URLSearchParams(location.search);if(params.get('type')==='correction' && inquiry.elements.Business)inquiry.elements.Business.value=(params.get('business')||'').slice(0,120);}
+document.querySelectorAll('[data-ad-placement]').forEach(link=>link.addEventListener('click',()=>{const select=document.getElementById('placement');if(select)select.value=link.dataset.adPlacement;window.nobletonTrack?.('advertising_interest',{placement:link.dataset.adPlacement});}));

@@ -6,6 +6,6 @@ Recipients are fixed in the handler: real estate and valuations to realtor@noble
 
 Deploy static files, lint PHP (`php -l server/inquiry.php`), then copy it to `api/inquiry.php`. Rate counters live outside the public root; 4 valid attempts per IP hash per hour. No inquiry body is written to disk by this handler. Invalid/honeypot requests do not send mail.
 
-Analytics are deliberately inactive: set `measurementId` in `assets/analytics.js` only after the owner supplies a valid GA4 property ID. Disable Enhanced Measurement automatic form interactions and site-search tracking in that property, and update the privacy notice when activated. The custom events exclude PII and user-entered amounts. Search Console ownership verification still requires the owner's property access; the bilingual sitemap is `/sitemap.xml`.
+Analytics use GA4 `G-W01L22WKDM` in the dedicated Nobleton.ca property. The script loads only on the canonical domain after consent; visitors can withdraw via footer preferences. Enhanced Measurement is disabled. The custom events exclude query strings, personal form data and user-entered amounts; `generate_lead` fires only on a successful inquiry response. The privacy notice describes this. Preserve the live search-verification file and Bing verification meta tag; the bilingual sitemap is `/sitemap.xml`.
 
 The approved live property feed remains a separate dependency: a website-specific data agreement, feed access and provider display/inquiry requirements must be available before enabling listing search. Do not seed invented listings.
