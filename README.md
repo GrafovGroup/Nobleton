@@ -53,3 +53,9 @@ WHC-specific Apache configuration is maintained in `server/nobleton.htaccess` an
 GA4 property `563488180`, web stream `16308299110`, measurement ID `G-W01L22WKDM` belongs to Nobleton.ca in the Grafov Group account. Analytics load only on `nobleton.ca`/`www.nobleton.ca`, after consent. Footer preferences allow withdrawal. Enhanced Measurement is disabled in the property. Tracking excludes query strings, form fields, contact identifiers and calculator amounts. `generate_lead` fires after a successful inquiry response, not when a visitor merely presses Submit. Other events measure contact clicks, directory actions, advertising interest and calculator use.
 
 The directory includes 25 sourced businesses and five public resources. Entries are free editorial listings; paid examples on `/advertise/` are labelled samples. Homepage and events pages share a dated event dataset and hide past events using Ontario local dates. Maintain the dataset in `work/plan_content.py`; automatic expiry does not discover new events. Practical guide questions for the professionals are editorial prompts, not attributed quotes or claimed professional review.
+
+## Temporary remembrance tribute
+
+A red remembrance poppy appears beside the header wordmark in both languages until `2026-11-15T02:55:29Z` (five days after activation). `assets/remembrance.js` checks the fixed expiry before rendering, removes it from open tabs at expiry and rechecks when a tab becomes visible. It does not repeat in future years.
+
+The poppy uses the owner-supplied photograph, edited to remove the metal pin and white background; a transparent WebP is used in the header.
