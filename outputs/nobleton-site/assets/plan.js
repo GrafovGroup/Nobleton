@@ -4,6 +4,9 @@ const fr=document.documentElement.lang.startsWith('fr');
 const form=document.querySelector('.professional-form');
 if(form){
  form.elements.source_page.value=location.pathname;
+ const listingRef=new URLSearchParams(location.search).get('listing');
+ if(form.dataset.kind==='realtor'&&listingRef&&/^[A-Za-z0-9_-]{1,80}$/.test(listingRef)&&!form.elements.message.value)form.elements.message.value=(fr?'Je souhaite en savoir plus sur la propriété MLS® ':'I would like to learn more about MLS® ')+listingRef+'.';
+
  form.elements.preferred_language.value=fr?'fr-CA':'en-CA';
  if(form.elements.topic && new URLSearchParams(location.search).get('topic')==='question') form.elements.topic.value='question';
  form.addEventListener('submit',async e=>{

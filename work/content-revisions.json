@@ -1,7 +1,7 @@
 {
   "/": {
-    "hash": "17bbac2a37b1788bb9a9caf7bc6241812db59026486a74b65273de753bcf1514",
-    "lastmod": "2026-11-10"
+    "hash": "c7231ccea9a98609c140b334bd5a067e21a0f3a776a253d2a444b1f5b66d4961",
+    "lastmod": "2026-11-12"
   },
   "/about/": {
     "hash": "3e3d2e52eb3336aaade48d8ccad79a327d8c8149d19dcd25169379457f82cf7a",
@@ -156,8 +156,8 @@
     "lastmod": "2026-11-10"
   },
   "/fr/": {
-    "hash": "c3c9c7b82e1d7a1b8a0df14cdb4b11aa3ed850220ffd72b2e77dde2855323385",
-    "lastmod": "2026-11-10"
+    "hash": "5bbd516da367715eda86687736770dabf52a509b8d4e993d25418359b88d7db6",
+    "lastmod": "2026-11-12"
   },
   "/fr/about/": {
     "hash": "5412dc50ddd55b6ea6a3782d985aacdc143948026ef2a82993eefb170a53b950",
@@ -180,8 +180,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/directory/": {
-    "hash": "26ae5e64bd6f15584bc9b114f17ed24509f2163a263aace06a9a746e03773463",
-    "lastmod": "2026-11-10"
+    "hash": "daa801f72d0661f33b93f4bbb44f7b6982def00cb1024ab245221a79cc9ae1d1",
+    "lastmod": "2026-11-12"
   },
   "/fr/directory/barburrito-nobleton/": {
     "hash": "a5d12f60c96159206611ca27af8c6affc2a1b5430490b5802fce65efc78c6436",
@@ -316,8 +316,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/guide/buying-a-home/": {
-    "hash": "0d5b88625f63101e85d0737499f10b5ecbdc4cee05e2b71f51af257fef3d69ad",
-    "lastmod": "2026-11-09"
+    "hash": "dd49dddcd00cf054df881f0f196d6f94a717910b2bfc4f5805a2a46ddefdf3c8",
+    "lastmod": "2026-11-12"
   },
   "/fr/guide/down-payments/": {
     "hash": "0f530a26d52f40c58eb33d8cc79cc845b331fbe23ba3fc96671c3950e00d593f",
@@ -332,8 +332,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/guide/moving-to-nobleton/": {
-    "hash": "2bb97515cbdbc9327a485ac659c77991ab1acf3ae3c66261fcd383ffcb58210a",
-    "lastmod": "2026-11-10"
+    "hash": "aff486a1693be829557190170eb11912a501499ca0509d1e48d68e68e5659e32",
+    "lastmod": "2026-11-12"
   },
   "/fr/guide/parks/": {
     "hash": "54de565174c8b3d7f9b9b6aebdc60a99463174d1c4ac4124c83826b98164a8ac",
@@ -352,8 +352,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/homes-for-sale/": {
-    "hash": "09c0dae5de8b12e35dc0ac5c9c06be2c12e4fa0980f6c05f7eabe69862e265eb",
-    "lastmod": "2026-11-09"
+    "hash": "f94681a75ffc00fd803ee44aa99217e0e7412873ed543fb734432d303e1d7e99",
+    "lastmod": "2026-11-12"
   },
   "/fr/mortgage-calculator/": {
     "hash": "b89d66f03e8935cbed62ac41317a9c76f067e5e6d73cd75f4eaa1bf6796bd398",
@@ -376,12 +376,12 @@
     "lastmod": "2026-11-10"
   },
   "/fr/privacy/": {
-    "hash": "3d626e79363d97b6174ae35e141abec059b4f2a885abffac2cf6bf998521d9fd",
-    "lastmod": "2026-11-10"
+    "hash": "0d2d5bf55fc9d13f963307c15ccadd52ea9c49d85197b87da46dc388ac7cc9e2",
+    "lastmod": "2026-11-12"
   },
   "/fr/real-estate/": {
-    "hash": "90f69c98a02569f180219c4b253f1f0e22c29ca61977966a466bbcef0c3e5635",
-    "lastmod": "2026-11-09"
+    "hash": "d9432c021e7dc480ef456022cbc840ccf9067c3ca7385cfed3030b2d365cc573",
+    "lastmod": "2026-11-12"
   },
   "/fr/standards/": {
     "hash": "156d4de61061a021161226c287a31c83d2df4cdb0ec53f645ae1cf9a9edd28ba",
@@ -396,8 +396,8 @@
     "lastmod": "2026-11-09"
   },
   "/guide/buying-a-home/": {
-    "hash": "54259b801f207273e9a54c353fe32d96920ce719d14299e58d98e503c6a3bee3",
-    "lastmod": "2026-11-09"
+    "hash": "26d1c5438dac99f87c43ddd8234493f5a89fe36a73159a8c37b839af34fb667a",
+    "lastmod": "2026-11-12"
   },
   "/guide/down-payments/": {
     "hash": "e48bbc5f18d2ee1b4eac6bc0086f2605ad217633cfd01338bdb16ed0d0d010c8",
@@ -412,8 +412,8 @@
     "lastmod": "2026-11-09"
   },
   "/guide/moving-to-nobleton/": {
-    "hash": "fed6820c53a74673afa04a91288c347baa4e5c4a4b29fcc8cf31e96c11129b51",
-    "lastmod": "2026-11-10"
+    "hash": "15544310717e65879d6ad711970cd575d088ec693e1ad86c482e03e9cb9780e5",
+    "lastmod": "2026-11-12"
   },
   "/guide/parks/": {
     "hash": "b310de77245d5ec8d1e949228297e4f3fe68367e071e32ebb2c143391a4ffdb9",
@@ -432,8 +432,8 @@
     "lastmod": "2026-11-09"
   },
   "/homes-for-sale/": {
-    "hash": "407c6f3431594c1fb54c9edf6c41f4a92b132cca1bde7c07b7e8fa42dbd55fc0",
-    "lastmod": "2026-11-09"
+    "hash": "856f7f060c2470cbcbacaebcb4b2b5d002ec5dbf24a5651ddc6736bb22780f09",
+    "lastmod": "2026-11-12"
   },
   "/mortgage-calculator/": {
     "hash": "061752569ce89b844f0cf5fc2b93a834c6c2e730a7ed2ef979a23e5a5029f038",
@@ -456,12 +456,12 @@
     "lastmod": "2026-11-10"
   },
   "/privacy/": {
-    "hash": "a79b6dc16c4d64a76f7a3a1e0d86ff6f8179dd42fa9b6a289297dfd4fabe4786",
-    "lastmod": "2026-11-10"
+    "hash": "52f09171e4747ad1e942789ac0dbf4aa17d5b8564e7959eff0f73d7c587458f1",
+    "lastmod": "2026-11-12"
   },
   "/real-estate/": {
-    "hash": "fdd589293fc9515f47d439b3a526f3ebe1072ce1eb5352e0470db4b7289a870c",
-    "lastmod": "2026-11-09"
+    "hash": "04551146fd06db1fe6a19fd13d916fada348430192e8323596978edc93555f01",
+    "lastmod": "2026-11-12"
   },
   "/standards/": {
     "hash": "170f391b68c71a894ba78b72f45f42476baae2907152e02306470c3cb534404c",

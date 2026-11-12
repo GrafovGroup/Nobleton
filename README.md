@@ -26,7 +26,7 @@ Business submissions and service requests POST to `https://formspree.io/f/xljjnz
 
 ## October 2026 UX/search improvements
 
-Fluid page containers, readable article widths, responsive navigation, larger text and touch targets, populated homepage categories, directory filter reset, guide contents links, explicit location heading and social sharing metadata. Existing canonical URLs, crawl policy, sitemap, breadcrumbs and entity markup are preserved. The property search page clearly explains that the listing feed is pending.
+Fluid page containers, readable article widths, responsive navigation, larger text and touch targets, populated homepage categories, directory filter reset, guide contents links, explicit location heading and social sharing metadata. Existing canonical URLs, crawl policy, sitemap, breadcrumbs and entity markup are preserved. The property search page connects to the approved PropTx IDX feed through a private WHC cache and a bounded public search endpoint.
 
 Content growth remains the main opportunity: verified business listings, real local photographs and maintained official-resource links. Search rankings and inclusion in AI answers are not guaranteed.
 

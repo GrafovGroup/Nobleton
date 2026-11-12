@@ -17,3 +17,5 @@ outputs/nobleton-production/
 !work/growth.py
 !work/guide_enrichment.py
 !work/businesses.json
+
+!work/idx_content.py

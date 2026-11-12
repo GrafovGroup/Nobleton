@@ -8,4 +8,4 @@ Deploy static files, lint PHP (`php -l server/inquiry.php`), then copy it to `ap
 
 Analytics use GA4 `G-W01L22WKDM` in the dedicated Nobleton.ca property. The script loads only on the canonical domain after consent; visitors can withdraw via footer preferences. Enhanced Measurement is disabled. The custom events exclude query strings, personal form data and user-entered amounts; `generate_lead` fires only on a successful inquiry response. The privacy notice describes this. Preserve the live search-verification file and Bing verification meta tag; the bilingual sitemap is `/sitemap.xml`.
 
-The approved live property feed remains a separate dependency: a website-specific data agreement, feed access and provider display/inquiry requirements must be available before enabling listing search. Do not seed invented listings.
+See `IDX.md` for the approved Nobleton.ca feed connector, private credential location, synchronization, recovery and deployment instructions.
