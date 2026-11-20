@@ -43,14 +43,32 @@ LOCAL_PHOTOS={
  'nobleton-lakes':('Nobleton Lakes · October 2006','Ken Mist','https://commons.wikimedia.org/wiki/File:Nobleton_Lakes_(274245513).jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/',1536,1152),
  'nobleton-roslyn-house':('Roslyn House, Nobleton · archive photo','Kingrd','https://commons.wikimedia.org/wiki/File:Nobleton_building.jpg','CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/',588,437)
 }
+
+LANDMARK_CAPTIONS = {
+ 'nobleton-hambly-house':(
+  ('Hambly House','Maison Hambly'),
+  ('Built in 1884 · Photographed in 2022','Construite en 1884 · Photographie de 2022'),
+ ),
+ 'nobleton-roslyn-house':(
+  ('Roslyn House','Maison Roslyn'),
+  ('Archival photograph','Photographie d’archives'),
+ ),
+}
+
 def photo(name,alt,caption,extra='',eager=False):
  width,height=1536,1024
+ landmark=LANDMARK_CAPTIONS.get(name) if extra in ('gallery-photo','article-photo') else None
  if name in LOCAL_PHOTOS:
   title,author,source,license,license_url,width,height=LOCAL_PHOTOS[name]
-  caption=f'{title} · <a href="/photo-credits/#{name}">Photo: {author} ↗</a>'
+  credit=f'<a href="/photo-credits/#{name}">Photo: {author} ↗</a>'
+  caption=f'{title} · {credit}'
+  if landmark:
+   label,date=landmark
+   caption=f'<strong>{plan_t(*label)}</strong><span>{plan_t(*date)}</span>{credit}'
+ caption_class=' class="landmark-caption"' if landmark else ''
  small=min(width,768)
  sources=f'/assets/images/{name}-768.jpg {small}w, /assets/images/{name}.jpg {width}w' if width>768 else f'/assets/images/{name}.jpg {width}w'
- return f'<figure class="editorial-photo {extra}"><img src="/assets/images/{name}.jpg" srcset="{sources}" sizes="{'100vw' if extra=='home-hero-photo' else '(max-width: 780px) 100vw, 50vw'}" alt="{alt}" width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async" {"fetchpriority=high" if eager else ""}><figcaption>{caption}</figcaption></figure>'
+ return f'<figure class="editorial-photo {extra}"><img src="/assets/images/{name}.jpg" srcset="{sources}" sizes="{'100vw' if extra=='home-hero-photo' else '(max-width: 780px) 100vw, 50vw'}" alt="{alt}" width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async" {"fetchpriority=high" if eager else ""}><figcaption{caption_class}>{caption}</figcaption></figure>'
 
 def local_gallery():
  items=[('nobleton-hambly-house','Red-brick Hambly House with its central tower in Nobleton','A familiar landmark','Hambly House brings Nobleton’s architectural character into view.'),('nobleton-lakes','Pond and autumn foliage at Nobleton Lakes in 2006','A quieter side of Nobleton','An autumn view from Nobleton Lakes, photographed in October 2006.'),('nobleton-roslyn-house','Yellow wooden exterior and gabled roof of Roslyn House in Nobleton','Village character','An archival photograph of Roslyn House on Highway 27.')]
@@ -114,7 +132,7 @@ def layout(title,desc,body,path='/',active=''):
  share_image='hambly-house-history.jpeg' if path=='/guide/history/' else 'ekaterina-ottchenach.webp' if path=='/real-estate/' else 'anatoly-shibkov.jpg' if path=='/mortgages/' else 'nobleton-hambly-house.jpg'
  share_alt=plan_t('Hambly House in Nobleton','La maison Hambly à Nobleton') if path=='/guide/history/' else 'Ekaterina Ottchenach, Real Estate Sales Representative' if path=='/real-estate/' else 'Anatoly Shibkov, Mortgage Agent' if path=='/mortgages/' else 'Hambly House in Nobleton, photographed by Peter Broster in 2022; CC BY-SA 4.0'
  stylesheet_version='20261119-menu-buttons'
- history_css='<link rel="stylesheet" href="/assets/history.css?v=20261120-village-heritage">'
+ history_css='<link rel="stylesheet" href="/assets/history.css?v=20261120-bookplate-brass">'
  if path in ['/', '/real-estate/', '/homes-for-sale/', CAVALLO_PATH]:
   history_css+='<link rel="stylesheet" href="/assets/cavallo.css?v=20261119-cavallo-collections">'
  if path==CAVALLO_PATH:

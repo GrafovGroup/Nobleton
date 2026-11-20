@@ -13,8 +13,12 @@ def heritage_mark(tone='dark'):
 
 def photograph(eager=False):
     alt = t('Hambly House in Nobleton, with red and cream brickwork, a central tower and a veranda', 'La maison Hambly à Nobleton, avec sa maçonnerie rouge et crème, sa tour centrale et sa véranda')
-    caption = t('Hambly House · A landmark in Nobleton’s village story.', 'La maison Hambly · Un lieu emblématique de l’histoire de Nobleton.')
-    return f'<figure class="history-photo heritage-photo"><img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{"eager" if eager else "lazy"}" decoding="async"><figcaption>{caption}</figcaption></figure>'
+    name = t('Hambly House', 'Maison Hambly')
+    date = t('Built in 1884', 'Construite en 1884')
+    credit = t('Photo supplied for Nobleton.ca', 'Photo fournie pour Nobleton.ca')
+    return (f'<figure class="history-photo heritage-photo">'
+            f'<img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{"eager" if eager else "lazy"}" decoding="async">'
+            f'<figcaption class="landmark-caption"><strong>{name}</strong><span>{date}</span><span>{credit}</span></figcaption></figure>')
 
 def teaser():
     return '<section class="wrap section history-feature">'+photograph()+'<div><p class="eyebrow">'+heritage_mark()+t('OUR VILLAGE STORY', 'L’HISTOIRE DE NOTRE VILLAGE')+'</p><h2>'+title()+'</h2>'+p('From an early crossroads settlement to the community we know today, discover the people, places and landmarks that shaped Nobleton.', 'D’un petit établissement à la croisée des chemins à la communauté d’aujourd’hui, découvrez les gens, les lieux et les bâtiments qui ont façonné Nobleton.')+f'<a class="button" href="{PATH}">'+t('Discover Nobleton’s history', 'Découvrez l’histoire de Nobleton')+'</a></div></section>'

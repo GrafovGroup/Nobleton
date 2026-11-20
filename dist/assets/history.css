@@ -57,3 +57,52 @@
   border-radius: 3px;
   background: #f3e8d3;
 }
+
+.reading > .article-toc ~ h2:first-of-type + p,
+.history-article > h2:first-of-type + p {
+  border-block-start: 1px solid #b8aa90;
+  padding-block-start: .7rem;
+}
+
+.reading > .article-toc ~ h2:first-of-type + p::first-letter,
+.history-article > h2:first-of-type + p::first-letter {
+  float: left;
+  margin: .05em .13em 0 0;
+  color: #876329;
+  font: 600 clamp(2.55rem, 4vw, 3.4rem) / .91 Georgia, serif;
+}
+
+figcaption.landmark-caption {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: .12rem .65rem;
+  inline-size: fit-content;
+  max-inline-size: calc(100% - 1rem);
+  min-height: 0;
+  margin: .65rem auto 0;
+  border: 1px solid #ad8952;
+  border-radius: 2px;
+  padding: .45rem .7rem;
+  background: #ead9b6;
+  box-shadow: inset 0 0 0 1px #f7ecd3;
+  color: #382c1d;
+  font-size: .8125rem;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.landmark-caption strong {
+  flex-basis: 100%;
+  color: #382c1d;
+  font: 700 1rem / 1.35 Georgia, serif;
+}
+
+.landmark-caption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .14em;
+}

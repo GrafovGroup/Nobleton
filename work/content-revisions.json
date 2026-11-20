@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "3ec6d0693ffced838f73825a7a56c6082f140cef530e5df58c835af58251fde6",
+    "hash": "533b5e3d64b3b5226d3f008f4db81dc39aa7717fe2fd455da407f3e3113c9684",
     "lastmod": "2026-11-20"
   },
   "/about/": {
@@ -156,7 +156,7 @@
     "lastmod": "2026-11-10"
   },
   "/fr/": {
-    "hash": "aa58a416670fc6f3161e89cd32a7fa19b6b7c0d4c6e8b31205de64b5bad27c99",
+    "hash": "c08506cab2c0294144903d5d6ff2ec48a73da5f7106e8e361c279bc88bfac992",
     "lastmod": "2026-11-20"
   },
   "/fr/about/": {
@@ -312,7 +312,7 @@
     "lastmod": "2026-11-10"
   },
   "/fr/guide/": {
-    "hash": "fb76c78495354e39a652b2b788c70b5e290ed47252030040a41dffedec6a10a5",
+    "hash": "64cce82667ca63f430cf55832c00c8e2e870ef51a5401d8c8ec585b30e0a81ec",
     "lastmod": "2026-11-20"
   },
   "/fr/guide/buying-a-home/": {
@@ -324,11 +324,11 @@
     "lastmod": "2026-11-09"
   },
   "/fr/guide/essentials/": {
-    "hash": "d293631faa14ff4f17621b78cf4aa93e9c76d2312613da2c9fcbc7462d943871",
-    "lastmod": "2026-11-10"
+    "hash": "473d9f1ad548edecf08caf3241c06fe35145aeff0afa8a9b4030437c6fe3e64c",
+    "lastmod": "2026-11-20"
   },
   "/fr/guide/history/": {
-    "hash": "08e0f655fd40f78faa9004957f440c5fa576686ca9c25189e2b9b2575b04fdfd",
+    "hash": "8a862f268f0db198d4c17d8709b297766eadea8aa2001ee42ab08867b07d3c21",
     "lastmod": "2026-11-20"
   },
   "/fr/guide/mortgage-renewal/": {
@@ -400,7 +400,7 @@
     "lastmod": "2026-11-10"
   },
   "/guide/": {
-    "hash": "f469c8c7c206510c7f27677d068f6f1c5c09e5789651f899ddbdb328d9c48204",
+    "hash": "97d934fc60bef5a86429483deff7d3aa38e798bb4b9a367e249d16dddb770b49",
     "lastmod": "2026-11-20"
   },
   "/guide/buying-a-home/": {
@@ -412,11 +412,11 @@
     "lastmod": "2026-11-09"
   },
   "/guide/essentials/": {
-    "hash": "79e5925eef188e980aac63ea994cd548fafbd2485247b54c9aa8e0a2848c1481",
-    "lastmod": "2026-11-10"
+    "hash": "d188c38bd88c744e89ac4a180ab079a72c4416f31ccb7ed28e47b030d796d51b",
+    "lastmod": "2026-11-20"
   },
   "/guide/history/": {
-    "hash": "f83df7cfd52934f9a81f073896996b84b073e8477128cb7f369eb676643f8ff7",
+    "hash": "06bbfb167a2cb7a3889eeb773b4bdd2a093fe46bea32df00591d165b8ff9edca",
     "lastmod": "2026-11-20"
   },
   "/guide/mortgage-renewal/": {
