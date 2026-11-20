@@ -45,12 +45,13 @@ def village_map():
     for number, (point, name, location, link) in enumerate(LANDMARKS, 1):
         x, y = point
         pins.append(
-            f'<g class="village-map__pin" transform="translate({x} {y})">'
-            '<circle r="18"></circle>'
+            f'<g class="village-map__pin" data-landmark="{number}" transform="translate({x} {y})">'
+            '<circle class="village-map__pin-ring" r="23"></circle>'
+            '<circle class="village-map__pin-dot" r="18"></circle>'
             f'<text y="0" text-anchor="middle" dominant-baseline="central">{number}</text></g>'
         )
         legend.append(
-            f'<li><span class="village-map__number" aria-hidden="true">{number}</span>'
+            f'<li data-landmark="{number}"><span class="village-map__number" aria-hidden="true">{number}</span>'
             f'<div><a href="{link}">{t(*name)}</a>'
             f'<p>{t(*location)}</p></div></li>'
         )

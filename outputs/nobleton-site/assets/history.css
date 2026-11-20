@@ -24,10 +24,11 @@
   margin-inline-end: .65rem;
 }
 
-.footer-top .heritage-mark {
-  display: flex;
-  inline-size: max-content;
-  margin-block-end: .65rem;
+.footer-etching {
+  display: block;
+  inline-size: 44px;
+  block-size: auto;
+  margin-block-start: .8rem;
 }
 
 .heritage-mark::before,
@@ -78,16 +79,16 @@ figcaption.landmark-caption {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
-  gap: .12rem .65rem;
+  gap: .1rem .55rem;
   inline-size: fit-content;
   max-inline-size: calc(100% - 1rem);
   min-height: 0;
   margin: .65rem auto 0;
-  border: 1px solid #ad8952;
+  border: 1px solid #c4aa7d;
   border-radius: 2px;
-  padding: .45rem .7rem;
-  background: #ead9b6;
-  box-shadow: inset 0 0 0 1px #f7ecd3;
+  padding: .28rem .6rem;
+  background: #f2e6d3;
+  box-shadow: inset 0 0 0 1px #faf1e2;
   color: #382c1d;
   font-size: .8125rem;
   line-height: 1.45;

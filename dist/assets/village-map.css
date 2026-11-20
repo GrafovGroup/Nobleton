@@ -64,15 +64,29 @@
   font-weight: 700;
 }
 
-.village-map__pin circle,
+.village-map__pin-dot,
 .village-map__number {
   fill: #826127;
   background: #826127;
 }
 
-.village-map__pin circle {
+.village-map__pin-dot {
   stroke: var(--white);
   stroke-width: 2;
+}
+
+.village-map__pin-ring {
+  fill: none;
+  stroke: #9e762e;
+  stroke-width: 3;
+  opacity: 0;
+}
+
+.village-map__layout:has(li[data-landmark="1"]:is(:hover, :focus-within)) .village-map__pin[data-landmark="1"] .village-map__pin-ring,
+.village-map__layout:has(li[data-landmark="2"]:is(:hover, :focus-within)) .village-map__pin[data-landmark="2"] .village-map__pin-ring,
+.village-map__layout:has(li[data-landmark="3"]:is(:hover, :focus-within)) .village-map__pin[data-landmark="3"] .village-map__pin-ring,
+.village-map__layout:has(li[data-landmark="4"]:is(:hover, :focus-within)) .village-map__pin[data-landmark="4"] .village-map__pin-ring {
+  opacity: 1;
 }
 
 .village-map__pin text {

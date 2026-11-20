@@ -1,6 +1,6 @@
 """Presentation components for the Nobleton community guide."""
 
-from plan_content import t
+from plan_content import home_additions, t
 from history_content import photograph
 
 ICON_PATHS = {
@@ -90,6 +90,7 @@ def home_page(photo, card, resources, feature_photos):
   </div>
 </section>
 <nav class="discovery-bar wrap" aria-label="Discover Nobleton">{shortcuts}</nav>
+{home_additions()}
 <section class="wrap section village-story" aria-labelledby="village-story-title">
   <div class="section-heading"><h2 id="village-story-title">{t('Neighbourly by nature', 'L’esprit de voisinage')}</h2></div>
   <div class="village-card-grid">{''.join(neighbour_cards)}</div>
