@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "06281fae8733de17e97a42fb406e8c4ab272ef42faec060234d225bbce4764e3",
+    "hash": "91906027b90c78434bea7e7bd9c9d5d43aa5acc6f0294d207487011a66ca9970",
     "lastmod": "2026-11-20"
   },
   "/about/": {
@@ -24,8 +24,8 @@
     "lastmod": "2026-11-09"
   },
   "/directory/": {
-    "hash": "2dc3c1195f4513e95eff8fd0f5cff016397e6452820c43157e34a1f40dc24532",
-    "lastmod": "2026-11-10"
+    "hash": "f10cdccf9855e1b74fae86812f8c604f63220c6995f5ba0bd7fbe68c4d60867c",
+    "lastmod": "2026-11-20"
   },
   "/directory/barburrito-nobleton/": {
     "hash": "5d046b715e61f3ccdadefade1318903ca20a2a64ff2b817328b8cfd963c17777",
@@ -148,15 +148,15 @@
     "lastmod": "2026-11-10"
   },
   "/events/": {
-    "hash": "2c2e5393ba168f3513fdef0a7fef1ec4b6b6352785093e6e41aeac15fd32e158",
-    "lastmod": "2026-11-09"
+    "hash": "46fea90126518078f803a078b2bdac77953898168510d16692d8353ea468c488",
+    "lastmod": "2026-11-20"
   },
   "/find-a-service/": {
     "hash": "3e252ea98b59ae98df27d933ac5e80b997ebdcdb6d757a50a424afbd2df5f121",
     "lastmod": "2026-11-10"
   },
   "/fr/": {
-    "hash": "8e06ec6575be275e079c1b83aa62c6cc6cae45b6c581623948a5441f934a119f",
+    "hash": "4b6da9fc8b56836737f6e48921b2e4d2bdf8a86981bae8e74befd33faf9f091b",
     "lastmod": "2026-11-20"
   },
   "/fr/about/": {
@@ -180,8 +180,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/directory/": {
-    "hash": "daa801f72d0661f33b93f4bbb44f7b6982def00cb1024ab245221a79cc9ae1d1",
-    "lastmod": "2026-11-12"
+    "hash": "a17de7de37dc646f824d6ddef8934e8428d0920d8dcb16268c12ccad14a4cd89",
+    "lastmod": "2026-11-20"
   },
   "/fr/directory/barburrito-nobleton/": {
     "hash": "a5d12f60c96159206611ca27af8c6affc2a1b5430490b5802fce65efc78c6436",
@@ -220,8 +220,8 @@
     "lastmod": "2026-11-10"
   },
   "/fr/directory/nobleton-community-park/": {
-    "hash": "585f1ec86ad23a11b6769da13316df8b667d5b5c6793c264416d3b30912efe30",
-    "lastmod": "2026-11-09"
+    "hash": "f56409d6b7d4dd4c57979b02d86f640d7ece39c5bd728cb84d3320082c020616",
+    "lastmod": "2026-11-20"
   },
   "/fr/directory/nobleton-dental-smiles/": {
     "hash": "6e83860e105cf9ccdd1892306f5cc168deed120cfb9e93aaba31079abed434de",
@@ -304,15 +304,15 @@
     "lastmod": "2026-11-10"
   },
   "/fr/events/": {
-    "hash": "ef7c09d89729993ba8f51df6dc0a24dfdb5bcf756297fc88f290fa73e8669c57",
-    "lastmod": "2026-11-09"
+    "hash": "0dc4e8315a0c3b60d62d5a1b022ab805d99434b401531df2b4de32b30bee3b1f",
+    "lastmod": "2026-11-20"
   },
   "/fr/find-a-service/": {
     "hash": "e09c412c83a4d50408ec8727a6e8caec9f3e1a34918bbe3eb3994c180d8c4c2c",
     "lastmod": "2026-11-10"
   },
   "/fr/guide/": {
-    "hash": "64cce82667ca63f430cf55832c00c8e2e870ef51a5401d8c8ec585b30e0a81ec",
+    "hash": "973e1e33f194b8e9f2c7843a49b93fbb1310b7eac48e57a82450c8b8dd0e9440",
     "lastmod": "2026-11-20"
   },
   "/fr/guide/buying-a-home/": {
@@ -340,8 +340,8 @@
     "lastmod": "2026-11-12"
   },
   "/fr/guide/parks/": {
-    "hash": "be4a1ddda2e15e2e628fbd25115d850625b684ff1089776625c1189f07ddb8d4",
-    "lastmod": "2026-11-10"
+    "hash": "cab51d79c89e8c1164154acdac56c5d61ecb2b73d210e8323a0cd1c13249d92b",
+    "lastmod": "2026-11-20"
   },
   "/fr/guide/schools/": {
     "hash": "f515e15ce23df5abcf31dfecc6277d58be888559f49b5914c6982bd2956223ab",
@@ -376,8 +376,8 @@
     "lastmod": "2026-11-09"
   },
   "/fr/photo-credits/": {
-    "hash": "53138db6568762f2e1b8de4e0419ab10b5cc590ee9cd8b413629cc4e5259281d",
-    "lastmod": "2026-11-10"
+    "hash": "4949dec83d6dc695942cb8c43eca16684944534f04bbef559678df0ce25ac3e3",
+    "lastmod": "2026-11-20"
   },
   "/fr/privacy/": {
     "hash": "0d2d5bf55fc9d13f963307c15ccadd52ea9c49d85197b87da46dc388ac7cc9e2",
@@ -400,7 +400,7 @@
     "lastmod": "2026-11-10"
   },
   "/guide/": {
-    "hash": "97d934fc60bef5a86429483deff7d3aa38e798bb4b9a367e249d16dddb770b49",
+    "hash": "9a76673989e8603bacda2cc0091c5d71b8a2d239988670b235207684bd8a1397",
     "lastmod": "2026-11-20"
   },
   "/guide/buying-a-home/": {
@@ -428,8 +428,8 @@
     "lastmod": "2026-11-12"
   },
   "/guide/parks/": {
-    "hash": "867e5920ad582fa9bcce0783c09022a9f3abf8435f18f14fa9c4e0cd175866d5",
-    "lastmod": "2026-11-10"
+    "hash": "48b8e9e1c9ee7f5bf95a986b4fec4a5906b598830cb74c28fcf092d7ec2f9b0c",
+    "lastmod": "2026-11-20"
   },
   "/guide/schools/": {
     "hash": "0225c548840bb34eb7679be6a5fb5d777f70eaf7de6dc62cbeea387bc26a6415",
@@ -464,8 +464,8 @@
     "lastmod": "2026-11-09"
   },
   "/photo-credits/": {
-    "hash": "b76b33f289affd34b9136aad483d3ac3560bc91a31e9d935342e3d6531d85dc2",
-    "lastmod": "2026-11-10"
+    "hash": "baa224bbaad23f365d91cb121632e6e696702d9c154547c571f8f5899f38e331",
+    "lastmod": "2026-11-20"
   },
   "/privacy/": {
     "hash": "52f09171e4747ad1e942789ac0dbf4aa17d5b8564e7959eff0f73d7c587458f1",

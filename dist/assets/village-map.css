@@ -1,0 +1,141 @@
+.village-map__intro {
+  max-width: 54ch;
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.village-map__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 4vw, 3.75rem);
+  align-items: start;
+}
+
+.village-map__figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #f4eddd;
+}
+
+.village-map__drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.village-map__figure figcaption {
+  padding: .65rem 1rem;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.village-map__park {
+  fill: #dddcc2;
+  stroke: #bdbb9e;
+  stroke-width: 1.5;
+}
+
+.village-map__trees {
+  fill: none;
+  stroke: #7c7959;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.village-map__road-border,
+.village-map__road-fill {
+  fill: none;
+  stroke-width: 12;
+  stroke: #aa9368;
+}
+
+.village-map__road-fill {
+  stroke-width: 9;
+  stroke: #fffaf0;
+}
+
+.village-map__street-names,
+.village-map__north {
+  fill: #4e412b;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.village-map__pin circle,
+.village-map__number {
+  fill: #826127;
+  background: #826127;
+}
+
+.village-map__pin circle {
+  stroke: var(--white);
+  stroke-width: 2;
+}
+
+.village-map__pin text {
+  fill: var(--white);
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.village-map__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.village-map__legend li {
+  display: flex;
+  gap: .85rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.village-map__legend li:first-child {
+  padding-top: 0;
+}
+
+.village-map__number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 1.8rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.village-map__legend a,
+.village-map__sources a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.village-map__legend a {
+  display: inline-block;
+  margin-bottom: .25rem;
+  font-weight: 700;
+}
+
+.village-map__legend p,
+.village-map__sources {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.village-map__sources {
+  margin-top: .8rem;
+}
+
+@media (max-width: 780px) {
+  .village-map__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

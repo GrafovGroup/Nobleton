@@ -4,6 +4,7 @@ from seo import prepare, finish, EXCLUDED, BASE
 from local_content import MOVING, related, HOME_ANSWERS
 from visual_design import home_page, icon
 from history_content import IMAGE as HISTORY_IMAGE, heritage_mark, teaser as history_teaser, register as register_history
+from village_map import village_map
 from cavallo_content import teaser as cavallo_teaser, register as register_cavallo, PATH as CAVALLO_PATH
 from growth import businesses, business_detail, directory_intro, directory_feature, advertising_options, placement_field
 from guide_enrichment import enrich_guide
@@ -41,7 +42,33 @@ LOCAL_PHOTOS={
  'nobleton-tasca-tree':('Tree detail at Tasca Park, Nobleton · 2025','Magnolia677','https://commons.wikimedia.org/wiki/File:Tasca_Community_Park.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/',1200,1975),
  'nobleton-hambly-house':('Hambly House, Nobleton · 2022','Peter Broster','https://commons.wikimedia.org/wiki/File:Hambly_House.jpg','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/',1536,864),
  'nobleton-lakes':('Nobleton Lakes · October 2006','Ken Mist','https://commons.wikimedia.org/wiki/File:Nobleton_Lakes_(274245513).jpg','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/',1536,1152),
- 'nobleton-roslyn-house':('Roslyn House, Nobleton · archive photo','Kingrd','https://commons.wikimedia.org/wiki/File:Nobleton_building.jpg','CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/',588,437)
+ 'nobleton-roslyn-house':('Roslyn House, Nobleton · archive photo','Kingrd','https://commons.wikimedia.org/wiki/File:Nobleton_building.jpg','CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/',588,437),
+ 'cold-creek-meadow':(
+  plan_t('Cold Creek Conservation Area','Aire de conservation de Cold Creek'),
+  'Vlad Podvorny','https://commons.wikimedia.org/wiki/File:Cold_Creek_(22239991173).jpg',
+  'CC BY 2.0','https://creativecommons.org/licenses/by/2.0/',1536,1024,
+ ),
+ 'nobleton-baseball-1928':(
+  plan_t('Nobleton youth baseball · 1928','Baseball jeunesse à Nobleton · 1928'),
+  plan_t('King Township Archives','Archives du canton de King'),
+  'https://commons.wikimedia.org/wiki/File:Youth_baseball_team,_Nobleton,_1928.jpg',
+  plan_t('Public domain','Domaine public'),'https://creativecommons.org/publicdomain/mark/1.0/',1536,1030,
+ ),
+}
+
+FEATURE_PHOTOS = {
+ '/events/': ('nobleton-baseball-1928',plan_t(
+  'The 1928 Nobleton youth baseball team posing for a group photograph',
+  'L’équipe de baseball jeunesse de Nobleton posant pour une photo de groupe en 1928',
+ ),''),
+ '/guide/parks/': ('cold-creek-meadow',plan_t(
+  'Golden grasses beneath a clouded blue sky at Cold Creek Conservation Area',
+  'Herbes dorées sous un ciel bleu nuageux à l’aire de conservation de Cold Creek',
+ ),''),
+ '/directory/': ('nobleton-roslyn-house',plan_t(
+  'The yellow clapboard exterior of the historic Roslyn House on Highway 27',
+  'Le parement de bois jaune de la maison historique Roslyn, sur la route 27',
+ ),''),
 }
 
 LANDMARK_CAPTIONS = {
@@ -57,18 +84,26 @@ LANDMARK_CAPTIONS = {
 
 def photo(name,alt,caption,extra='',eager=False):
  width,height=1536,1024
+ village_card=extra=='village-card-photo'
  landmark=LANDMARK_CAPTIONS.get(name) if extra in ('gallery-photo','article-photo','history-photo heritage-photo') else None
  if name in LOCAL_PHOTOS:
   title,author,source,license,license_url,width,height=LOCAL_PHOTOS[name]
-  credit=f'<a href="/photo-credits/#{name}">Photo: {author} ↗</a>'
-  caption=f'{title} · {credit}'
+  credit_text=plan_t('Source: King Township Archives','Source : Archives du canton de King') if name=='nobleton-baseball-1928' else plan_t(f'Photo: {author}',f'Photo : {author}')
+  credit=f'<a href="/photo-credits/#{name}">{credit_text} ↗</a>'
+  caption_label=f'{title} ·'
+  if title in TRANSLATIONS:
+   plan_t(caption_label,f'{TRANSLATIONS[title]} ·')
+  caption=f'{caption_label} {credit}'
   if landmark:
    label,date=landmark
    caption=f'<strong>{plan_t(*label)}</strong><span>{plan_t(*date)}</span>{credit}'
- caption_class=' class="landmark-caption"' if landmark else ''
+  elif village_card:
+   caption=f'<strong>{title}</strong>{credit}'
+ caption_class=' class="landmark-caption"' if landmark or village_card else ''
  small=min(width,768)
  sources=f'/assets/images/{name}-768.jpg {small}w, /assets/images/{name}.jpg {width}w' if width>768 else f'/assets/images/{name}.jpg {width}w'
- return f'<figure class="editorial-photo {extra}"><img src="/assets/images/{name}.jpg" srcset="{sources}" sizes="(max-width: 780px) 100vw, 50vw" alt="{alt}" width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async" {"fetchpriority=high" if eager else ""}><figcaption{caption_class}>{caption}</figcaption></figure>'
+ sizes='(max-width: 680px) 100vw, 33vw' if village_card else '(max-width: 780px) 100vw, 50vw'
+ return f'<figure class="editorial-photo {extra}"><img src="/assets/images/{name}.jpg" srcset="{sources}" sizes="{sizes}" alt="{alt}" width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async" {"fetchpriority=high" if eager else ""}><figcaption{caption_class}>{caption}</figcaption></figure>'
 
 def local_gallery():
  items=[('nobleton-hambly-house','Red-brick Hambly House with its central tower in Nobleton','A familiar landmark','Hambly House brings Nobleton’s architectural character into view.'),('nobleton-lakes','Pond and autumn foliage at Nobleton Lakes in 2006','A quieter side of Nobleton','An autumn view from Nobleton Lakes, photographed in October 2006.'),('nobleton-roslyn-house','Yellow wooden exterior and gabled roof of Roslyn House in Nobleton','Village character','An archival photograph of Roslyn House on Highway 27.')]
@@ -86,12 +121,12 @@ def enrich(body,path):
   body=body.replace('<article class="estate-feature">','<article class="estate-feature image-feature">'+photo(*home))
   body=body.replace('<article class="service-feature">','<article class="service-feature image-feature">'+photo(*street))
   body=body.replace('<div class="house-line" aria-hidden="true">⌂</div>','')
- elif path in ['/directory/','/guide/','/find-a-service/','/submit/','/about/']:
-  asset={'/directory/':street,'/guide/':park,'/find-a-service/':street,'/submit/':street,'/about/':street}[path]
+ elif path in ('/directory/','/events/','/guide/','/find-a-service/','/submit/','/about/'):
+  asset=FEATURE_PHOTOS.get(path,park if path=='/guide/' else street)
   body=body.replace('<section class="page-intro">','<section class="page-intro visual-intro">',1)
   body=body.replace('</div></section>',photo(*asset,extra='intro-photo',eager=True)+'</div></section>',1)
  elif path in ['/guide/parks/','/guide/essentials/']:
-  body=body.replace('<article class="wrap reading section">','<article class="wrap reading section">'+photo(*(park if 'parks' in path else street),extra='article-photo'))
+  body=body.replace('<article class="wrap reading section">','<article class="wrap reading section">'+photo(*FEATURE_PHOTOS.get(path,street),extra='article-photo'))
  if path=='/guide/': body+=local_gallery()
  return body
 
@@ -116,7 +151,7 @@ def layout(title,desc,body,path='/',active=''):
   body=body.replace('</section>', '</section>'+cavallo_teaser(), 1)
  if path=='/mortgages/':
   body=body.replace('</section>', '</section>'+mortgage_links(), 1)
- if path=='/guide/':body+=history_teaser()+guide_resources()
+ if path=='/guide/':body+=village_map()+history_teaser()+guide_resources()
  if path=='/privacy/':
   start=body.index('<h2>Analytics and external links</h2>');end=body.index('<h2>Questions or corrections</h2>',start)
   body=body[:start]+privacy_addition()+body[end:]
@@ -132,8 +167,13 @@ def layout(title,desc,body,path='/',active=''):
  share_image=Path(HISTORY_IMAGE).name if path in ('/','/guide/history/') else 'ekaterina-ottchenach.webp' if path=='/real-estate/' else 'anatoly-shibkov.jpg' if path=='/mortgages/' else 'nobleton-hambly-house.jpg'
  share_alt=plan_t('Hambly House in Nobleton','La maison Hambly à Nobleton') if path in ('/','/guide/history/') else 'Ekaterina Ottchenach, Real Estate Sales Representative' if path=='/real-estate/' else 'Anatoly Shibkov, Mortgage Agent' if path=='/mortgages/' else 'Hambly House in Nobleton, photographed by Peter Broster in 2022; CC BY-SA 4.0'
  stylesheet_version='20261119-menu-buttons'
- design_version='20261120-hambly-hero' if path=='/' else '20261120-wordmark'
+ design_version='20261120-village-photos' if path=='/' else '20261120-wordmark'
  history_css='<link rel="stylesheet" href="/assets/history.css?v=20261120-bookplate-brass">'
+ if path=='/guide/':
+  history_css+='<link rel="stylesheet" href="/assets/village-map.css?v=20261120-village-map">'
+ if path in FEATURE_PHOTOS:
+  name,share_alt,_=FEATURE_PHOTOS[path]
+  share_image=f'{name}.jpg'
  if path in ['/', '/real-estate/', '/homes-for-sale/', CAVALLO_PATH]:
   history_css+='<link rel="stylesheet" href="/assets/cavallo.css?v=20261119-cavallo-collections">'
  if path==CAVALLO_PATH:
@@ -158,7 +198,7 @@ def intro(kicker,title,desc):
 
 categories=[('Schools','Schools'),('Community','Library & community'),('Parks & recreation','Parks & recreation'),('Business resources','Business resources')]
 cats=''.join(f'<a class="category" href="/directory/?category={html.escape(__import__("urllib.parse",fromlist=["quote"]).quote(c))}"><span aria-hidden="true">{icons[c]}</span><strong>{label}</strong><span class="arrow" aria-hidden="true">↗</span></a>' for c,label in categories)
-home=home_page(photo,card,resources)
+home=home_page(photo,card,resources,FEATURE_PHOTOS)
 history_teaser_photo=photo(
  'nobleton-hambly-house',
  plan_t('Angled view of Hambly House, showing its red-brick tower and veranda','Vue de trois quarts de la maison Hambly, avec sa tour en brique rouge et sa véranda'),
@@ -221,7 +261,13 @@ page('standards','Listing standards','How Nobleton.ca reviews directory submissi
 page('privacy','Privacy & contact','How Nobleton.ca handles form submissions and contact information.',intro('PRIVACY & CONTACT','You choose what to share.','Contact the Nobleton.ca team at info@nobleton.ca.')+'''<article class="wrap reading section"><h2>How website forms work</h2><p>When you submit a business listing, service request or advertising inquiry, the information you enter is sent to Formspree, our form-processing provider, for delivery to the Nobleton.ca team. This includes your name, email address, request details and any business or service-area information you provide. We use this information to review and respond to your inquiry.</p><p>Formspree processes submissions and technical information under its <a href="https://formspree.io/legal/privacy-policy/">privacy policy</a>. The form helper is loaded from the unpkg content delivery network. We do not store form contents in browser storage. Please do not include sensitive information.</p><h2>Email inquiries</h2><p>If you send an email, its contents and your email address are delivered through your email provider to info@nobleton.ca. We use inquiries to respond to the relevant request. We ask before sharing personal contact details with a service provider.</p><h2>Analytics and external links</h2><p>This preview does not load third-party analytics, advertising scripts or embedded real-estate feeds. External websites have their own privacy practices. The preview web server may record technical requests in its access log.</p><h2>Questions or corrections</h2><p>Email <a href="mailto:info@nobleton.ca">info@nobleton.ca</a> about your information or a directory correction.</p><p class="fine">Updated November 9, 2026 · Email info@nobleton.ca with questions about your submission or to request a correction or deletion.</p></article>''')
 credits='<article class="wrap reading section"><p>These photographs show real places in Nobleton, King Township. Older photographs are presented as archival views; they do not confirm current conditions, public access or business operations. No endorsement by a photographer or property owner is implied.</p>'
 for name,(title,author,source,license,license_url,width,height) in LOCAL_PHOTOS.items():
- credits+=f'<section id="{name}"><h2>{title}</h2>'+photo(name,title,'',extra='credit-photo')+f'<p>Photograph by {author}. <a href="{source}">Original photograph and source details on Wikimedia Commons</a>. Used under <a href="{license_url}">{license}</a>.</p><p>Changes: resized and compressed for the web; some placements crop the displayed image to fit. Adapted versions of share-alike images remain available under the same license.</p><p><a href="/assets/images/{name}.jpg">View the full website image</a></p></section>'
+ if name=='nobleton-baseball-1928':
+  attribution=plan_t('Photographer unknown. From the King Township Archives.','Photographe inconnu. Photo des Archives du canton de King.')
+  rights=f'<a href="{license_url}">{license}</a>.'
+ else:
+  attribution=plan_t(f'Photograph by {author}.',f'Photographie de {author}.')
+  rights=f'Used under <a href="{license_url}">{license}</a>.'
+ credits+=f'<section id="{name}"><h2>{title}</h2>'+photo(name,title,'',extra='credit-photo')+f'<p>{attribution} <a href="{source}">Original photograph and source details on Wikimedia Commons</a>. {rights}</p><p>Changes: resized and compressed for the web; some placements crop the displayed image to fit. Adapted versions of share-alike images remain available under the same license.</p><p><a href="/assets/images/{name}.jpg">View the full website image</a></p></section>'
 credits+='</article>'
 page('photo-credits','Nobleton Photography & Image Credits','Sources, photographers and licences for authentic Nobleton landmark and landscape photographs.',intro('BEHIND THE IMAGES','Real places. Credited photographers.','The people and sources behind our local image collection.')+credits)
 write('404.html',layout('Page not found','Return to the Nobleton community guide.',intro('404','Let’s get you back to the neighbourhood.','This page could not be found.')+'<div class="wrap section"><a class="button" href="/">Back to home ↗</a></div>',path='/404.html'))

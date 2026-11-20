@@ -3,21 +3,57 @@
 from plan_content import t
 from history_content import photograph
 
-def icon(kind):
-    paths = {
-        'Schools': '<path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12v5c3 2 7 2 10 0v-5M21 9v8"/>',
-        'Community': '<path d="M3 10 12 3l9 7M5 9v12h14V9M9 21v-8h6v8"/>',
-        'Parks & recreation': '<path d="m12 2-6 8h3l-5 7h6v5h4v-5h6l-5-7h3l-6-8Z"/>',
-        'Business resources': '<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12c5 4 13 4 18 0M10 13h4"/>',
-        'Home services': '<path d="M3 10 12 3l9 7M5 9v12h14V9M9 21v-8h6v8"/>',
-        'Food & drink': '<path d="M5 3v8m4-8v8M5 7h4M7 11v10M17 3v18M17 3c-5 3-5 9 0 9"/>',
-        'Health & wellness': '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z"/>',
-        'Shopping': '<path d="M4 8h16l1 13H3L4 8ZM8 8V6a4 4 0 0 1 8 0v2"/>',
-        'search': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
-    }
-    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths.get(kind,paths['Community'])+'</svg>'
+ICON_PATHS = {
+    'Schools': (
+        '<path d="m3 9 9-5 9 5-9 5-9-5Z"/>'
+        '<path d="M7 11.3v4.2c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4.2M21 9v6"/>'
+    ),
+    'Community': (
+        '<path d="M12 6.5C9.4 4.5 6.6 4 3 5v13c3.6-1 6.4-.5 9 1.5'
+        ' 2.6-2 5.4-2.5 9-1.5V5c-3.6-1-6.4-.5-9 1.5Zm0 0v13"/>'
+    ),
+    'Parks & recreation': '<path d="m12 2-6 8h3l-5 7h6v5h4v-5h6l-5-7h3l-6-8Z"/>',
+    'Business resources': (
+        '<rect x="3" y="7" width="18" height="14" rx="2"/>'
+        '<path d="M8 7V3h8v4M3 12.5h18m-11 0v2h4v-2"/>'
+    ),
+    'Home services': '<path d="m3 10 9-7 9 7M5 10v10h14V10m-9.5 7 4-4M12 11.5l3 3"/>',
+    'Food & drink': '<path d="M5 3v5a2 2 0 0 0 4 0V3M7 3v18m10-18v18m0-18c-2 1.5-3 5-3 9h3"/>',
+    'Health & wellness': (
+        '<path d="M20 6c-2.2-2.2-5.7-1.6-8 .8C9.7 4.4 6.2 3.8 4 6'
+        'c-2.2 2.2-2.1 5.7.4 8l7.6 7 7.6-7c2.5-2.3 2.6-5.8.4-8Z"/>'
+        '<path d="M7 12h3l1.5-2.5 2 4.5 1-2H17"/>'
+    ),
+    'Shopping': (
+        '<path d="M4 12v8h16v-8M3 11l2-6h14l2 6'
+        'M3 11c1.5 1.5 3 1.5 4.5 0 1.5 1.5 3 1.5 4.5 0'
+        ' 1.5 1.5 3 1.5 4.5 0 1.5 1.5 3 1.5 4.5 0'
+        'M10 20v-5h4v5"/>'
+    ),
+    'Automotive': (
+        '<path d="m5 11 2-5h10l2 5M4 17v2m16-2v2M4 17h16v-4'
+        'a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4Zm3-3h2m6 0h2"/>'
+    ),
+    'Pet care': (
+        '<circle cx="5.4" cy="10.2" r="1.55"/><circle cx="9.2" cy="6.5" r="1.65"/>'
+        '<circle cx="14.8" cy="6.5" r="1.65"/><circle cx="18.6" cy="10.2" r="1.55"/>'
+        '<path d="M7 16.5c0-1.5.8-2.3 1.7-2.8.8-.5 1.5-1.7 3.3-1.7'
+        's2.5 1.2 3.3 1.7c.9.5 1.7 1.3 1.7 2.8 0 1.6-1.1 2.7-2.6 2.7'
+        '-.9 0-1.4-.4-2.4-.4s-1.5.4-2.4.4c-1.5 0-2.6-1.1-2.6-2.7Z"/>'
+    ),
+    'search': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+}
 
-def home_page(photo, card, resources):
+
+def icon(kind):
+    paths = ICON_PATHS.get(kind, ICON_PATHS['Community'])
+    return (
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" '
+        f'aria-hidden="true">{paths}</svg>'
+    )
+
+def home_page(photo, card, resources, feature_photos):
     links = [
         ('Schools', 'Schools & families', '/guide/schools/'),
         ('Community', 'Local essentials', '/guide/essentials/'),
@@ -33,7 +69,15 @@ def home_page(photo, card, resources):
         ('/directory/', t('Support local businesses', 'Soutenez les entreprises locales'),
          t('Find shops, restaurants and services in the directory.', 'Trouvez des commerces, des restaurants et des services dans le répertoire.')),
     ]
-    neighbour_actions = ''.join(f'<a href="{url}"><div><h3>{label}</h3><p>{description}</p></div></a>' for url,label,description in neighbour_links)
+    neighbour_cards = []
+    for url, label, description in neighbour_links:
+        image = photo(*feature_photos[url], extra='village-card-photo')
+        neighbour_cards.append(
+            f'<article class="village-card">{image}'
+            f'<div class="village-card-copy"><h3><a href="{url}">{label}'
+            '<span aria-hidden="true">→</span></a></h3>'
+            f'<p>{description}</p></div></article>'
+        )
     return f'''
 <section class="home-hero" aria-labelledby="home-title">
   {photograph(hero=True)}
@@ -46,9 +90,9 @@ def home_page(photo, card, resources):
   </div>
 </section>
 <nav class="discovery-bar wrap" aria-label="Discover Nobleton">{shortcuts}</nav>
-<section class="wrap section village-story">
-  <div class="story-photo">{photo('nobleton-lakes','Pond framed by autumn foliage at Nobleton Lakes, photographed in October 2006','',extra='story-landscape')}</div>
-  <div class="story-copy"><h2>{t('Neighbourly by nature', 'L’esprit de voisinage')}</h2><div class="story-links">{neighbour_actions}</div></div>
+<section class="wrap section village-story" aria-labelledby="village-story-title">
+  <div class="section-heading"><h2 id="village-story-title">{t('Neighbourly by nature', 'L’esprit de voisinage')}</h2></div>
+  <div class="village-card-grid">{''.join(neighbour_cards)}</div>
 </section>
 <section class="professionals-section section">
  <div class="wrap"><div class="section-heading"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>Start with a conversation.</h2></div><p>Real estate and mortgage guidance,<br>with a person you can reach.</p></div>
