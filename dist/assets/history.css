@@ -70,7 +70,7 @@
   float: left;
   margin: .05em .13em 0 0;
   color: #876329;
-  font: 600 clamp(2.55rem, 4vw, 3.4rem) / .91 Georgia, serif;
+  font: 600 clamp(2.55rem, 4vw, 3.4rem) / .91 var(--font-serif);
 }
 
 figcaption.landmark-caption {
@@ -99,7 +99,7 @@ figcaption.landmark-caption {
 .landmark-caption strong {
   flex-basis: 100%;
   color: #382c1d;
-  font: 700 1rem / 1.35 Georgia, serif;
+  font: 700 1rem / 1.35 var(--font-serif);
 }
 
 .landmark-caption a {
