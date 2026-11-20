@@ -1,5 +1,7 @@
 """Community and homeowner resources from the owner's October 2026 plan."""
+from datetime import date
 from html import escape
+from typing import NamedTuple
 TRANSLATIONS={}
 def t(en,fr):
     TRANSLATIONS[en]=fr
@@ -12,8 +14,29 @@ def actions(*items): return '<div class="plan-actions">'+''.join(button(*i) for 
 def cards(items):
     return '<div class="plan-card-grid">'+''.join(f'<a class="plan-card" href="{url}"><span class="eyebrow">{i+1:02}</span><h3>{t(en,fr)}</h3><p>{t(desc,descfr)}</p></a>' for i,(url,en,fr,desc,descfr) in enumerate(items))+'</div>'
 
+def review_form(kind, subject, fields, permission, submit_label, success, *, subject_field='_subject'):
+    return (
+        f'<form class="email-form" id="inquiry-form" data-kind="{kind}" action="https://formspree.io/f/xljjnzbr" method="POST">'
+        f'<input type="hidden" name="{subject_field}" value="{escape(subject)}"><input type="hidden" name="inquiry_type" value="{kind}">'
+        '<label for="name">Your name</label><input data-fs-field id="name" name="Name" autocomplete="name" required maxlength="100">'
+        '<label for="email">Email address</label><input data-fs-field id="email" name="email" type="email" autocomplete="email" required maxlength="180">'
+        f'{fields}<label class="check"><input data-fs-field type="checkbox" required name="Contact permission" value="Yes"><span>{permission}</span></label>'
+        '<p class="fine">Your details are sent securely through Formspree to the Nobleton.ca team when you select Send. <a href="/privacy/">Privacy information</a></p>'
+        f'<button class="button" type="submit" data-fs-submit-btn>{submit_label} ↗</button>'
+        f'<p data-fs-success role="status" tabindex="-1" style="display:none">{success}</p>'
+        '<p data-fs-error="email" role="alert"></p><p data-fs-error="message" role="alert"></p><p data-fs-error role="alert"></p>'
+        '<p class="fine">Having trouble? <a href="mailto:info@nobleton.ca">Email info@nobleton.ca</a>.</p></form>'
+    )
+
 def home_additions():
-    return '<section class="wrap section community-now"><div class="section-heading"><div><p class="eyebrow">'+t('ON THE LOCAL CALENDAR','AU CALENDRIER LOCAL')+'</p>'+h('Make a little time for Nobleton.','Prenez un moment pour Nobleton.')+'</div><a class="text-link" href="/events/">'+t('All events & official calendars','Événements et calendriers officiels')+'</a></div><div class="homepage-events">'+event_cards().replace('<h2>','<h3>').replace('</h2>','</h3>')+'</div><p id="no-upcoming-events" hidden>'+t('Visit our events page for official calendars and upcoming activities.','Consultez la page des événements pour les calendriers officiels et activités à venir.')+'</p><p class="fine">'+t('Local Ontario times. Details checked November 9, 2026; confirm with the organizer before attending.','Heures locales de l’Ontario. Détails vérifiés le 9 novembre 2026; confirmez auprès de l’organisateur.')+'</p></section>'
+    return (
+        '<section class="wrap section community-now"><div class="section-heading">'
+        f'{h("Upcoming events in Nobleton", "Événements à venir à Nobleton")}'
+        f'<a class="text-link" href="/events/">{t("All events & official calendars", "Événements et calendriers officiels")}</a></div>'
+        f'<div class="homepage-events" data-event-limit="3">{event_cards()}</div>'
+        f'<p id="no-upcoming-events" hidden>{t("Visit our events page for official calendars and upcoming activities.", "Consultez la page des événements pour les calendriers officiels et activités à venir.")}</p>'
+        f'<p class="fine">{event_check_note()}</p></section>'
+    )
 
 
 def homeowner_links():
@@ -114,23 +137,154 @@ def guide_resources():
       ('/guide/down-payments/','Down payments','Mises de fonds','Understand the minimum, insurance and closing cash.','Comprenez le minimum, l’assurance et les fonds nécessaires à la clôture.'),
       ('/guide/mortgage-renewal/','Renewal and refinancing','Renouvellement et refinancement','Prepare your questions before choosing new terms.','Préparez vos questions avant de choisir de nouvelles conditions.')])+'</section>'
 
+class Event(NamedTuple):
+    start: str
+    end: str
+    title: tuple[str, str]
+    when: tuple[str, str]
+    where: tuple[str, str]
+    details: tuple[str, str]
+    url: str
+    source: tuple[str, str] = ('Details from King Township', 'Détails du canton de King')
+
+
+EVENTS = (
+    Event(
+        '2026-11-06', '2026-11-22',
+        ('Taste of King', 'Taste of King'),
+        ('Through November 22, 2026 · Times vary by restaurant', 'Jusqu’au 22 novembre 2026 · Heures selon le restaurant'),
+        ('Participating restaurants in Nobleton, King City and Schomberg', 'Restaurants participants à Nobleton, King City et Schomberg'),
+        ('Menu prices vary · Check the menus and reserve with the restaurant', 'Prix selon le menu · Consultez les menus et réservez auprès du restaurant'),
+        'https://www.king.ca/tasteofking',
+    ),
+    Event(
+        '2026-11-21', '2026-11-22',
+        ('One of a King Handmade Holiday Market', 'Marché artisanal des fêtes One of a King'),
+        ('November 21–22, 2026 · 10 a.m.–3 p.m. daily', '21–22 novembre 2026 · De 10 h à 15 h chaque jour'),
+        ('Nearby in King City · King Township Municipal Centre, 2585 King Road', 'À proximité, à King City · Centre municipal du canton de King, 2585 King Road'),
+        ('Free admission · Free shuttle to two additional markets', 'Entrée gratuite · Navette gratuite vers deux autres marchés'),
+        'https://www.king.ca/OneofaKing',
+    ),
+    Event(
+        '2026-11-25', '2026-11-25',
+        ('Project Kindness at Nobleton Library', 'Projet bienveillance à la bibliothèque de Nobleton'),
+        ('November 25, 2026 · 12:30–2 p.m.', '25 novembre 2026 · De 12 h 30 à 14 h'),
+        ('Nobleton Library · 8 Sheardown Drive', 'Bibliothèque de Nobleton · 8 Sheardown Drive'),
+        ('Free for adults · Register by calling or visiting the branch', 'Gratuit pour les adultes · Inscrivez-vous par téléphone ou à la bibliothèque'),
+        'https://www.kinglibrary.ca/programs-events/events/community-calendar/project-kindness',
+        ('Details from King Township Public Library', 'Détails de la Bibliothèque publique du canton de King'),
+    ),
+    Event(
+        '2026-11-28', '2026-11-28',
+        ('Community electronic recycling', 'Collecte communautaire de déchets électroniques'),
+        ('November 28, 2026 · 9 a.m.–noon', '28 novembre 2026 · De 9 h à midi'),
+        ('Nobleton Arena parking lot · 15 Old King Road', 'Stationnement de l’aréna de Nobleton · 15 Old King Road'),
+        ('Free · Check accepted items before you go', 'Gratuit · Vérifiez les articles acceptés avant de partir'),
+        'https://www.king.ca/recreation-living/events/events-calendar/community-electronic-recycling-event-3',
+    ),
+    Event(
+        '2026-12-06', '2026-12-06',
+        ('Nobleton Tree Lighting', 'Illumination du sapin de Nobleton'),
+        ('December 6, 2026 · 5–7:30 p.m. · Tree lighting at 6 p.m.', '6 décembre 2026 · De 17 h à 19 h 30 · Illumination à 18 h'),
+        ('Nobleton Gazebo · 8 Sheardown Drive', 'Kiosque de Nobleton · 8 Sheardown Drive'),
+        ('Free · Holiday crafts, carols and photos with Santa', 'Gratuit · Bricolage des fêtes, chants et photos avec le père Noël'),
+        'https://www.king.ca/recreation-living/events/events-calendar/nobleton-tree-lighting',
+    ),
+    Event(
+        '2026-12-12', '2026-12-12',
+        ('Winter Woodland Creations', 'Créations hivernales de la forêt'),
+        ('December 12, 2026 · 10 a.m.–noon', '12 décembre 2026 · De 10 h à midi'),
+        ('Cold Creek Education Centre · 14125 11th Concession, Nobleton', 'Centre éducatif de Cold Creek · 14125 11th Concession, Nobleton'),
+        ('$15 per person + HST · Registration required', '15 $ par personne + TVH · Inscription requise'),
+        'https://www.king.ca/EnvironmentalEvents',
+    ),
+)
+
+EVENT_MONTHS = (
+    ('JAN', 'JAN'), ('FEB', 'FÉV'), ('MAR', 'MAR'), ('APR', 'AVR'),
+    ('MAY', 'MAI'), ('JUN', 'JUIN'), ('JUL', 'JUIL'), ('AUG', 'AOÛT'),
+    ('SEP', 'SEP'), ('OCT', 'OCT'), ('NOV', 'NOV'), ('DEC', 'DÉC'),
+)
+
+
 def event_cards():
-    events=[
-      ('2026-11-14','NOV','14','Fall Feeders for Feathered Friends','Mangeoires d’automne pour nos amis à plumes','November 14, 2026 · 10–11:30 a.m.','14 novembre 2026 · 10 h à 11 h 30','Cold Creek Visitor Centre · 14125 11th Concession, Nobleton','Centre d’accueil de Cold Creek · 14125 11th Concession, Nobleton','$5 + HST · Registration required','5 $ + TVH · Inscription requise','https://www.king.ca/EnvironmentalEvents'),
-      ('2026-11-28','NOV','28','Community electronic recycling','Collecte communautaire de déchets électroniques','November 28, 2026 · 9 a.m.–noon','28 novembre 2026 · 9 h à midi','Nobleton Arena parking lot · 15 Old King Road','Stationnement de l’aréna de Nobleton · 15 Old King Road','Free · Check accepted items before you go','Gratuit · Vérifiez les articles acceptés avant de partir','https://www.king.ca/electronicrecycling'),
-      ('2026-12-12','DEC','12','Winter Woodland Creations','Créations hivernales de la forêt','December 12, 2026 · 10 a.m.–noon','12 décembre 2026 · 10 h à midi','Cold Creek Education Centre · 14125 11th Concession, Nobleton','Centre éducatif de Cold Creek · 14125 11th Concession, Nobleton','$15 + HST · Registration required','15 $ + TVH · Inscription requise','https://www.king.ca/EnvironmentalEvents')]
-    eventhtml=''
-    for date,mon,day,title,frtitle,time,frtime,loc,frloc,cost,frcost,url in events:
-        eventhtml+=f'<article class="event-card" data-event-date="{date}"><div class="event-date"><span>{t(mon,{"NOV":"NOV","DEC":"DÉC"}[mon])}</span><strong>{day}</strong></div><div><h2>{t(title,frtitle)}</h2><p><time datetime="{date}">{t(time,frtime)}</time></p><p>{t(loc,frloc)}</p><p class="fine">{t(cost,frcost)}</p><a class="text-link" href="{url}">{t("Details from King Township","Détails du canton de King")}</a></div></article>'
-    return eventhtml
+    result = []
+    for event in sorted(EVENTS, key=lambda item: item.start):
+        last_day = date.fromisoformat(event.end)
+        month = t(*EVENT_MONTHS[last_day.month - 1])
+        result.append(
+            f'<article class="event-card" data-event-start="{event.start}" data-event-date="{event.end}">'
+            f'<div class="event-date" aria-hidden="true"><span>{month}</span><strong>{last_day.day}</strong></div>'
+            f'<div><h3>{t(*event.title)}</h3><p><time datetime="{event.end}">{t(*event.when)}</time></p>'
+            f'<p>{t(*event.where)}</p><p class="fine">{t(*event.details)}</p>'
+            f'<a class="text-link" href="{event.url}">{t(*event.source)}</a></div></article>'
+        )
+    return ''.join(result)
+
+
+def event_check_note():
+    return t('Details checked November 20, 2026. Times are local to Ontario. Confirm with the organizer before attending.',
+             'Détails vérifiés le 20 novembre 2026. Les heures sont locales à l’Ontario. Confirmez auprès de l’organisateur avant de vous déplacer.')
+
+
+def event_submission():
+    fields = (
+        f'<label for="event-name">{t("Event name", "Nom de l’événement")}</label>'
+        '<input data-fs-field id="event-name" name="event_name" required maxlength="120">'
+        f'<label for="event-date">{t("Event date", "Date de l’événement")}</label>'
+        '<input data-fs-field id="event-date" name="event_date" type="date" required>'
+        f'<label for="event-time">{t("Start time in Ontario (optional)", "Heure de début en Ontario (facultatif)")}</label>'
+        '<input data-fs-field id="event-time" name="event_time" type="time">'
+        f'<label for="event-location">{t("Venue and address", "Lieu et adresse")}</label>'
+        '<input data-fs-field id="event-location" name="location" required maxlength="180">'
+        f'<label for="event-cost">{t("Admission cost or free", "Prix d’entrée ou gratuité")}</label>'
+        '<input data-fs-field id="event-cost" name="cost" required maxlength="80">'
+        f'<label for="organizer-url">{t("Organizer’s event page", "Page de l’événement chez l’organisateur")}</label>'
+        '<input data-fs-field id="organizer-url" name="organizer_url" type="url" pattern="https?://.+" placeholder="https://" required maxlength="400">'
+        f'<label for="details">{t("What should visitors know?", "Que devraient savoir les visiteurs?")}</label>'
+        '<textarea data-fs-field id="details" name="message" rows="4" maxlength="1500" required></textarea>'
+    )
+    form = review_form(
+        'event', 'Nobleton.ca event tip', fields,
+        t('Nobleton.ca may email me to confirm these details.', 'Nobleton.ca peut m’écrire pour confirmer ces renseignements.'),
+        t('Send event tip', 'Proposer cet événement'),
+        t('Thank you. Your event tip has been received for editorial review.', 'Merci. Notre équipe a reçu votre proposition d’événement pour examen.'),
+        subject_field='subject',
+    )
+    return (
+        '<section id="submit-event" class="section form-layout" aria-labelledby="submit-event-heading"><aside>'
+        f'<h2 id="submit-event-heading">{t("Suggest a local event", "Proposer un événement local")}</h2>'
+        f'{p("Tell us about a public event in Nobleton or nearby. We check the organizer’s details and may contact you before publishing.", "Signalez une activité ouverte au public à Nobleton ou dans les environs. Nous vérifions les renseignements auprès de l’organisateur et pourrions vous contacter avant de publier.")}'
+        f'</aside>{form}</section>'
+    )
+
+
+def events_page():
+    official_links = actions(
+        ('https://www.king.ca/communitycalendar','Township event calendar','Calendrier du canton'),
+        ('https://www.kinglibrary.ca/programs-events/events-and-community-calendar/library-calendar','Library programs','Programmes de la bibliothèque'),
+        ('https://www.king.ca/DropinPrograms','Public skating & drop-in recreation','Patinage libre et activités sans inscription'),
+    )
+    return (
+        '<div class="wrap section"><section id="this-weekend" aria-labelledby="weekend-heading"><div class="section-heading">'
+        f'<h2 id="weekend-heading">{t("This weekend in Nobleton", "Cette fin de semaine à Nobleton")}</h2>'
+        f'<a class="text-link" href="#submit-event">{t("Suggest a local event", "Proposer un événement local")}</a></div>'
+        '<div id="weekend-event-list" class="events-list"></div>'
+        f'<p id="no-weekend-events">{t("Find weekend activities in the organizer calendars below.", "Trouvez des activités de fin de semaine dans les calendriers des organisateurs ci-dessous.")}</p></section>'
+        '<section id="upcoming-events" aria-labelledby="upcoming-events-heading">'
+        f'<h2 id="upcoming-events-heading">{t("Coming up", "À venir")}</h2>'
+        f'<div class="events-list">{event_cards()}</div></section>'
+        '<section class="note" aria-labelledby="events-sources-heading">'
+        f'<h2 id="events-sources-heading">{t("Official calendars & schedules", "Calendriers et horaires officiels")}</h2>'
+        f'<p>{event_check_note()}</p>{official_links}</section>{event_submission()}</div>'
+    )
 
 def register_community(make,photo):
     make('community','Stay connected to Nobleton.','Restez connecté à Nobleton.','Local news, community plans and useful ways to stay involved.','Actualités, projets communautaires et ressources pour participer à la vie locale.',current_news()+'<section class="wrap section">'+cards([
       ('https://www.king.ca/news','Local news & notices','Actualités et avis locaux','Read King Township announcements, service notices and community updates at the official source.','Consultez les annonces, avis de services et nouvelles du canton de King à la source officielle.'),
       ('/events/','Make time for community','Participez à la vie locale','A selection of upcoming activities, plus official event calendars.','Une sélection d’activités à venir et les calendriers officiels.'),
-      ('https://www.king.ca/news','Planning & community projects','Aménagement et projets locaux','Find public meeting notices and planning updates. Check dates, documents and participation details with the Township.','Trouvez les avis de réunions et d’aménagement. Vérifiez les dates, documents et modalités de participation auprès du canton.')])+h('A local guide that grows with you.','Un guide local qui grandit avec vous.')+p('Have a community update, a local event or a useful resource to suggest? Send the official source and details to info@nobleton.ca. We review submissions before publishing.','Vous souhaitez proposer une nouvelle, un événement ou une ressource? Envoyez la source officielle et les détails à info@nobleton.ca. Nous examinons les propositions avant publication.')+actions(('/submit/','Add your business','Ajouter votre entreprise'),('/neighbourhoods/','Explore our neighbourhoods','Explorer les communautés'))+'</section>')
-    eventhtml=event_cards()
-    make('events','Good things happen close to home.','De belles activités tout près de chez vous.','Upcoming community activities in and around Nobleton.','Activités communautaires à venir à Nobleton et dans les environs.','<section class="wrap section"><div class="events-list">'+eventhtml+'</div><p id="no-upcoming-events" hidden>'+t('Visit the official calendars for the latest upcoming events.','Consultez les calendriers officiels pour les prochains événements.')+'</p><aside class="note">'+p('Details checked November 9, 2026 against King Township’s event information. Times are local to Ontario. Dates, costs and availability can change; confirm with the organizer before attending.','Détails vérifiés le 9 novembre 2026 auprès du canton de King. Les heures sont locales à l’Ontario. Dates, tarifs et disponibilité peuvent changer; confirmez auprès de l’organisateur.')+actions(('https://www.king.ca/events','Township event calendar','Calendrier du canton'),('https://www.kinglibrary.ca/','Library programs','Programmes de la bibliothèque'))+'</aside></section>')
+      ('https://www.king.ca/news','Planning & community projects','Aménagement et projets locaux','Find public meeting notices and planning updates. Check dates, documents and participation details with the Township.','Trouvez les avis de réunions et d’aménagement. Vérifiez les dates, documents et modalités de participation auprès du canton.')])+h('A local guide that grows with you.','Un guide local qui grandit avec vous.')+p('Have a community update or a useful resource to suggest? Send the official source and details to info@nobleton.ca. We review submissions before publishing.','Vous souhaitez proposer une nouvelle ou une ressource? Envoyez la source officielle et les détails à info@nobleton.ca. Nous examinons les propositions avant publication.')+actions(('/events/#submit-event','Suggest a local event','Proposer un événement local'),('/submit/','Add your business','Ajouter votre entreprise'),('/neighbourhoods/','Explore our neighbourhoods','Explorer les communautés'))+'</section>')
+    make('events','Nobleton Events & Weekend Plans','Événements et sorties de fin de semaine à Nobleton','Upcoming community events and weekend activities in Nobleton and nearby King Township communities.','Événements communautaires et activités de fin de semaine à Nobleton et dans les environs du canton de King.',events_page())
     make('neighbourhoods','Get to know your corner of King.','Découvrez votre coin de King.','A starting point for comparing Nobleton and neighbouring communities on your own terms.','Un point de départ pour comparer Nobleton et les communautés voisines selon vos besoins.','<section class="wrap section split-feature"><div>'+photo('nobleton-lakes','Pond and autumn foliage at Nobleton Lakes in 2006','')+'</div><div>'+h('Nobleton','Nobleton')+p('Begin with the village’s local schools, library, parks and everyday services. Our Nobleton guides connect you with official resources and practical address-specific checks.','Commencez par les écoles, la bibliothèque, les parcs et les services du village. Nos guides vous orientent vers les ressources officielles et les vérifications propres à chaque adresse.')+actions(('/guide/','Explore Nobleton’s local guide','Explorer le guide de Nobleton'))+'</div></section><section class="wrap section">'+cards([
       ('https://www.king.ca/township-services','King City','King City','Compare the services and locations you use regularly. Check your actual commute and school eligibility for each address.','Comparez les services et lieux que vous fréquentez. Vérifiez les trajets et l’admissibilité scolaire pour chaque adresse.'),
       ('https://www.king.ca/township-services','Schomberg','Schomberg','Explore another King Township community and review municipal resources before deciding where to settle.','Explorez une autre communauté de King et consultez les ressources municipales avant de choisir où vous installer.'),

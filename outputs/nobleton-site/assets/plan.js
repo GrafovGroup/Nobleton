@@ -29,8 +29,38 @@ if(form){
   }finally{form.removeAttribute('aria-busy');btn.disabled=false;btn.textContent=label;status.focus({preventScroll:true});}
  });
 }
-const events=[...document.querySelectorAll('[data-event-date]')];
-const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-events.forEach(event=>event.hidden=event.dataset.eventDate<today);
-const empty=document.getElementById('no-upcoming-events');if(empty)empty.hidden=events.some(e=>!e.hidden);
+const events = [...document.querySelectorAll('[data-event-date]')];
+const localDate = new Intl.DateTimeFormat('en-CA', {
+ timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit'
+}).formatToParts(new Date());
+const {year, month, day} = Object.fromEntries(localDate.map(({type, value}) => [type, value]));
+const today = `${year}-${month}-${day}`;
+const upcoming = events.filter(event => {
+ event.hidden = event.dataset.eventDate < today;
+ return !event.hidden;
+});
+
+const weekendList = document.getElementById('weekend-event-list');
+if (weekendList) {
+ // Use UTC only for calendar arithmetic after deriving today's date in Toronto.
+ const saturday = new Date(`${today}T00:00:00Z`);
+ const weekday = saturday.getUTCDay();
+ saturday.setUTCDate(saturday.getUTCDate() + (weekday === 0 ? -1 : 6 - weekday));
+ const sunday = new Date(saturday);
+ sunday.setUTCDate(sunday.getUTCDate() + 1);
+ const start = saturday.toISOString().slice(0, 10);
+ const end = sunday.toISOString().slice(0, 10);
+ const weekend = upcoming.filter(event => event.dataset.eventStart <= end && event.dataset.eventDate >= start);
+ weekendList.append(...weekend);
+ document.getElementById('no-weekend-events').hidden = weekend.length > 0;
+ document.getElementById('upcoming-events').hidden = weekend.length === upcoming.length;
+}
+
+const limitedList = document.querySelector('[data-event-limit]');
+if (limitedList) {
+ const limit = Number(limitedList.dataset.eventLimit);
+ upcoming.slice(limit).forEach(event => event.hidden = true);
+}
+const empty = document.getElementById('no-upcoming-events');
+if (empty) empty.hidden = upcoming.length > 0;
 })();

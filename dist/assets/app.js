@@ -28,8 +28,19 @@ if(document.querySelector('#inquiry-form')){
    form.querySelectorAll('[data-fs-error]').forEach(e=>{e.textContent='';e.style.display='none'});form.querySelector('[data-fs-success]').style.display='none';
   },
   enable:({form})=>{const button=form.querySelector('[type="submit"]');button.disabled=false;if(button.dataset.label)button.textContent=button.dataset.label;form.removeAttribute('aria-busy')},
-  renderSuccess:({form})=>{window.nobletonTrack?.('inquiry_submit',{inquiry_type:form.dataset.kind});window.nobletonTrack?.('generate_lead',{inquiry_type:form.dataset.kind});form.reset();const success=form.querySelector('[data-fs-success]');success.style.display='block';success.focus()},
-  renderFieldErrors:showError,renderFormError:showError,onFailure:showError
+  // The helper calls render callbacks with null to clear messages before it reads the form.
+  renderSuccess:()=>{},renderFieldErrors:()=>{},renderFormError:()=>{},
+  onSuccess:({form})=>{
+   const kind=form.dataset.kind;
+   if(kind!=='event'){
+    window.nobletonTrack?.('inquiry_submit',{inquiry_type:kind});
+    window.nobletonTrack?.('generate_lead',{inquiry_type:kind});
+   }
+   form.reset();
+   const success=form.querySelector('[data-fs-success]');
+   success.style.display='block';success.focus();
+  },
+  onError:showError,onFailure:showError
  });
 }
 // Analytics integration point: listen for this event after a provider and privacy settings are approved.

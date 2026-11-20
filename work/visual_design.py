@@ -54,6 +54,13 @@ def icon(kind):
     )
 
 def home_page(photo, card, resources, feature_photos):
+    main_links = [
+        ('/where-to-eat-in-nobleton/', t('Eat & Drink', 'Où manger')),
+        ('/events/#this-weekend', t('This Weekend', 'Cette fin de semaine')),
+        ('/guide/parks/', t('Parks & Recreation', 'Parcs et loisirs')),
+        ('/homes-for-sale/', t('Homes for Sale', 'Maisons à vendre')),
+    ]
+    hero_links = ''.join(f'<a href="{url}">{label}</a>' for url, label in main_links)
     links = [
         ('Schools', 'Schools & families', '/guide/schools/'),
         ('Community', 'Local essentials', '/guide/essentials/'),
@@ -83,10 +90,10 @@ def home_page(photo, card, resources, feature_photos):
   {photograph(hero=True)}
   <div class="home-hero-content">
     <p class="eyebrow">YOUR INDEPENDENT LOCAL GUIDE</p>
-    <h1 id="home-title">Nobleton.<br><em>A little closer<br>to home.</em></h1>
-    <p>Discover the places, people and everyday possibilities that make this corner of King Township feel like home.</p>
-    <form class="search" action="/directory/" role="search"><label class="sr-only" for="home-search">Search the local directory</label><span>{icon('search')}</span><input id="home-search" name="q" placeholder="What are you looking for?" type="search"><button type="submit">Explore</button></form>
-    <div class="hero-links"><a href="/guide/">Explore the village</a><a href="/homes-for-sale/">Explore homes</a></div>
+    <h1 id="home-title">{t('Welcome to Nobleton.', 'Bienvenue à Nobleton.')}</h1>
+    <p>{t('Find places to eat, things to do, and local businesses in Nobleton, a village in King Township, Ontario.', 'Découvrez où manger, quoi faire et quels commerces visiter à Nobleton, un village du canton de King, en Ontario.')}</p>
+    <div class="hero-links">{hero_links}</div>
+    <form class="home-directory-search" action="/directory/" role="search"><label for="home-search">{t('Search local businesses', 'Rechercher des commerces locaux')}</label><div class="search"><span>{icon('search')}</span><input id="home-search" name="q" placeholder="{t('Business name or service', 'Nom ou service')}" type="search"><button type="submit">{t('Search', 'Rechercher')}</button></div></form>
   </div>
 </section>
 <nav class="discovery-bar wrap" aria-label="Discover Nobleton">{shortcuts}</nav>

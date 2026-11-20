@@ -30,15 +30,17 @@ function start(){
  if(/^\/(?:fr\/)?directory\/[^/]+\/$/.test(safePath()))window.nobletonTrack('listing_view');
 }
 const banner=document.createElement('aside');banner.className='analytics-banner';banner.setAttribute('aria-label',fr?'Statistiques facultatives':'Optional analytics');
-const text=document.createElement('p');text.textContent=fr?'Autorisez-vous les statistiques de fréquentation avec Google Analytics? Les champs des formulaires et les montants saisis sont exclus.':'Allow usage analytics with Google Analytics? Form contents and calculator amounts are excluded.';
+const text=document.createElement('p');text.textContent=fr?'Autoriser Google Analytics à mesurer la fréquentation? Les données de formulaires et les montants sont exclus.':'Allow Google Analytics to measure site usage? Form entries and calculator amounts are excluded.';
 const privacy=document.createElement('a');privacy.href=(fr?'/fr':'')+'/privacy/';privacy.textContent=fr?'Confidentialité':'Privacy';text.append(' ',privacy);banner.append(text);
 function removeCookies(){
  for(const entry of document.cookie.split(';')){const name=entry.split('=')[0].trim();if(!/^_ga(?:_|$)/.test(name))continue;
   for(const domain of ['',location.hostname,'.'+location.hostname,'.nobleton.ca'])document.cookie=name+'=; Max-Age=0; path=/'+(domain?'; domain='+domain:'')+'; SameSite=Lax';}
 }
 function choose(value){choice=value;try{localStorage.setItem(key,value);}catch{}banner.hidden=true;if(value==='accepted'){window['ga-disable-'+measurementId]=false;start();}else{window['ga-disable-'+measurementId]=true;window.nobletonTrack=()=>{};removeCookies();if(loaded)location.reload();}}
-for(const [value,label] of [['accepted',fr?'Autoriser':'Allow'],['declined',fr?'Refuser':'Decline']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.className='button';b.onclick=()=>choose(value);banner.append(b);}
-banner.hidden=choice!==null;document.body.append(banner);
+const choices=document.createElement('div');choices.className='analytics-choices';
+for(const [value,label] of [['accepted',fr?'Autoriser':'Allow'],['declined',fr?'Refuser':'Decline']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.className='button';b.onclick=()=>choose(value);choices.append(b);}
+banner.append(choices);
+banner.hidden=choice!==null;document.querySelector('.site-actions')?.prepend(banner);
 document.querySelectorAll('.analytics-preferences').forEach(b=>{b.hidden=false;b.onclick=()=>{banner.hidden=false;banner.querySelector('button').focus();};});
 if(choice==='accepted')start();
 document.addEventListener('click',event=>{const a=event.target.closest('a[href]');if(!a)return;const href=a.getAttribute('href');const method=href.startsWith('tel:')?'phone':href.startsWith('mailto:')?'email':href.startsWith('https://wa.me/')?'whatsapp':null;if(method)window.nobletonTrack('contact_click',{contact_method:method});if(a.dataset.directoryAction)window.nobletonTrack('directory_action',{action:a.dataset.directoryAction});});

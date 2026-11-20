@@ -22,7 +22,7 @@ Deploy `dist/` with real 404 handling using `dist/404.html`. The default canonic
 - `publish-build.py`: production build entry point.
 - `.openai/hosting.json`: existing Sites deployment identity.
 
-Business submissions and service requests POST to `https://formspree.io/f/xljjnzbr`. The Formspree AJAX CDN helper provides loading, success and validation/error states; native HTML POST is the fallback when JavaScript is unavailable. Both forms use the `email` reply-to field, `message`, distinct `_subject` and `inquiry_type` fields. Formspree dashboard settings control recipient notifications, spam protection and allowed domains. Generated imagery is labelled and is not a photograph of an actual location or property listing. Resource review dates reflect the source content, not the most recent software build.
+Business submissions, service requests, advertising inquiries and event tips POST to `https://formspree.io/f/xljjnzbr`. The Formspree AJAX CDN helper provides loading, success and validation/error states; native HTML POST is the fallback when JavaScript is unavailable. Forms use the `email` reply-to field, `message`, a distinct subject and `inquiry_type`. Event tips from `/events/#submit-event` use `inquiry_type=event` for editorial review and are excluded from sales-lead analytics. Formspree dashboard settings control recipient notifications, spam protection and allowed domains. Generated imagery is labelled and is not a photograph of an actual location or property listing. Resource review dates reflect the source content, not the most recent software build.
 
 ## October 2026 UX/search improvements
 

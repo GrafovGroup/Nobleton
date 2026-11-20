@@ -1,0 +1,182 @@
+.bakery-hero > .wrap,
+.dining-feature {
+  display: grid;
+  gap: clamp(28px, 5vw, 80px);
+  align-items: center;
+}
+
+.bakery-hero > .wrap {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+
+.dining-feature {
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+}
+
+.dining-photo {
+  border-radius: 0;
+  background: none;
+}
+
+.dining-photo img {
+  border-radius: 6px;
+}
+
+.bakery-hero img {
+  aspect-ratio: 4 / 5;
+  object-position: center 65%;
+}
+
+.dining-feature img {
+  aspect-ratio: 5 / 4;
+  object-position: center 74%;
+}
+
+.dining-photo figcaption {
+  position: static;
+  max-width: none;
+  padding: 9px 0 0;
+  background: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.bakery-story > h2:first-child,
+.bakery-visit h2 {
+  margin-top: 0;
+}
+
+.bakery-story > .dining-photo {
+  margin-block: 30px;
+}
+
+.bakery-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-block: 32px;
+}
+
+.bakery-visit {
+  padding: clamp(22px, 4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.bakery-visit .plan-actions {
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.dining-listings {
+  padding-top: 0;
+}
+
+.dining-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 24px 0;
+}
+
+.dining-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.dining-feature {
+  padding-top: clamp(28px, 4vw, 50px);
+}
+
+.dining-group {
+  scroll-margin-top: 24px;
+}
+
+.dining-group + .dining-group {
+  margin-top: clamp(36px, 5vw, 64px);
+}
+
+.dining-places {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.dining-place {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 2.5vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.dining-place h3 {
+  margin: 0 0 10px;
+  font: 400 clamp(24px, 3vw, 30px)/1.16 var(--font-serif);
+}
+
+.dining-place h3 a,
+.dining-place dd a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.dining-place a:hover {
+  text-decoration-color: currentColor;
+}
+
+.dining-place dl {
+  margin: 0 0 16px;
+}
+
+.dining-place dt {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.dining-place dd {
+  margin: 0 0 10px;
+}
+
+.dining-place-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.dining-place-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media (max-width: 680px) {
+  .bakery-hero > .wrap,
+  .dining-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dining-feature > div {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 440px) {
+  .bakery-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
