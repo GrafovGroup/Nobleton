@@ -8,13 +8,16 @@ IMAGE = '/assets/images/hambly-house-history.jpeg'
 def title():
     return t('Nobleton: Over 200 Years of History', 'Nobleton : plus de 200 ans d’histoire')
 
+def heritage_mark(tone='dark'):
+    return f'<span class="heritage-mark heritage-mark--{tone}" aria-hidden="true"><span></span><span></span><span></span></span>'
+
 def photograph(eager=False):
     alt = t('Hambly House in Nobleton, with red and cream brickwork, a central tower and a veranda', 'La maison Hambly à Nobleton, avec sa maçonnerie rouge et crème, sa tour centrale et sa véranda')
     caption = t('Hambly House · A landmark in Nobleton’s village story.', 'La maison Hambly · Un lieu emblématique de l’histoire de Nobleton.')
-    return f'<figure class="history-photo"><img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{"eager" if eager else "lazy"}" decoding="async"><figcaption>{caption}</figcaption></figure>'
+    return f'<figure class="history-photo heritage-photo"><img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{"eager" if eager else "lazy"}" decoding="async"><figcaption>{caption}</figcaption></figure>'
 
 def teaser():
-    return '<section class="wrap section history-feature">'+photograph()+'<div><p class="eyebrow">'+t('OUR VILLAGE STORY', 'L’HISTOIRE DE NOTRE VILLAGE')+'</p><h2>'+title()+'</h2>'+p('From an early crossroads settlement to the community we know today, discover the people, places and landmarks that shaped Nobleton.', 'D’un petit établissement à la croisée des chemins à la communauté d’aujourd’hui, découvrez les gens, les lieux et les bâtiments qui ont façonné Nobleton.')+f'<a class="button" href="{PATH}">'+t('Discover Nobleton’s history', 'Découvrez l’histoire de Nobleton')+'</a></div></section>'
+    return '<section class="wrap section history-feature">'+photograph()+'<div><p class="eyebrow">'+heritage_mark()+t('OUR VILLAGE STORY', 'L’HISTOIRE DE NOTRE VILLAGE')+'</p><h2>'+title()+'</h2>'+p('From an early crossroads settlement to the community we know today, discover the people, places and landmarks that shaped Nobleton.', 'D’un petit établissement à la croisée des chemins à la communauté d’aujourd’hui, découvrez les gens, les lieux et les bâtiments qui ont façonné Nobleton.')+f'<a class="button" href="{PATH}">'+t('Discover Nobleton’s history', 'Découvrez l’histoire de Nobleton')+'</a></div></section>'
 
 def register(page, intro):
     desc = t('Discover Nobleton’s history, from its early 19th-century crossroads and Joseph Noble to Hambly House and village life in King Township.', 'Découvrez l’histoire de Nobleton, de son carrefour du début du XIXe siècle et de Joseph Noble à la maison Hambly et à la vie dans le canton de King.')

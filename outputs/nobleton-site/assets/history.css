@@ -8,3 +8,52 @@
 .history-article .history-photo{margin:24px 0 36px}
 .history-article .fine{font-size:.875rem;line-height:1.7}
 @media(max-width:780px){.history-feature{grid-template-columns:1fr;gap:26px}.history-feature h2{font-size:2.25rem}.history-feature .button{white-space:normal;text-align:center}.history-article .history-photo{margin:20px 0 28px}}
+
+.heritage-mark {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: .25rem;
+  vertical-align: middle;
+}
+
+.heritage-mark--dark {color: #876329}
+.heritage-mark--light {color: var(--gold, #d1a34b)}
+
+.page-intro .heritage-mark,
+.history-feature .heritage-mark {
+  margin-inline-end: .65rem;
+}
+
+.footer-top .heritage-mark {
+  display: flex;
+  inline-size: max-content;
+  margin-block-end: .65rem;
+}
+
+.heritage-mark::before,
+.heritage-mark::after {
+  content: "";
+  inline-size: clamp(.875rem, 4vw, 1.75rem);
+  margin: 0 .2rem .2rem;
+  border-block-start: 1px solid currentColor;
+}
+
+.heritage-mark > span {
+  box-sizing: border-box;
+  inline-size: .45rem;
+  block-size: .625rem;
+  border: 1px solid currentColor;
+  border-radius: 50% 50% 0 0;
+}
+
+.heritage-mark > span:nth-child(2) {
+  block-size: .875rem;
+}
+
+.heritage-photo > img {
+  box-sizing: border-box;
+  padding: clamp(.25rem, .8vw, .55rem);
+  border: 1px solid #b8aa90;
+  border-radius: 3px;
+  background: #f3e8d3;
+}

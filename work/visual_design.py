@@ -1,5 +1,7 @@
 """Presentation components for the Nobleton community guide."""
 
+from plan_content import t
+
 def icon(kind):
     paths = {
         'Schools': '<path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12v5c3 2 7 2 10 0v-5M21 9v8"/>',
@@ -15,8 +17,22 @@ def icon(kind):
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths.get(kind,paths['Community'])+'</svg>'
 
 def home_page(photo, card, resources):
-    links = [('Schools','Schools & families','/guide/schools/'),('Parks & recreation','Parks & recreation','/guide/parks/'),('Community','Local directory','/directory/'),('Business resources','Local services','/find-a-service/')]
+    links = [
+        ('Schools', 'Schools & families', '/guide/schools/'),
+        ('Community', 'Local essentials', '/guide/essentials/'),
+        ('Business resources', 'Moving to Nobleton', '/guide/moving-to-nobleton/'),
+        ('search', 'Local services', '/find-a-service/'),
+    ]
     shortcuts = ''.join(f'<a href="{url}"><span class="shortcut-icon">{icon(kind)}</span><span>{label}</span></a>' for kind,label,url in links)
+    neighbour_links = [
+        ('/events/', t('Meet your neighbours', 'Rencontrez vos voisins'),
+         t('Find upcoming events and community calendars.', 'Découvrez les activités à venir et les calendriers communautaires.')),
+        ('/guide/parks/', t('Explore parks and trails', 'Explorez les parcs et sentiers'),
+         t('Check trail access and plan a visit to local conservation areas.', 'Vérifiez l’accès aux sentiers et planifiez une visite dans les aires de conservation des environs.')),
+        ('/directory/', t('Support local businesses', 'Soutenez les entreprises locales'),
+         t('Find shops, restaurants and services in the directory.', 'Trouvez des commerces, des restaurants et des services dans le répertoire.')),
+    ]
+    neighbour_actions = ''.join(f'<a href="{url}"><div><h3>{label}</h3><p>{description}</p></div></a>' for url,label,description in neighbour_links)
     return f'''
 <section class="home-hero" aria-labelledby="home-title">
   {photo('nobleton-hambly-house','Red-brick Hambly House with its central tower in Nobleton','',extra='home-hero-photo',eager=True)}
@@ -30,8 +46,8 @@ def home_page(photo, card, resources):
 </section>
 <nav class="discovery-bar wrap" aria-label="Discover Nobleton">{shortcuts}</nav>
 <section class="wrap section village-story">
-  <div class="story-photo">{photo('nobleton-lakes','Pond framed by autumn foliage at Nobleton Lakes, photographed in October 2006','',extra='story-landscape')}<span class="photo-tag">A SENSE OF PLACE</span></div>
-  <div class="story-copy"><p class="eyebrow">SMALL-TOWN ROOTS</p><h2>Room to breathe.<br>More to discover.</h2><p>New here or here for years? Find the everyday essentials and places that bring the community together.</p><div class="story-links"><a href="/guide/schools/"><span>01</span><div><h3>Schools & families</h3><p>Start with local schools and official resources.</p></div></a><a href="/guide/parks/"><span>02</span><div><h3>Outside & around town</h3><p>Parks, library visits and ways to spend the day.</p></div></a><a href="/guide/moving-to-nobleton/"><span>03</span><div><h3>Make your move</h3><p>A practical checklist for settling into Nobleton.</p></div></a></div></div>
+  <div class="story-photo">{photo('nobleton-lakes','Pond framed by autumn foliage at Nobleton Lakes, photographed in October 2006','',extra='story-landscape')}</div>
+  <div class="story-copy"><h2>{t('Neighbourly by nature', 'L’esprit de voisinage')}</h2><div class="story-links">{neighbour_actions}</div></div>
 </section>
 <section class="professionals-section section">
  <div class="wrap"><div class="section-heading"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>Start with a conversation.</h2></div><p>Real estate and mortgage guidance,<br>with a person you can reach.</p></div>
