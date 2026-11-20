@@ -19,3 +19,5 @@ outputs/nobleton-production/
 !work/businesses.json
 
 !work/idx_content.py
+
+!work/history_content.py

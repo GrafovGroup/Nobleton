@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nobleton.ca/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/" />
@@ -275,7 +275,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/" />
@@ -548,7 +548,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/" />
@@ -573,6 +573,13 @@
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/essentials/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/guide/history/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/history/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/history/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/history/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/guide/mortgage-renewal/</loc>
@@ -688,7 +695,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/guide/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/" />
@@ -713,6 +720,13 @@
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/essentials/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/essentials/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/guide/history/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/guide/history/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/guide/history/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/guide/history/" />
   </url>
   <url>
     <loc>https://nobleton.ca/guide/mortgage-renewal/</loc>

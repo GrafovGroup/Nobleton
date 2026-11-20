@@ -1,6 +1,6 @@
 # Nobleton
 
-Independent community guide and directory. Static HTML, CSS and JavaScript; Python 3 builds 61 English and 61 French pages without third-party dependencies.
+Independent community guide and directory. Static HTML, CSS and JavaScript; Python 3 builds 62 English and 62 French pages without third-party dependencies.
 
 ## Build
 
@@ -44,7 +44,7 @@ English routes remain at `/`; equivalent French routes are under `/fr/`. Every p
 
 ## November 2026 search and usability updates
 
-Unique bilingual metadata, concise breadcrumbs, publisher identity and visible editorial attribution on guides; direct homes/mortgage navigation and contextual mobile contact links. The sitemap lists 118 canonical URLs with reciprocal English/French alternates. `work/content-revisions.json` records content hashes and last-modified dates; unchanged builds do not change dates, and CSS/navigation-only changes do not reset them.
+Unique bilingual metadata, concise breadcrumbs, publisher identity and visible editorial attribution on guides; direct homes/mortgage navigation and contextual mobile contact links. The sitemap lists 120 canonical URLs with reciprocal English/French alternates. `work/content-revisions.json` records content hashes and last-modified dates; unchanged builds do not change dates, and CSS/navigation-only changes do not reset them.
 
 WHC-specific Apache configuration is maintained in `server/nobleton.htaccess` and deployed separately from `dist/`. Preserve search-verification files when deploying. Search submissions are requests for discovery, not a guarantee of indexing.
 
@@ -59,3 +59,7 @@ The directory includes 25 sourced businesses and five public resources. Entries 
 A red remembrance poppy appears beside the header wordmark in both languages until `2026-11-15T02:55:29Z` (five days after activation). `assets/remembrance.js` checks the fixed expiry before rendering, removes it from open tabs at expiry and rechecks when a tab becomes visible. It does not repeat in future years.
 
 The poppy uses the owner-supplied photograph, edited to remove the metal pin and white background; a transparent WebP is used in the header.
+
+## Local history
+
+`work/history_content.py` adds the owner-supplied history and unaltered Hambly House photo to `/guide/history/`, with a French counterpart and homepage/local-guide features. Municipal sources date settlement to 1812, so the headline uses “Over 200 Years.” The tower is described without the unsupported octagonal claim. Photo supplied November 19, 2026; capture date and photographer not asserted.
