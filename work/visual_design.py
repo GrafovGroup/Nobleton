@@ -1,6 +1,7 @@
 """Presentation components for the Nobleton community guide."""
 
 from plan_content import t
+from history_content import photograph
 
 def icon(kind):
     paths = {
@@ -35,7 +36,7 @@ def home_page(photo, card, resources):
     neighbour_actions = ''.join(f'<a href="{url}"><div><h3>{label}</h3><p>{description}</p></div></a>' for url,label,description in neighbour_links)
     return f'''
 <section class="home-hero" aria-labelledby="home-title">
-  {photo('nobleton-hambly-house','Red-brick Hambly House with its central tower in Nobleton','',extra='home-hero-photo',eager=True)}
+  {photograph(hero=True)}
   <div class="home-hero-content">
     <p class="eyebrow">YOUR INDEPENDENT LOCAL GUIDE</p>
     <h1 id="home-title">Nobleton.<br><em>A little closer<br>to home.</em></h1>
