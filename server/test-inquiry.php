@@ -5,16 +5,19 @@ if (PHP_SAPI !== 'cli') { http_response_code(404); exit; }
 $case = $argv[1] ?? 'realtor';
 $expected = ['realtor'=>200,'valuation'=>200,'mortgage'=>200,'both'=>200,'missing_consent'=>422,'bad_email'=>422,'bad_address'=>422,'bad_topic'=>422,'bad_origin'=>403,'honeypot'=>400,'delivery_failure'=>503,'method'=>405,'options'=>204][$case] ?? 500;
 $calls=0;
+$expectedSource = $case==='cavallo'?'/real-estate/cavallo-estates/':($case==='cavallo_fr'?'/fr/real-estate/cavallo-estates/':'/ask-realtor/');
+if(in_array($case,['cavallo','cavallo_fr'],true))$expected=200;
 function mail($to,$subject,$body,$headers): bool {
-    global $case,$calls;
+    global $case,$calls,$expectedSource;
     $calls++;
     $recipient = $case==='both'?'realtor@nobleton.ca, mortgage@nobleton.ca':($case==='mortgage'?'mortgage@nobleton.ca':'realtor@nobleton.ca');
     if($to!==$recipient || $headers['Reply-To']!=='validation@example.invalid') throw new \RuntimeException('Routing/header failure');
-    if(!str_contains($body,'Source page: /ask-realtor/')) throw new \RuntimeException('Source attribution failure');
+    if(!str_contains($body,'Source page: '.$expectedSource)) throw new \RuntimeException('Source attribution failure');
     return $case!=='delivery_failure';
 }
 $_SERVER=['REQUEST_METHOD'=>'POST','HTTP_ACCEPT'=>'application/json','HTTP_ORIGIN'=>'https://nobleton.ca','REMOTE_ADDR'=>'cli-test-'.getmypid()];
 $_POST=['kind'=>'realtor','name'=>'Validation fixture','email'=>'validation@example.invalid','message'=>'Automated validation; delivery is stubbed.','consent'=>'yes','source_page'=>'/ask-realtor/','preferred_language'=>'fr-CA','topic'=>'consultation'];
+$_POST['source_page']=$expectedSource;
 if($case==='valuation'){$_POST['kind']='valuation';$_POST['address']='Test fixture address';unset($_POST['message']);}
 if($case==='mortgage')$_POST['kind']='mortgage';
 if($case==='both')$_POST['both']='yes';
@@ -26,5 +29,5 @@ if($case==='bad_origin')$_SERVER['HTTP_ORIGIN']='https://example.invalid';
 if($case==='honeypot')$_POST['company_url']='spam';
 if($case==='method')$_SERVER['REQUEST_METHOD']='GET';
 if($case==='options')$_SERVER['REQUEST_METHOD']='OPTIONS';
-register_shutdown_function(function()use($expected,$case){global $calls;$wantCalls=in_array($case,['realtor','valuation','mortgage','both','delivery_failure'],true)?1:0;if(http_response_code()!==$expected||$calls!==$wantCalls){fwrite(STDERR,"FAIL $case\n");exit(1);}echo " PASS $case\n";});
+register_shutdown_function(function()use($expected,$case){global $calls;$wantCalls=in_array($case,['realtor','valuation','mortgage','both','delivery_failure','cavallo','cavallo_fr'],true)?1:0;if(http_response_code()!==$expected||$calls!==$wantCalls){fwrite(STDERR,"FAIL $case\n");exit(1);}echo " PASS $case\n";});
 require __DIR__.'/inquiry.php';

@@ -34,7 +34,7 @@ def schema_fr(value,base,key=''):
   if key=='inLanguage':return 'fr-CA'
   if value==base+'/#publisher':return value
   if key in ('@id','url','item'):return french_url(value,base)
-  if key in ('name','description','jobTitle','propertyID','headline'):return tr(value,False)
+  if key in ('name','description','jobTitle','propertyID','headline','text'):return tr(value,False)
  return value
 
 class French(HTMLParser):

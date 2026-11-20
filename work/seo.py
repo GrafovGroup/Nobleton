@@ -66,6 +66,9 @@ def prepare(title,desc,body,path,resources):
  graph[1]['publisher']={'@id':publisher['@id']}
  if path.startswith('/guide/') and path!='/guide/':
   graph.append({'@type':'Article','@id':BASE+path+'#article','headline':title,'description':desc,'inLanguage':'en-CA','author':{'@id':publisher['@id']},'publisher':{'@id':publisher['@id']},'mainEntityOfPage':{'@id':graph[1]['@id']}})
+ if path=='/real-estate/cavallo-estates/':
+  from cavallo_content import structured_data
+  graph.extend(structured_data(BASE))
  return title,desc,body,{'@context':'https://schema.org','@graph':graph}
 
 def finish(root,routes,production):

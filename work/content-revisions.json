@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "08d3535887f2f7845eadc49624e3904bb88852d6a8bccba2b300b042f8e9d14e",
+    "hash": "0a299a950bce3deaefeb1a41d341006f3ce61786aefc97fd068f0b1495cade3d",
     "lastmod": "2026-11-20"
   },
   "/about/": {
@@ -156,7 +156,7 @@
     "lastmod": "2026-11-10"
   },
   "/fr/": {
-    "hash": "2b16345691fa1d854940cc2c64463784456328eee58363f7ab4858d5e15f7860",
+    "hash": "266fcd66941cb538fcce6172caa085c5166facb642203b0c6b06651a6549053a",
     "lastmod": "2026-11-20"
   },
   "/fr/about/": {
@@ -169,7 +169,7 @@
   },
   "/fr/ask-realtor/": {
     "hash": "630e95d011d4e69e087e25ee581792695452c48c1e7d34ee2bef786f592c5b7b",
-    "lastmod": "2026-11-09"
+    "lastmod": "2026-11-20"
   },
   "/fr/community/": {
     "hash": "2e5d463b9f5ee416f685e837b8edf5bb5c51ac24a67bc72ad28c16e9cebbc70b",
@@ -353,11 +353,11 @@
   },
   "/fr/home-evaluation/": {
     "hash": "a1b6fb062aa0297e422024346dc99fbda82dbd8baa104ad59d15f9ad6b4b16ef",
-    "lastmod": "2026-11-09"
+    "lastmod": "2026-11-20"
   },
   "/fr/homes-for-sale/": {
-    "hash": "f94681a75ffc00fd803ee44aa99217e0e7412873ed543fb734432d303e1d7e99",
-    "lastmod": "2026-11-12"
+    "hash": "c7f90e48c8f489f4442a3b16b6b580c961e7d0838468c12abf4fbce9c7021f04",
+    "lastmod": "2026-11-20"
   },
   "/fr/mortgage-calculator/": {
     "hash": "b89d66f03e8935cbed62ac41317a9c76f067e5e6d73cd75f4eaa1bf6796bd398",
@@ -384,8 +384,12 @@
     "lastmod": "2026-11-12"
   },
   "/fr/real-estate/": {
-    "hash": "d9432c021e7dc480ef456022cbc840ccf9067c3ca7385cfed3030b2d365cc573",
-    "lastmod": "2026-11-12"
+    "hash": "9cd033d1aada713497546179edfae6e49707487159ca4d78f629c40392e272b5",
+    "lastmod": "2026-11-20"
+  },
+  "/fr/real-estate/cavallo-estates/": {
+    "hash": "0439973da5ea32f6485421903120ca314b673fa858b72ccc901b4545794213f6",
+    "lastmod": "2026-11-20"
   },
   "/fr/standards/": {
     "hash": "156d4de61061a021161226c287a31c83d2df4cdb0ec53f645ae1cf9a9edd28ba",
@@ -440,8 +444,8 @@
     "lastmod": "2026-11-09"
   },
   "/homes-for-sale/": {
-    "hash": "856f7f060c2470cbcbacaebcb4b2b5d002ec5dbf24a5651ddc6736bb22780f09",
-    "lastmod": "2026-11-12"
+    "hash": "f2e6fd9405c06a4b702fed4a18b21aa32a467a72ceca9a3a01f81fc6a23f118d",
+    "lastmod": "2026-11-20"
   },
   "/mortgage-calculator/": {
     "hash": "061752569ce89b844f0cf5fc2b93a834c6c2e730a7ed2ef979a23e5a5029f038",
@@ -468,8 +472,12 @@
     "lastmod": "2026-11-12"
   },
   "/real-estate/": {
-    "hash": "04551146fd06db1fe6a19fd13d916fada348430192e8323596978edc93555f01",
-    "lastmod": "2026-11-12"
+    "hash": "7f59bd5830239247428659b0d1b4c525e64e32dc8c9fde1fdd1fce90df49784c",
+    "lastmod": "2026-11-20"
+  },
+  "/real-estate/cavallo-estates/": {
+    "hash": "c648d7ccdbcf20029a9679cf8d6576fde5038864b3625e7621e687450d220213",
+    "lastmod": "2026-11-20"
   },
   "/standards/": {
     "hash": "170f391b68c71a894ba78b72f45f42476baae2907152e02306470c3cb534404c",

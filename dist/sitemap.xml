@@ -296,7 +296,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/ask-realtor/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/ask-realtor/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/ask-realtor/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/ask-realtor/" />
@@ -618,14 +618,14 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/home-evaluation/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/home-evaluation/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/home-evaluation/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/home-evaluation/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/homes-for-sale/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/homes-for-sale/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/homes-for-sale/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/homes-for-sale/" />
@@ -674,10 +674,17 @@
   </url>
   <url>
     <loc>https://nobleton.ca/fr/real-estate/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/real-estate/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/real-estate/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/real-estate/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/fr/real-estate/cavallo-estates/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/real-estate/cavallo-estates/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/real-estate/cavallo-estates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/real-estate/cavallo-estates/" />
   </url>
   <url>
     <loc>https://nobleton.ca/fr/standards/</loc>
@@ -772,7 +779,7 @@
   </url>
   <url>
     <loc>https://nobleton.ca/homes-for-sale/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/homes-for-sale/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/homes-for-sale/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/homes-for-sale/" />
@@ -821,10 +828,17 @@
   </url>
   <url>
     <loc>https://nobleton.ca/real-estate/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/real-estate/" />
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/real-estate/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/real-estate/" />
+  </url>
+  <url>
+    <loc>https://nobleton.ca/real-estate/cavallo-estates/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://nobleton.ca/real-estate/cavallo-estates/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://nobleton.ca/fr/real-estate/cavallo-estates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nobleton.ca/real-estate/cavallo-estates/" />
   </url>
   <url>
     <loc>https://nobleton.ca/standards/</loc>

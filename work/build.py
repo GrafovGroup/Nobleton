@@ -4,6 +4,7 @@ from seo import prepare, finish, EXCLUDED, BASE
 from local_content import MOVING, related, HOME_ANSWERS
 from visual_design import home_page, icon
 from history_content import teaser as history_teaser, register as register_history
+from cavallo_content import teaser as cavallo_teaser, register as register_cavallo, PATH as CAVALLO_PATH
 from growth import businesses, business_detail, directory_intro, directory_feature, advertising_options, placement_field
 from guide_enrichment import enrich_guide
 from plan_content import register_pages, home_additions, homeowner_links, realtor_bio, mortgage_links, privacy_addition, TRANSLATIONS, guide_resources, t as plan_t
@@ -93,6 +94,8 @@ def layout(title,desc,body,path='/',active=''):
   body=body.replace('<article class="wrap reading section">','<article class="wrap reading section">'+toc)
  if path=='/real-estate/':
   body=body.replace('</section>', '</section>'+realtor_bio(), 1)
+ if path in ['/real-estate/','/homes-for-sale/']:
+  body=body.replace('</section>', '</section>'+cavallo_teaser(), 1)
  if path=='/mortgages/':
   body=body.replace('</section>', '</section>'+mortgage_links(), 1)
  if path=='/guide/':body+=history_teaser()+guide_resources()
@@ -110,12 +113,17 @@ def layout(title,desc,body,path='/',active=''):
  share_alt=plan_t('Hambly House in Nobleton','La maison Hambly à Nobleton') if path=='/guide/history/' else 'Ekaterina Ottchenach, Real Estate Sales Representative' if path=='/real-estate/' else 'Anatoly Shibkov, Mortgage Agent' if path=='/mortgages/' else 'Hambly House in Nobleton, photographed by Peter Broster in 2022; CC BY-SA 4.0'
  stylesheet_version='20261110-local'
  history_css='<link rel="stylesheet" href="/assets/history.css?v=20261119">' if path in ['/', '/guide/', '/guide/history/'] else ''
+ if path in ['/', '/real-estate/', '/homes-for-sale/', CAVALLO_PATH]:
+  history_css+='<link rel="stylesheet" href="/assets/cavallo.css?v=20261119">'
+ if path==CAVALLO_PATH:
+  share_image='cavallo-broker-presentation.jpg'
+  share_alt=plan_t('Treasure Hill broker presentation photo supplied for Nobleton.ca','Photo de la présentation de Treasure Hill aux courtiers fournie pour Nobleton.ca')
  robots='index,follow,max-image-preview:large' if PRODUCTION and path not in EXCLUDED else 'noindex,follow'
  preview_label='Independent local guide' if PRODUCTION else 'Community preview'
  nav=''.join(f'<a href="{u}"'+(' aria-current="page"' if active==k or (k=='Homes' and path in ['/real-estate/','/homes-for-sale/','/home-evaluation/','/ask-realtor/','/neighbourhoods/']) or (k=='Mortgages' and path in ['/mortgages/','/mortgage-calculator/','/mortgage-consultation/']) else '')+f'>{k}</a>' for k,u in [('Directory','/directory/'),('Local guide','/guide/'),('Homes','/homes-for-sale/'),('Mortgages','/mortgages/'),('Community','/community/')])
 
  mobile=[('/directory/','Directory'),('/find-a-service/','Get help'),('/advertise/','Advertise')]
- if path in ['/real-estate/','/homes-for-sale/','/home-evaluation/','/ask-realtor/','/neighbourhoods/']:
+ if path in ['/real-estate/','/homes-for-sale/','/home-evaluation/','/ask-realtor/','/neighbourhoods/',CAVALLO_PATH]:
   mobile=[('/ask-realtor/','Ask Ekaterina'),('/home-evaluation/','Home value'),('tel:+16478385569','Call Ekaterina')]
  elif path in ['/mortgages/','/mortgage-calculator/','/mortgage-consultation/']:
   mobile=[('/mortgage-consultation/','Ask Anatoly'),('/mortgage-calculator/','Calculator'),('tel:+14372555037','Call Anatoly')]
@@ -132,7 +140,7 @@ cats=''.join(f'<a class="category" href="/directory/?category={html.escape(__imp
 home=home_page(photo,card,resources)
 home=home.replace('<section class="professionals-section section">',history_teaser()+'<section class="professionals-section section">')
 home=home.replace('<section class="wrap section neighbourhood-section">',directory_feature(resources,card)+'<section class="wrap section neighbourhood-section">')
-home=home.replace('<section class="professionals-section section">',homeowner_links()+'<section class="professionals-section section">')
+home=home.replace('<section class="professionals-section section">',homeowner_links()+cavallo_teaser()+'<section class="professionals-section section">')
 home=home.replace('<section class="wrap section village-story">',home_additions()+'<section class="wrap section village-story">')
 home=home.replace('Nobleton.<br><em>A little closer<br>to home.</em>',plan_t('Welcome to Nobleton.','Bienvenue à Nobleton.'))
 home=home.replace('Discover the places, people and everyday possibilities that make this corner of King Township feel like home.',plan_t('Your Community. Your Neighbourhood. Your Home.','Votre communauté. Votre quartier. Votre chez-vous.'))
@@ -192,6 +200,7 @@ page('photo-credits','Nobleton Photography & Image Credits','Sources, photograph
 write('404.html',layout('Page not found','Return to the Nobleton community guide.',intro('404','Let’s get you back to the neighbourhood.','This page could not be found.')+'<div class="wrap section"><a class="button" href="/">Back to home ↗</a></div>',path='/404.html'))
 register_pages(page,intro,photo)
 register_history(page,intro)
+register_cavallo(page,photo)
 TRANSLATIONS.update({k+' | Nobleton':v+' | Nobleton' for k,v in list(TRANSLATIONS.items())})
 (ROOT/'plan-translations.json').write_text(json.dumps(TRANSLATIONS,ensure_ascii=False))
 finish(ROOT,ROUTES,PRODUCTION)

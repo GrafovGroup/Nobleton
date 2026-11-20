@@ -54,7 +54,7 @@ $record['count']++; rewind($handle); ftruncate($handle, 0); fwrite($handle, json
 // Bound retention of expired counters without logging IP addresses.
 foreach (glob($rateDir.'/*.json') ?: [] as $old) { if (@filemtime($old) < $now - 86400) @unlink($old); }
 $source = scalar('source_page');
-if (!preg_match('~^/(?:fr/)?(?:ask-realtor|home-evaluation|mortgage-consultation)/$~', $source)) $source = 'Not supplied';
+if (!preg_match('~^/(?:fr/)?(?:ask-realtor|home-evaluation|mortgage-consultation|real-estate/cavallo-estates)/$~', $source)) $source = 'Not supplied';
 $language = scalar('preferred_language') === 'fr-CA' ? 'fr-CA' : 'en-CA';
 $both = scalar('both') === 'yes';
 $to = $both ? 'realtor@nobleton.ca, mortgage@nobleton.ca' : $destinations[$kind];
