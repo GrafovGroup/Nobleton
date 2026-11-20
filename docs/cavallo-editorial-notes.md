@@ -18,7 +18,7 @@ The section displays the newly supplied Gmail address and phone, while its exist
 
 ## Editorial and visual decisions
 
-Original Noble Plum page design and copy. The hero uses the existing licensed Nobleton Lakes photograph, labelled with its actual location/date and photographer credit. The broker photo is a separate story feature. No competitor renderings, logos, floor plans, site-plan diagrams, testimonials, tax countdowns or priority-allocation claims are copied.
+The Cavallo hero uses the white project wordmark published by CavalloNobleton.com, operated by Century 21 MyPro Realty Inc., Brokerage. The nearby home comparison paraphrases its public catalogue. Lot widths and areas are published figures and the area includes finished basement space. Worthington includes different layouts, so use the builder’s plan for details. CavalloNobleton.com reports spring 2028 closings and the owner-supplied broker notes say summer 2028. The page identifies both as reported timing. The hero photograph depicts Nobleton Lakes, with its location, date and photographer credited. The broker photo accompanies the separate broker presentation story.
 
 Avoid the supplied 70 km/500-acre combination because municipal sources distinguish different maintained parks, open-space and trail totals. Refer to named parks and official resources instead. Future Barrie Line service and Highway 413 are labelled future projects without a promised date or commute saving.
 

@@ -114,7 +114,7 @@ def layout(title,desc,body,path='/',active=''):
  stylesheet_version='20261119-black-gold'
  history_css=f'<link rel="stylesheet" href="/assets/history.css?v={stylesheet_version}">' if path in ['/', '/guide/', '/guide/history/'] else ''
  if path in ['/', '/real-estate/', '/homes-for-sale/', CAVALLO_PATH]:
-  history_css+=f'<link rel="stylesheet" href="/assets/cavallo.css?v={stylesheet_version}">'
+  history_css+='<link rel="stylesheet" href="/assets/cavallo.css?v=20261119-cavallo-collections">'
  if path==CAVALLO_PATH:
   share_image='cavallo-broker-presentation.jpg'
   share_alt=plan_t('Treasure Hill broker presentation photo supplied for Nobleton.ca','Photo de la présentation de Treasure Hill aux courtiers fournie pour Nobleton.ca')
