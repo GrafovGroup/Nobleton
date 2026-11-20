@@ -111,7 +111,7 @@ def layout(title,desc,body,path='/',active=''):
  form_script='<script src="https://unpkg.com/@formspree/ajax@1" defer></script>' if 'id="inquiry-form"' in body else ''
  share_image='hambly-house-history.jpeg' if path=='/guide/history/' else 'ekaterina-ottchenach.webp' if path=='/real-estate/' else 'anatoly-shibkov.jpg' if path=='/mortgages/' else 'nobleton-hambly-house.jpg'
  share_alt=plan_t('Hambly House in Nobleton','La maison Hambly à Nobleton') if path=='/guide/history/' else 'Ekaterina Ottchenach, Real Estate Sales Representative' if path=='/real-estate/' else 'Anatoly Shibkov, Mortgage Agent' if path=='/mortgages/' else 'Hambly House in Nobleton, photographed by Peter Broster in 2022; CC BY-SA 4.0'
- stylesheet_version='20261119-black-gold'
+ stylesheet_version='20261119-menu-buttons'
  history_css=f'<link rel="stylesheet" href="/assets/history.css?v={stylesheet_version}">' if path in ['/', '/guide/', '/guide/history/'] else ''
  if path in ['/', '/real-estate/', '/homes-for-sale/', CAVALLO_PATH]:
   history_css+='<link rel="stylesheet" href="/assets/cavallo.css?v=20261119-cavallo-collections">'
