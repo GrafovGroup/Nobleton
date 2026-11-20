@@ -166,7 +166,7 @@ def layout(title,desc,body,path='/',active=''):
  form_script='<script src="https://unpkg.com/@formspree/ajax@1" defer></script>' if 'id="inquiry-form"' in body else ''
  share_image=Path(HISTORY_IMAGE).name if path in ('/','/guide/history/') else 'ekaterina-ottchenach.webp' if path=='/real-estate/' else 'anatoly-shibkov.jpg' if path=='/mortgages/' else 'nobleton-hambly-house.jpg'
  share_alt=plan_t('Hambly House in Nobleton','La maison Hambly à Nobleton') if path in ('/','/guide/history/') else 'Ekaterina Ottchenach, Real Estate Sales Representative' if path=='/real-estate/' else 'Anatoly Shibkov, Mortgage Agent' if path=='/mortgages/' else 'Hambly House in Nobleton, photographed by Peter Broster in 2022; CC BY-SA 4.0'
- stylesheet_version='20261120-source-fonts'
+ stylesheet_version='20261120-baskervville-dm-sans'
  history_css=f'<link rel="stylesheet" href="/assets/history.css?v={stylesheet_version}">'
  if path=='/guide/':
   history_css+='<link rel="stylesheet" href="/assets/village-map.css?v=20261120-map-highlight">'
@@ -189,8 +189,8 @@ def layout(title,desc,body,path='/',active=''):
   mobile=[('/mortgage-consultation/','Ask Anatoly'),('/mortgage-calculator/','Calculator'),('tel:+14372555037','Call Anatoly')]
  mobile_links=''.join(f'<a href="{url}">{label}</a>' for url,label in mobile)
  preload=(
-  '<link rel="preload" href="/assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>'
-  '<link rel="preload" href="/assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>'
+  '<link rel="preload" href="/assets/fonts/baskervville-latin.woff2" as="font" type="font/woff2" crossorigin>'
+  '<link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>'
  )
  if path=='/':
   preload+=f'<link rel="preload" as="image" href="{HISTORY_IMAGE}" fetchpriority="high">'
