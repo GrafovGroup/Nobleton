@@ -4,6 +4,9 @@ from seo import META, LABELS
 
 PATH = '/guide/history/'
 IMAGE = '/assets/images/hambly-house-history.jpeg'
+HERO_IMAGE = '/assets/images/hambly-house-history-1280.webp'
+HERO_SIZES = '(max-width: 780px) 100vw, 72vw'
+HERO_SOURCES = ', '.join(f'/assets/images/hambly-house-history-{width}.webp {width}w' for width in (640, 960, 1280))
 
 def title():
     return t('Nobleton: Over 200 Years of History', 'Nobleton : plus de 200 ans d’histoire')
@@ -16,12 +19,13 @@ def photograph(eager=False, *, hero=False):
     name = t('Hambly House', 'Maison Hambly')
     date = t('Built in 1884', 'Construite en 1884')
     credit = t('Photo supplied for Nobleton.ca', 'Photo fournie pour Nobleton.ca')
-    loading = 'eager' if eager or hero else 'lazy'
-    priority = ' fetchpriority="high"' if hero else ''
-    image = f'<img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{loading}" decoding="async"{priority}>'
     if hero:
+        image = (f'<img src="{HERO_IMAGE}" srcset="{HERO_SOURCES}" sizes="{HERO_SIZES}" alt="{alt}" '
+                 'width="1280" height="950" loading="eager" decoding="async" fetchpriority="high">')
         return (f'<figure class="editorial-photo home-hero-photo">{image}'
                 f'<figcaption><span>{name}</span> · <span>{credit}</span></figcaption></figure>')
+    loading = 'eager' if eager else 'lazy'
+    image = f'<img src="{IMAGE}" alt="{alt}" width="1280" height="950" loading="{loading}" decoding="async">'
     return (f'<figure class="history-photo heritage-photo">{image}'
             f'<figcaption class="landmark-caption"><strong>{name}</strong><span>{date}</span><span>{credit}</span></figcaption></figure>')
 

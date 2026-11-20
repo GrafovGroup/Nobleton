@@ -100,8 +100,10 @@
     "/fr/privacy/",
     "/fr/real-estate/",
     "/fr/real-estate/cavallo-estates/",
+    "/fr/st-phillips-bakery-nobleton/",
     "/fr/standards/",
     "/fr/submit/",
+    "/fr/where-to-eat-in-nobleton/",
     "/guide/",
     "/guide/buying-a-home/",
     "/guide/down-payments/",
@@ -122,8 +124,10 @@
     "/privacy/",
     "/real-estate/",
     "/real-estate/cavallo-estates/",
+    "/st-phillips-bakery-nobleton/",
     "/standards/",
-    "/submit/"
+    "/submit/",
+    "/where-to-eat-in-nobleton/"
   ],
   "excludedRoutes": [
     "/404.html",

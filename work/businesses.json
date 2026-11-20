@@ -9,7 +9,17 @@
     "source_url": "https://www.cappuccinobakery.com/",
     "summary_en": "Italian bakery offering bread, pastries, cakes, hot meals and catering on King Road.",
     "summary_fr": "Boulangerie italienne sur King Road proposant pains, pâtisseries, gâteaux, repas chauds et service de traiteur.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "coffee-and-bakeries",
+      "hours": ["Mon–Fri 6 a.m.–8 p.m. · Sat–Sun 6 a.m.–7 p.m.", "Lun.–ven. 6 h–20 h · sam.–dim. 6 h–19 h"],
+      "menu_url": "https://www.cappuccinobakery.com/cateringmenu",
+      "menu_label": ["Catering menu", "Menu traiteur"],
+      "spotlight": [
+        "Cappuccino Bakery has served the Nobleton community since 1983. The King Road bakery offers breakfast and hot meals alongside pastries, gelato and custom cakes. Its catering menu lists serving sizes for pizza and pasta.",
+        "La Cappuccino Bakery sert la communauté de Nobleton depuis 1983. Cette boulangerie de King Road propose des déjeuners, des plats chauds, des pâtisseries, du gelato et des gâteaux sur mesure. Son menu traiteur précise le nombre de portions pour les pizzas et les pâtes."
+      ]
+    }
   },
   {
     "slug": "sunset-grill-nobleton",
@@ -21,7 +31,13 @@
     "source_url": "https://locations.sunsetgrill.ca/restaurant/nobleton-27/",
     "summary_en": "Breakfast and lunch restaurant with dine-in and takeout on Highway 27.",
     "summary_fr": "Restaurant de déjeuners et de dîners sur la route 27, avec service en salle et plats à emporter.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "sit-down-meals",
+      "hours": ["Mon–Fri 7 a.m.–3 p.m. · Sat–Sun 7 a.m.–3:30 p.m.", "Lun.–ven. 7 h–15 h · sam.–dim. 7 h–15 h 30"],
+      "hours_source": "https://sunsetgrill.ca/location/ontario-nobleton-13255-hwy-27/",
+      "menu_url": "https://sunsetgrill.ca/menu/"
+    }
   },
   {
     "slug": "vivo-pizza-pasta-nobleton",
@@ -33,7 +49,16 @@
     "source_url": "https://vivopizzapasta.ca/nobleton",
     "summary_en": "Italian restaurant in Nobleton serving pizza, pasta and other dishes, with dine-in and takeout options.",
     "summary_fr": "Restaurant italien à Nobleton proposant pizzas, pâtes et autres plats, à déguster sur place ou à emporter.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "sit-down-meals",
+      "hours": ["Sun–Wed 11:30 a.m.–9 p.m. · Thu–Sat 11:30 a.m.–10 p.m.", "Dim.–mer. 11 h 30–21 h · jeu.–sam. 11 h 30–22 h"],
+      "menu_url": "https://vivopizzapasta.ca/page/pdf-menus",
+      "spotlight": [
+        "Vivo serves Italian dishes such as Margherita pizza and rigatoni Bolognese. The Nobleton restaurant has a patio, offers takeout and links to table reservations on its location page.",
+        "Vivo sert des plats italiens comme la pizza margherita et les rigatonis à la bolognaise. Le restaurant de Nobleton dispose d’une terrasse et offre des plats à emporter. Sa page locale permet de réserver une table."
+      ]
+    }
   },
   {
     "slug": "misoya-sushi",
@@ -45,7 +70,14 @@
     "source_url": "https://misoya.ca/home/",
     "summary_en": "Japanese restaurant on King Road with sushi, sashimi, noodle dishes and party trays.",
     "summary_fr": "Restaurant japonais sur King Road proposant sushis, sashimis, plats de nouilles et plateaux à partager.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "sit-down-meals",
+      "hours": ["Tue–Sun 3–9 p.m. · Closed Mon", "Mar.–dim. 15 h–21 h · fermé le lundi"],
+      "hours_source": "https://misoya.ca/hours-location/",
+      "menu_url": "https://misoya.ca/MisoyaSushiMenu.pdf",
+      "menu_label": ["Menu (PDF)", "Menu (PDF)"]
+    }
   },
   {
     "slug": "barburrito-nobleton",
@@ -57,7 +89,13 @@
     "source_url": "https://www.barburrito.ca/location/nobleton/",
     "summary_en": "Tex-Mex restaurant on Highway 27 with burritos and online pickup ordering.",
     "summary_fr": "Restaurant tex-mex sur la route 27 proposant des burritos et la commande en ligne pour emporter.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "takeout",
+      "hours": ["Daily 11 a.m.–10 p.m.", "Tous les jours, de 11 h à 22 h"],
+      "menu_url": "https://wwws-canada2.givex.com/cws5/barburrito/",
+      "menu_label": ["Order pickup", "Commander pour emporter"]
+    }
   },
   {
     "slug": "subway-nobleton",
@@ -69,7 +107,12 @@
     "source_url": "https://restaurants.subway.com/canada/on/nobleton/13255-highway-27",
     "summary_en": "Sandwich restaurant offering subs, wraps and salads at Highway 27 and Sheardown Road.",
     "summary_fr": "Restaurant de sandwichs proposant sous-marins, roulés et salades sur la route 27.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "takeout",
+      "hours": ["Sun–Wed 8 a.m.–10 p.m. · Thu–Fri 8 a.m.–10:30 p.m. · Sat 8 a.m.–11 p.m.", "Dim.–mer. 8 h–22 h · jeu.–ven. 8 h–22 h 30 · sam. 8 h–23 h"],
+      "menu_url": "https://www.subway.com/en-ca/menunutrition/menu"
+    }
   },
   {
     "slug": "taj-royal-indian-cuisine",
@@ -81,7 +124,11 @@
     "source_url": "https://www.tajroyalcuisine.com/home",
     "summary_en": "Indian restaurant on Highway 27 with an online menu and pickup ordering.",
     "summary_fr": "Restaurant indien sur la route 27 avec menu en ligne et commande pour emporter.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "takeout",
+      "menu_url": "https://www.tajroyalcuisine.com/"
+    }
   },
   {
     "slug": "st-phillips-nobleton",
@@ -93,7 +140,13 @@
     "source_url": "https://www.stphillips.com/locations/",
     "summary_en": "Italian bakery and café on Mactaggart Drive offering pastries, cakes, bread and coffee.",
     "summary_fr": "Boulangerie et café italiens sur Mactaggart Drive proposant pâtisseries, gâteaux, pain et café.",
-    "checked": "2026-11-09"
+    "checked": "2026-11-20",
+    "dining": {
+      "group": "coffee-and-bakeries",
+      "hours": ["Daily, 7:30 AM–9 PM", "Tous les jours, de 7 h 30 à 21 h"],
+      "menu_url": "https://www.stphillips.com/food-drink-2/",
+      "menu_label": ["Food & catering", "Plats et service de traiteur"]
+    }
   },
   {
     "slug": "cousins-market-nobleton",

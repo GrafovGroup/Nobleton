@@ -1,9 +1,16 @@
 """Local directory presentation and advertising options. Facts live in businesses.json."""
+from datetime import date
 from pathlib import Path
 from html import escape as esc
 from urllib.parse import quote
 import json
 from plan_content import t, h, p, actions
+from dining_content import dining_link
+
+FRENCH_MONTHS = (
+    'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+    'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
+)
 
 def businesses():
     path=Path(__file__).with_name('businesses.json')
@@ -16,13 +23,64 @@ def businesses():
         for key in ('name','address','phone'):t(item[key],item[key])
     return items
 
-def business_detail(r,intro):
-    phone='+'+''.join(x for x in r['phone'] if x.isdigit())
-    if len(phone)==11:phone='+1'+phone[1:]
-    maps='https://www.google.com/maps/search/?api=1&query='+quote(r['name']+' '+r['address'])
-    title=r['name']+' in Nobleton'
-    t(title,r['name']+' à Nobleton')
-    return title, intro(r['category'],r['name'],r['description'])+f'''<section class="wrap section business-detail"><div class="business-facts"><p class="eyebrow">{t('LOCAL BUSINESS','ENTREPRISE LOCALE')}</p><h2>{t('Plan your visit or call ahead','Préparez votre visite ou appelez')}</h2><dl><div><dt>{t('Address','Adresse')}</dt><dd>{esc(r['address'])}</dd></div><div><dt>{t('Phone','Téléphone')}</dt><dd><a href="tel:{phone}" data-directory-action="phone">{esc(r['phone'])}</a></dd></div></dl><div class="plan-actions"><a class="button" data-directory-action="website" href="{esc(r['website'])}">{t('Visit business website','Consulter le site de l’entreprise')}</a><a class="button secondary" data-directory-action="directions" href="{maps}">{t('Get directions','Itinéraire')}</a></div><p class="fine">{t('Check opening hours, availability and pricing with the business before visiting.','Vérifiez les heures, la disponibilité et les tarifs auprès de l’entreprise avant votre visite.')}</p></div><aside class="directory-source"><h2>{t('About this entry','À propos de cette fiche')}</h2><p>{t('Public business information checked November 9, 2026. This is a free editorial listing, not a paid placement or endorsement.','Renseignements publics vérifiés le 9 novembre 2026. Cette fiche éditoriale est gratuite; elle ne constitue ni une publicité ni une recommandation.')}</p><p><a href="{esc(r['source_url'])}">{t('Source: official business website','Source : site officiel de l’entreprise')}</a></p><a class="text-link" href="/submit/?type=correction&amp;business={quote(r['name'])}">{t('Own this business? Request an update','Vous êtes propriétaire? Demandez une mise à jour')}</a></aside></section>'''
+def business_detail(r, intro):
+    phone = '+' + ''.join(digit for digit in r['phone'] if digit.isdigit())
+    if len(phone) == 11:
+        phone = '+1' + phone[1:]
+    maps = 'https://www.google.com/maps/search/?api=1&query=' + quote(r['name'] + ' ' + r['address'])
+    name = r['name'].removesuffix(' Nobleton')
+    if 'nobleton' in name.casefold().split():
+        title, title_fr = name, name
+    else:
+        title, title_fr = f'{name} in Nobleton', f'{name} à Nobleton'
+    t(title, title_fr)
+
+    street = r['address'].split(', Nobleton,', 1)[0].split(', King,', 1)[0]
+    description = t(
+        f"Find {title} at {street}. Get directions or call {r['phone']}.",
+        f"{title_fr} se trouve au {street}. Consultez l’itinéraire ou appelez le {r['phone']}.",
+    )
+
+    hours = ''
+    dining = r.get('dining', {})
+    if dining.get('hours'):
+        source = esc(dining.get('hours_source', r['source_url']))
+        hours = (
+            f"<div><dt>{t('Hours', 'Heures d’ouverture')}</dt><dd>{esc(t(*dining['hours']))}<br>"
+            f'<a class="text-link" href="{source}">{t("Official hours", "Horaire officiel")}</a></dd></div>'
+        )
+
+    checked = date.fromisoformat(r['checked'])
+    checked_en = f'{checked:%B} {checked.day}, {checked.year}'
+    checked_fr = f'{checked.day} {FRENCH_MONTHS[checked.month - 1]} {checked.year}'
+    source_note = t(
+        f'Public business information checked {checked_en}. This is a free editorial listing, not a paid placement or endorsement.',
+        f'Renseignements publics vérifiés le {checked_fr}. Cette fiche éditoriale est gratuite; elle ne constitue ni une publicité ni une recommandation.',
+    )
+
+    body = intro(r['category'], r['name'], r['description']) + f'''<section class="wrap section business-detail">
+        <div class="business-facts">
+            <p class="eyebrow">{t('LOCAL BUSINESS', 'ENTREPRISE LOCALE')}</p>
+            <h2>{t('Plan your visit or call ahead', 'Préparez votre visite ou appelez')}</h2>
+            <dl>
+                <div><dt>{t('Address', 'Adresse')}</dt><dd>{esc(r['address'])}</dd></div>
+                <div><dt>{t('Phone', 'Téléphone')}</dt><dd><a href="tel:{phone}" data-directory-action="phone">{esc(r['phone'])}</a></dd></div>
+                {hours}
+            </dl>
+            <div class="plan-actions">
+                <a class="button" data-directory-action="website" href="{esc(r['website'])}">{t('Visit business website', 'Consulter le site de l’entreprise')}</a>
+                <a class="button secondary" data-directory-action="directions" href="{esc(maps)}">{t('Get directions', 'Itinéraire')}</a>
+            </div>
+            <p class="fine">{t('Check opening hours, availability and pricing with the business before visiting.', 'Vérifiez les heures, la disponibilité et les tarifs auprès de l’entreprise avant votre visite.')}</p>
+        </div>
+        <aside class="directory-source">
+            <h2>{t('About this entry', 'À propos de cette fiche')}</h2>
+            <p>{source_note}</p>
+            <p><a href="{esc(r['source_url'])}">{t('Source: official business website', 'Source : site officiel de l’entreprise')}</a></p>
+            <a class="text-link" href="/submit/?type=correction&amp;business={quote(r['name'])}">{t('Own this business? Request an update', 'Vous êtes propriétaire? Demandez une mise à jour')}</a>
+        </aside>
+    </section>'''
+    return title, description, ''.join(line.strip() for line in body.splitlines())
 
 def directory_intro(resources):
     count=sum(bool(r.get('commercial')) for r in resources)
@@ -31,7 +89,7 @@ def directory_intro(resources):
 def directory_feature(resources,card):
     cats=[('Food & drink','Food & drink','Restaurants et cafés'),('Health & wellness','Health & wellness','Santé et bien-être'),('Shopping','Shops & everyday essentials','Commerces et essentiels'),('Home services','Home services','Services résidentiels'),('Automotive','Auto services','Services automobiles'),('Pet care','Pet care','Soins aux animaux'),('Business resources','Business & banking','Affaires et services bancaires')]
     tiles=''.join(f'<a class="directory-category" href="/directory/?category={quote(cat)}"><span>{t(en,fr)}</span><strong>{sum(r["category"]==cat for r in resources)}</strong></a>' for cat,en,fr in cats if any(r.get('commercial') and r['category']==cat for r in resources))
-    return '<section class="wrap section local-business-discovery"><div class="section-heading"><div><p class="eyebrow">'+t('KEEP IT LOCAL','CHOISISSEZ LOCAL')+'</p>'+h('Your next local find.','Votre prochaine découverte locale.')+'</div><a class="text-link" href="/directory/">'+t('Browse every listing','Voir toutes les fiches')+'</a></div><div class="directory-category-grid">'+tiles+'</div><p class="fine">'+t('Free editorial listings, sourced from official business websites. No ratings, rankings or paid endorsements.','Fiches éditoriales gratuites, établies à partir des sites officiels. Aucun classement, note ou recommandation rémunérée.')+'</p></section>'
+    return '<section class="wrap section local-business-discovery"><div class="section-heading"><div><p class="eyebrow">'+t('KEEP IT LOCAL','CHOISISSEZ LOCAL')+'</p>'+h('Your next local find.','Votre prochaine découverte locale.')+'</div><a class="text-link" href="/directory/">'+t('Browse every listing','Voir toutes les fiches')+'</a></div><div class="directory-category-grid">'+tiles+'</div><p>'+dining_link()+'</p><p class="fine">'+t('Free editorial listings, sourced from official business websites. No ratings, rankings or paid endorsements.','Fiches éditoriales gratuites, établies à partir des sites officiels. Aucun classement, note ou recommandation rémunérée.')+'</p></section>'
 
 def advertising_options():
     options=[

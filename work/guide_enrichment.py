@@ -9,6 +9,35 @@ from html import escape
 TRANSLATIONS = {}
 
 
+def essentials_intro(t):
+    answer = t(
+        'Nobleton is a village in southwestern King Township, Ontario, centred around King Road and Highway 27.',
+        'Nobleton est un village du sud-ouest du canton de King, en Ontario, autour du carrefour de King Road et de la route 27.',
+    )
+    map_label = t('View Nobleton on Google Maps', 'Voir Nobleton sur Google Maps')
+    return (
+        f'{escape(answer)} <a class="text-link" '
+        'href="https://www.google.com/maps/search/?api=1&amp;query=Nobleton%2C%20Ontario">'
+        f'{escape(map_label)}</a>'
+    )
+
+
+def essentials_orientation(t):
+    heading = t('Getting oriented in Nobleton', 'Se repérer à Nobleton')
+    details = t(
+        'The village map shows Hambly House, Nobleton Library, Tasca Park and Nobleton Community Park.',
+        'La carte du village indique la maison Hambly, la bibliothèque de Nobleton, le parc Tasca et le parc communautaire de Nobleton.',
+    )
+    village_map = t('Explore the village map', 'Consulter la carte du village')
+    township_profile = t('Nobleton on the Township website', 'Nobleton sur le site du Canton')
+    return (
+        f'<h2>{escape(heading)}</h2><p>{escape(details)}</p><div class="plan-actions">'
+        f'<a class="text-link" href="/guide/#village-map-title">{escape(village_map)}</a>'
+        f'<a class="text-link" href="https://www.king.ca/OurCommunity/nobleton">{escape(township_profile)}</a>'
+        '</div>'
+    )
+
+
 def enrich_guide(body, path, photo, t):
     if path not in {'/guide/parks/', '/guide/essentials/', '/guide/moving-to-nobleton/', '/guide/schools/'}:
         return body
@@ -38,6 +67,9 @@ def enrich_guide(body, path, photo, t):
         extra += heading('Make room for a longer walk', 'Prévoyez une promenade plus longue')
         extra += para('Cold Creek Conservation Area is at 14125 11th Concession. King Township lists marked trails, a picnic shelter and opportunities for birdwatching; dogs must remain on leash. For an accessible trail option, the Township identifies the York Regional Forest entrance at 5345 15th Sideroad, with accessible parking. Check current conditions and the route before setting out.', 'L’aire de conservation Cold Creek se trouve au 14125 11th Concession. Le canton de King y répertorie des sentiers balisés, un abri de pique-nique et des possibilités d’observation des oiseaux; les chiens doivent rester en laisse. Pour un parcours accessible, le Canton indique l’entrée de la forêt régionale de York au 5345 15th Sideroad, avec stationnement accessible. Vérifiez les conditions et le parcours avant de partir.')
         extra += link('https://www.king.ca/trails', 'Official trail information and map', 'Renseignements officiels et carte des sentiers')
+        extra += heading('Public skating at Nobleton Arena', 'Patinage libre à l’aréna de Nobleton')
+        extra += para('The Dr. William Laceby Nobleton Community Centre & Arena is at 15 Old King Road. Check the Township’s live booking calendar for public skating and shinny hockey sessions at Nobleton.', 'Le centre communautaire et aréna Dr. William Laceby de Nobleton se trouve au 15 Old King Road. Consultez le calendrier de réservation du Canton pour connaître les séances de patinage libre et de hockey improvisé à Nobleton.')
+        extra += '<div class="plan-actions">' + link('https://townshipofking.perfectmind.com/23793/Clients/BookMe4BookingPages/Classes?calendarId=2fd6d540-75aa-416b-9a70-a78b8f598e7d&embed=False&widgetId=15f6af07-39c5-473e-b053-96653f77a406', 'See the current skating schedule', 'Voir l’horaire de patinage') + link('https://www.king.ca/recreation-living/facilities/dr-william-laceby-nobleton-community-centre-arena', 'Nobleton Arena information', 'Renseignements sur l’aréna de Nobleton') + '</div>'
         extra += heading('Plan a library stop', 'Prévoyez un arrêt à la bibliothèque')
         extra += para('The Nobleton library is at 8 Sheardown Drive; call 905-859-4188. Its published schedule currently includes Wednesday and Thursday evenings until 8 p.m. The branch is closed on Sundays and Mondays. Check the library’s own hours page for holiday changes before you leave.', 'La bibliothèque de Nobleton se trouve au 8 Sheardown Drive; téléphone : 905-859-4188. Son horaire publié comprend actuellement les mercredis et jeudis soirs jusqu’à 20 h. La succursale est fermée les dimanches et lundis. Consultez son horaire officiel pour les changements liés aux jours fériés avant de partir.')
         extra += link('https://www.kinglibrary.ca/hours-locations', 'Confirm library hours', 'Confirmer les heures de la bibliothèque')
